@@ -1,0 +1,93 @@
+[
+    {
+      "id": 56,
+      "image": "/images/apple.png",
+      "title": "Cyprina Apple Juice 1L (Slim)",
+      "price": "৳475.40",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 57,
+      "image": "/images/low.png",
+      "title": "SIS Low GI Sugar 350gm",
+      "price": "৳955",
+      "perprice": "per price",
+      "discount": "৳13 OFF", 
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 58,
+      "image": "/images/zero.png",
+      "title": "Zero Calorie Sweetener",
+      "price": "৳760",
+      "perprice": "per price",
+      "discount": "৳4 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 59,
+      "image": "/images/free.png",
+      "title": "Sugar Free Gold Sugar",
+      "price": "৳213",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 60,
+      "image": "/images/tablet.png",
+      "title": "Zerocal Tablet 100pcs",
+      "price": "৳140",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 61,
+      "image": "/images/pran.png",
+      "title": "Pran Diabetic Orange Jelly",
+      "price": "৳270",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 62,
+      "image": "/images/diet.png",
+      "title": "Marks Milk Based Diabetic",
+      "price": "৳1400",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 63,
+      "image": "/images/haque.png",
+      "title": "Haque Sugar Free Cream",
+      "price": "৳50",
+      "perprice": "per price",
+      "discount": "৳5 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 64,
+      "image": "/images/toast.png",
+      "title": "Sugar Free Toast ",
+      "price": "৳45",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 65,
+      "image": "/images/nutri.png",
+      "title": "Nutri Rich Diabetic Biscuits",
+      "price": "৳100",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    }
+  ]
+  

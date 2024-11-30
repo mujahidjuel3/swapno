@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 222.2 84% 4.9%; /* Dark text color */
+    --border: 214.3 31.8% 91.4%; /* Light border color */
+
+    /* Add any other custom CSS variables here */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 210 40% 98%; /* Light text color */
+    --border: 217.2 32.6% 17.5%; /* Dark border color */
+
+    /* Add dark-mode-specific variables */
+  }
+
+  body {
+    @apply bg-background text-foreground; /* Apply background and text colors */
+  }
+}

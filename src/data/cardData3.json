@@ -1,0 +1,111 @@
+[
+    {
+      "id": 44,
+      "image": "/images/broiler.png",
+      "title": "Broiler (Without Skin)",
+      "price": "৳94.40",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 45,
+      "image": "/images/lalshak.png",
+      "title": "Lal Shak (Red Amaranth)",
+      "price": "৳115",
+      "perprice": "per price",
+      "discount": "৳13 OFF", 
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 46,
+      "image": "/images/alu.png",
+      "title": "Gorur Mangsho-Alu Mix",
+      "price": "৳70",
+      "perprice": "per price",
+      "discount": "৳4 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 47,
+      "image": "/images/golda.png",
+      "title": "Golda (Chingri) Medium",
+      "price": "৳170",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 48,
+      "image": "/images/detergent.png",
+      "title": "Mr.White Detergent Powder",
+      "price": "৳550",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 49,
+      "image": "/images/powerx.png",
+      "title": "PowerX Toilet Cleaner 500ml",
+      "price": "৳260",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 50,
+      "image": "/images/ilish.png",
+      "title": "Hilsha (300-390gm)",
+      "price": "৳90",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 51,
+      "image": "/images/kettle.png",
+      "title": "Electric kettle 1.8L",
+      "price": "৳35",
+      "perprice": "per price",
+      "discount": "৳5 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 52,
+      "image": "/images/pepsodent.png",
+      "title": "PepsodentToothpaste 140gm",
+      "price": "৳275",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 53,
+      "image": "/images/wheel1.png",
+      "title": "Wheel Laundry Soap 125gm",
+      "price": "৳94.40",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 54,
+      "image": "/images/vim1.png",
+      "title": "Vim Dish Wash Powder 500gm",
+      "price": "৳115",
+      "perprice": "per price",
+      "discount": "৳13 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+        "id": 55,
+        "image": "/images/miniket1.png",
+        "title": "Miniket Rice Loose(P)",
+        "price": "৳115",
+        "perprice": "per price",
+        "discount": "৳13 OFF",
+        "delivery": "Delivery 1-2 hours"
+      }
+  ]
+  

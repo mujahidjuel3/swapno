@@ -1,0 +1,201 @@
+[
+    {
+      "id": 66,
+      "image": "/images/ruti.png",
+      "title": "Red Wheat Roti",
+      "price": "৳220",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 67,
+      "image": "/images/shami-kabab.png",
+      "title": "Shami Kabab 500gm",
+      "price": "৳415",
+      "perprice": "per price",
+      "discount": "৳13 OFF", 
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 68,
+      "image": "/images/dal-puri.png",
+      "title": "Dal Puri 200gm",
+      "price": "৳145",
+      "perprice": "per price",
+      "discount": "৳4 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 69,
+      "image": "/images/roll.png",
+      "title": "Chicken Mini Spring Roll",
+      "price": "৳230",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 70,
+      "image": "/images/premium-paratha.png",
+      "title": "Shwapno Premium Paratha",
+      "price": "৳270",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 71,
+      "image": "/images/momo.png",
+      "title": "Chicken Momo 300gm",
+      "price": "৳300",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 72,
+      "image": "/images/ball.png",
+      "title": "Chicken Ball 250gm",
+      "price": "৳200",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 73,
+      "image": "/images/kazifarms.png",
+      "title": "Chicken Shami Kabab",
+      "price": "৳230",
+      "perprice": "per price",
+      "discount": "৳5 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 74,
+      "image": "/images/sausages.png",
+      "title": "Chicken Sausage 300gm",
+      "price": "৳260",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 75,
+      "image": "/images/sausages2.png",
+      "title": "Chicken Sausage 340gm",
+      "price": "৳260",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 76,
+      "image": "/images/nuggets.png",
+      "title": "Chicken Nuggets 300gm",
+      "price": "৳240",
+      "perprice": "per price",
+      "discount": "৳13 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 77,
+      "image": "/images/spring.png",
+      "title": " Chicken Spring Roll",
+      "price": "৳320",
+      "perprice": "per price",
+      "discount": "৳50 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 78,
+      "image": "/images/samosa.png",
+      "title": "Chicken Mini Samosa",
+      "price": "৳210",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 79,
+      "image": "/images/lolipop.png",
+      "title": " Chicken Lollipop",
+      "price": "৳295",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 80,
+      "image": "/images/lolipop2.png",
+      "title": "Kitchen Chicken Lollipop",
+      "price": "৳255",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+        "id": 81,
+        "image": "/images/nuggets2.png",
+        "title": "Kitchen Chicken Nuggets",
+        "price": "৳200",
+        "perprice": "per price",
+        "discount": "৳100 OFF",
+        "delivery": "Delivery 1-2 hours"
+      },
+      {
+        "id": 82,
+        "image": "/images/ball2.png",
+        "title": "Chicken Meat Ball",
+        "price": "৳300",
+        "perprice": "per price",
+        "discount": "৳20 OFF",
+        "delivery": "Delivery 1-2 hours"
+      },
+      {
+        "id": 83,
+        "image": "/images/sausages3.png",
+        "title": "Harvest Chicken Sausage",
+        "price": "৳260",
+        "perprice": "per price",
+        "discount": "৳23.60 OFF",
+        "delivery": "Delivery 1-2 hours"
+      },
+      {
+        "id": 84,
+        "image": "/images/samosa2.png",
+        "title": "Single Bite Chicken Samosa",
+        "price": "৳415",
+        "perprice": "per price",
+        "discount": "৳13 OFF", 
+        "delivery": "Delivery 1-2 hours"
+      },
+      {
+        "id": 85,
+        "image": "/images/sausages4.png",
+        "title": "Chicken HOT Sausage",
+        "price": "৳320",
+        "perprice": "per price",
+        "discount": "৳4 OFF",
+        "delivery": "Delivery 1-2 hours"
+      },
+      {
+        "id": 86,
+        "image": "/images/paratha3.png",
+        "title": "Mega Deshi Paratha",
+        "price": "৳380",
+        "perprice": "per price",
+        "discount": "৳30 OFF",
+        "delivery": "Delivery 1-2 hours"
+      },
+      {
+        "id": 87,
+        "image": "/images/paratha4.png",
+        "title": "Kitchen Plain Paratha",
+        "price": "৳320",
+        "perprice": "per price",
+        "discount": "৳100 OFF",
+        "delivery": "Delivery 1-2 hours"
+      }
+  ]
+  

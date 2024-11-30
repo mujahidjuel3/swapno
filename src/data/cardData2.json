@@ -1,0 +1,156 @@
+[
+    {
+      "id": 27,
+      "image": "/images/paratha.png",
+      "title": "Premium Deshi Paratha",
+      "price": "৳94.40",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 28,
+      "image": "/images/rice.png",
+      "title": "Miniket Rice Loose(P)",
+      "price": "৳115",
+      "perprice": "per price",
+      "discount": "৳13 OFF", 
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 29,
+      "image": "/images/beef.png",
+      "title": "Beef Premium Cube",
+      "price": "৳70",
+      "perprice": "per price",
+      "discount": "৳4 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 30,
+      "image": "/images/vim.png",
+      "title": "Vim Dishwash Liquid Refill",
+      "price": "৳170",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 31,
+      "image": "/images/maggi.png",
+      "title": "Maggi Masala Blast 252gm",
+      "price": "৳550",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 32,
+      "image": "/images/hand-wash.png",
+      "title": "Lifebuoy Total 10 Hand Wash",
+      "price": "৳260",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 33,
+      "image": "/images/katari-rice.png",
+      "title": "Katari Nazirshail Rice Loose",
+      "price": "৳90",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 34,
+      "image": "/images/sugar-loose.png",
+      "title": "Sugar Loose Refined",
+      "price": "৳35",
+      "perprice": "per price",
+      "discount": "৳5 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 35,
+      "image": "/images/aroma.png",
+      "title": "Davidoff Café Rich Aroma",
+      "price": "৳275",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 36,
+      "image": "/images/rupchanda.png",
+      "title": "Rupchanda Soyabean Oil 5L",
+      "price": "৳94.40",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 37,
+      "image": "/images/teer-sugar.png",
+      "title": "Teer Sugar 1kg",
+      "price": "৳115",
+      "perprice": "per price",
+      "discount": "৳13 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 38,
+      "image": "/images/dairy-milk.png",
+      "title": "Aarong Dairy Liquid Milk",
+      "price": "৳250",
+      "perprice": "per price",
+      "discount": "৳50 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 39,
+      "image": "/images/wheel.png",
+      "title": "Clean & Detergent Powder",
+      "price": "৳170",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 40,
+      "image": "/images/horlicks.png",
+      "title": "Dekko Horlicks Cookies Biscuits",
+      "price": "৳550",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 41,
+      "image": "/images/dove.png",
+      "title": "Dove Beauty Cream Bar",
+      "price": "৳260",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+        "id": 42,
+        "image": "/images/broiler.png",
+        "title": "Broiler Chicken (Without Skin)",
+        "price": "৳550",
+        "perprice": "per price",
+        "discount": "৳100 OFF",
+        "delivery": "Delivery 1-2 hours"
+      },
+      {
+        "id": 43,
+        "image": "/images/egg.png",
+        "title": "Egg Loose (Min 12pcs)",
+        "price": "৳260",
+        "perprice": "per price",
+        "discount": "৳20 OFF",
+        "delivery": "Delivery 1-2 hours"
+      }
+  ]
+  
