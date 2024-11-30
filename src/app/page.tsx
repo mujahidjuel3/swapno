@@ -41,7 +41,7 @@ type CartItem = {
 };
 
 function MyApp() {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]); // সঠিক টাইপ ডিফাইন
+  const [cartItems, setCartItems] = useState<CartItem[]>([]); 
 
   useEffect(() => {
     const savedCart = localStorage.getItem("cartItems");
@@ -81,6 +81,7 @@ function MyApp() {
 
   return (
     <>
+    <main className="min-w-full">
       <Navbar />
       <Navbar2 />
       <BannerSlider />
@@ -102,6 +103,7 @@ function MyApp() {
       <FooterBottom />
       <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
       <Message />
+      </main>
     </>
   );
 }

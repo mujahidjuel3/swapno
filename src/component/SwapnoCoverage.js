@@ -24,12 +24,12 @@ const SwapnoCoverage = () => {
           src="https://www.shwapno.com/_next/static/media/web_coverage_area.32a74525.jpg"
           alt="Coverage Image"
           width={1300}
-          height={500}
+          height={100}
           layout="responsive"
         />
 
         {/* Title on Image */}
-        <div className="absolute inset-0 md:mb-20 flex flex-col items-center justify-center bg-opacity rounded-lg">
+        <div className="absolute pt-10 sm:pt-0 inset-0 md:mb-20 flex flex-col items-center justify-center bg-opacity rounded-lg">
           <h1 className="text-sm font-semibold bg-slate-1 bg-slate-20000 mb-5">Swapno Coverage Area</h1>
           <div className="grid grid-cols-2 gap-4 text-xs-  w-full px-6">
             {/* Left side Information */}

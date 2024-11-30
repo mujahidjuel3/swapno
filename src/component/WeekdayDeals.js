@@ -93,7 +93,7 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
 
 
   return (
-    <div className="flex flex-col pt-10 lg:flex-row bg-gray-50 rounded-lg shadow-lg pl-2 md:pl-16 py-8 gap-4">
+    <div className="flex flex-col pt-32 lg:flex-row bg-gray-50 rounded-lg shadow-lg pl-2 md:pl-16 py-8 gap-4">
       {/* Left Section */}
       <div className="lg:w-2/3 border-r bg-gray-400 pt-5 px-4 py-3 rounded-lg">
         {/* Header */}

@@ -36,7 +36,7 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
   return (
     <>
       {/* Sidebar Button */}
-      <div className="fixed top-1/2 right-0 z-50 transform -translate-y-1/2">
+      <div className="fixed top-1/2 right-10 sm:right-0 z-50 transform -translate-y-1/2">
         <div
           onClick={toggleCart}
           className="relative h-36 w-28 flex items-center justify-center rounded cursor-pointer"
