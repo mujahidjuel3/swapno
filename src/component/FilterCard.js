@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { IoFilter, IoClose } from "react-icons/io5";
+import Image from "next/image";
 
 const ResponsiveFilterCard = ({ products }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -158,9 +159,11 @@ const ResponsiveFilterCard = ({ products }) => {
       >
         {filteredData.map((product) => (
           <Card key={product.id} className="p-4 shadow-lg">
-            <img
+            <Image
               src={product.image}
               alt={product.title}
+              height={40}
+              width={100}
               className="w-full h-40 object-cover rounded"
             />
             <h2 className="text-lg font-bold mt-2">{product.title}</h2>
