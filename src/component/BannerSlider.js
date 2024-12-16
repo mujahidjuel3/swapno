@@ -1,52 +1,27 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const banners = [
-  {
-    id: 1,
-    img: "/slider1.png",
-    alt: "Unlock Big Savings!",
-  },
-  {
-    id: 2,
-    img: "/slider2.png",
-    alt: "Exciting Deals Await!",
-  },
-  {
-    id: 3,
-    img: "/slider3.png",
-    alt: "Shop and Save More!",
-  },
-  {
-    id: 4,
-    img: "/slider4.png",
-    alt: "Unlock Big Savings!",
-  },
-  {
-    id: 5,
-    img: "/slider5.png",
-    alt: "Exciting Deals Await!",
-  },
-  {
-    id: 6,
-    img: "/slider6.png",
-    alt: "Shop and Save More!",
-  },
+  { id: 1, img: "/slider1.png", alt: "Unlock Big Savings!" },
+  { id: 2, img: "/slider2.png", alt: "Exciting Deals Await!" },
+  { id: 3, img: "/slider3.png", alt: "Shop and Save More!" },
+  { id: 4, img: "/slider4.png", alt: "Unlock Big Savings!" },
+  { id: 5, img: "/slider5.png", alt: "Exciting Deals Await!" },
+  { id: 6, img: "/slider6.png", alt: "Shop and Save More!" },
 ];
 
 const BannerSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Autoplay Handler
+  // Autoplay Slider
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % banners.length);
-    }, 3000); 
+    }, 3000); // 3 seconds interval
     return () => clearInterval(interval);
   }, []);
 
@@ -59,65 +34,62 @@ const BannerSlider = () => {
   };
 
   return (
-    <div className="sm:left-[16rem] pl-4 sm:pl-1 lg:pl-0  lg:pr-3 top-24 md:top-28 relative flex sm:w-[28rem] w-[30rem] lg:w-[66rem] xl:w-[86rem] h-48 sm:h-56 overflow-hidden">
-
-      {/* Slider */}
-      <div className="relative w-full lg:w-[80%]">
-        <div className="absolute inset-0 flex transition-transform duration-500 ease-in-out">
-          {banners.map((banner, index) => (
-            <div
-              key={banner.id}
-              className={cn(
-                "absolute inset-0 transition-opacity duration-500",
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              )}
-            >
-              <div className="">
-              <Image
-                src={banner.img}
-                alt={banner.alt}
-                fill
-                className="h-48 sm:h-56 w-[31rem] sm:w-[31rem] lg:w-[62rem] xl:w-[86rem]"
-                priority={index === 0}
-              />
-              </div>
-            </div>
-          ))}
+    <div className="relative top-28 bg-gray-100">
+  {/* Slider Container */}
+  <div className="relative pl-[1px] md:pl-[296px] mx-auto w-full max-w-8xl h-[180px] md:h-[220px] lg:h-[240px] xl:h-[280px]">
+    {/* Slides */}
+    <div className="relative w-full h-full overflow-hidden">
+      {banners.map((banner, index) => (
+        <div
+          key={banner.id}
+          className={cn(
+            "absolute top-0 left-0 w-full h-full transition-opacity duration-500",
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          )}
+        >
+          <Image
+            src={banner.img}
+            alt={banner.alt}
+            layout="fill"
+            className=""
+            priority={index === 0}
+          />
         </div>
-
-        {/* Dot nevigation */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={cn(
-                "w-3 h-3 rounded-full",
-                index === currentSlide
-                  ? "bg-red-500"
-                  : "bg-gray-400 hover:bg-gray-500"
-              )}
-            ></button>
-          ))}
-        </div>
-
-        {/* Nevigation Button */}
-        <div className="absolute inset-0 flex  justify-between items-center px-2">
-          <button
-            onClick={prevSlide}
-            className="p-2.5 bg-yellow-300 w-9 h-9 text-white rounded-full hover:bg-gray-800"
-          >
-            <IoIosArrowBack/>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="p-2.5 bg-yellow-300 w-9 h-9 text-white rounded-full hover:bg-gray-800"
-          >
-            <IoIosArrowForward/>
-          </button>
-        </div>
-      </div>
+      ))}
     </div>
+
+    {/* Navigation Buttons */}
+    <button
+      onClick={prevSlide}
+      className="absolute pl-[2px] md:left-[18.5rem] top-1/2 transform -translate-y-1/2 p-1 bg-yellow-300 text-black rounded-full shadow hover:bg-yellow-500 focus:outline-none"
+    >
+      <IoIosArrowBack size={22} />
+    </button>
+    <button
+      onClick={nextSlide}
+      className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 bg-yellow-300 text-black rounded-full shadow hover:bg-yellow-500 focus:outline-none"
+    >
+      <IoIosArrowForward size={22} />
+    </button>
+
+    {/* Dots Navigation */}
+    <div className="absolute bottom-4 left-[55rem] transform -translate-x-1/2 hidden xl:flex space-x-2">
+      {banners.map((_, index) => (
+        <button
+          key={index}
+          onClick={() => setCurrentSlide(index)}
+          className={cn(
+            "w-3 h-3 rounded-full transition-colors",
+            index === currentSlide
+              ? "bg-red-500"
+              : "bg-gray-400 hover:bg-gray-500"
+          )}
+        ></button>
+      ))}
+    </div>
+  </div>
+</div>
+
   );
 };
 

@@ -1,0 +1,139 @@
+[
+    {
+      "id": 1,
+      "image": "/images/black-pepper.png",
+      "title": "Shwapno White Pepper Powder",
+      "price": "৳94.40",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours",
+       
+    },
+    {
+      "id": 2,
+      "image": "/images/turmeric.png",
+      "title": "Pran Turmeric (Holud) ",
+      "price": "৳115",
+      "perprice": "per price",
+      "discount": "৳13 OFF", 
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 3,
+      "image": "/images/alus.png",
+      "title": "Alu Loose kg (Cardinal)",
+      "price": "৳70",
+      "perprice": "per price",
+      "discount": "৳4 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 4,
+      "image": "/images/chia-seed.png",
+      "title": "Shwapno Chia Seed 100gm",
+      "price": "৳170",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 5,
+      "image": "/images/chilli-flakes.png",
+      "title": "Radhuni Chilli Flakes 40gm",
+      "price": "৳550",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 6,
+      "image": "/images/coriander.png",
+      "title": "Radhuni Coriander Powder",
+      "price": "৳260",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 7,
+      "image": "/images/garlic.png",
+      "title": "Shwapno Garlic Powder 60gm",
+      "price": "৳90",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 8,
+      "image": "/images/ginger-powder.png",
+      "title": "Shwapno Ginger Powder 50gm",
+      "price": "৳35",
+      "perprice": "per price",
+      "discount": "৳5 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 9,
+      "image": "/images/green-curry.png",
+      "title": "Thai Green Curry Paste",
+      "price": "৳275",
+      "perprice": "per price",
+      "discount": "৳10 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 10,
+      "image": "/images/haiko-powder.png",
+      "title": "Haiko Cocoa Powder 100gm",
+      "price": "৳94.40",
+      "perprice": "per price",
+      "discount": "৳23.60 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 11,
+      "image": "/images/radhuni.png",
+      "title": "Pran Turmeric (Holud) Powder",
+      "price": "৳115",
+      "perprice": "per price",
+      "discount": "৳13 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 12,
+      "image": "/images/radhuni-morich.png",
+      "title": "Radhuni Chilli (Morich) Powder",
+      "price": "৳250",
+      "perprice": "per price",
+      "discount": "৳50 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 13,
+      "image": "/images/roast-masala.png",
+      "title": "Shwapno Roast Masala",
+      "price": "৳170",
+      "perprice": "per price",
+      "discount": "৳30 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 14,
+      "image": "/images/white-pepper.png",
+      "title": "Shwapno White Pepper Powder",
+      "price": "৳550",
+      "perprice": "per price",
+      "discount": "৳100 OFF",
+      "delivery": "Delivery 1-2 hours"
+    },
+    {
+      "id": 15,
+      "image": "/images/soda-powder.png",
+      "title": "Emon Baking Soda Powde",
+      "price": "৳260",
+      "perprice": "per price",
+      "discount": "৳20 OFF",
+      "delivery": "Delivery 1-2 hours"
+    }
+  ]
+  

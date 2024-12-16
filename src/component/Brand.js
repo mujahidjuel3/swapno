@@ -34,7 +34,7 @@ const Brand = ({ cardData4 }) => {
   };
 
   return (
-    <div className="px-12 top-10 relative p-4">
+    <div className="top-10 relative p-4">
       {/* Left Arrow */}
       <Button
         variant="ghost"
@@ -53,7 +53,7 @@ const Brand = ({ cardData4 }) => {
         {cardData4.map((card, index) => (
           <Card
             key={index}
-            className="flex-shrink-0 shadow-md border-none overflow-hidden rounded-lg"
+            className="flex-shrink-0 shadow-md border overflow-hidden rounded-lg"
             style={{
               width: `calc(100% / ${getVisibleCards()} - 1rem)`,
             }}
@@ -66,9 +66,9 @@ const Brand = ({ cardData4 }) => {
                 height={100}
                 className="h-32 w-full "
               />
-              </div>
+            </div>
               {/* Title on Image */}
-              <div className="px-8 hidden md:flex pt-2">
+            <div className="hidden justify-center items-center md:flex pt-2">
               <div className="bottom-0 md:left-2 sm:left-5 lg:left-7  md:w-28 lg:w-32 w-full sm:w-36 bg-slate-300  sm:border text-center py-1">
                 <p className="text-sm font-medium text-black">{card.title}</p>
               </div>

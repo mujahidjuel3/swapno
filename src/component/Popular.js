@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button"; // ShadCN Button
 import { Card } from "@/components/ui/card"; // ShadCN Card
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Popular = ({ cardData3, addToCart, cartItems }) => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -32,13 +33,13 @@ const Popular = ({ cardData3, addToCart, cartItems }) => {
       behavior: "smooth",
     });
   };
- const getItemQuantity = (id) => {
-  const item = cartItems.find((cartItem) => cartItem.id === id);
-  return item ? item.quantity : 0;
- };
+  const getItemQuantity = (id) => {
+    const item = cartItems.find((cartItem) => cartItem.id === id);
+    return item ? item.quantity : 0;
+  };
 
   return (
-    <div className="relative px-12 py-8">
+    <div className="relative py-8">
       <h1 className="text-center mb-4 uppercase text-3xl font-semibold">
         Popular Items
       </h1>
@@ -53,10 +54,7 @@ const Popular = ({ cardData3, addToCart, cartItems }) => {
       </Button>
 
       {/* card Slider */}
-      <div
-        ref={sliderRef}
-        className="flex overflow-hidden gap-4 items-stretch" 
-      >
+      <div ref={sliderRef} className="flex overflow-hidden gap-4 items-stretch">
         {cardData3.map((card, index) => (
           <Card
             key={index}
@@ -67,6 +65,7 @@ const Popular = ({ cardData3, addToCart, cartItems }) => {
             }}
           >
             <div className="h-full flex flex-col justify-between">
+            <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
               <div>
                 <Image
                   src={card.image}
@@ -89,30 +88,30 @@ const Popular = ({ cardData3, addToCart, cartItems }) => {
                   </div>
                 </div>
               </div>
-              <div className="px-4 lg:px-12 sm:px-20 pb-4 pt-4">
-              {getItemQuantity(card.id) > 0 ? (
-                  <div className="flex items-center bg-yellow-500 justify-between rounded-full">
+              </Link>
+              <div className="flex items-center justify-center pb-4 pt-4">
+                {getItemQuantity(card.id) > 0 ? (
+                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
                     <button
-                      onClick={() =>
-                        addToCart({ ...card, quantity: -1 }, true)
-                      }
-                      className="bg-yellow-500 text-white px-2 py-1 text-xl rounded-full"
+                      onClick={() => addToCart({ ...card, quantity: -1 }, true)}
+                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
                     >
                       -
                     </button>
-                    <span className="font-semibold">{getItemQuantity(card.id)}</span>
+                    <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
+                      {getItemQuantity(card.id)}{" "}
+                      <p className="text-xs font-semibold">in Bag</p>
+                    </span>
                     <button
-                      onClick={() =>
-                        addToCart({ ...card, quantity: 1 }, true)
-                      }
-                      className="bg-yellow-500 text-white px-2 py-1 text-xl rounded-full"
+                      onClick={() => addToCart({ ...card, quantity: 1 }, true)}
+                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
                     >
                       +
                     </button>
                   </div>
                 ) : (
                   <button
-                    className="bg-red-600 text-white text-center px-4 py-1 rounded-full"
+                    className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
                     onClick={() =>
                       addToCart({
                         id: card.id,

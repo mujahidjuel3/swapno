@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button"; // ShadCN Button
-import { Card } from "@/components/ui/card"; // ShadCN Card
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
 
@@ -13,16 +11,16 @@ const CardSlider = ({ cards }) => {
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-    handleResize();
+    handleResize(); // Initial width calculation
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Screen size card
   const getVisibleCards = () => {
-    if (windowWidth >= 1280) return 5; // Desktop
-    if (windowWidth >= 1024) return 4; // Laptop
-    if (windowWidth >= 668) return 2; // Tablet
-    return 1; // Mobile
+    if (windowWidth >= 1920) return 5; // Desktop
+    if (windowWidth >= 1599) return 5; // Laptop
+    if (windowWidth >= 992) return 3; // Tablet
+    if (windowWidth >= 680) return 2; // Mobile
+    return 1; // Extra small devices
   };
 
   const scrollSlider = (direction) => {
@@ -34,56 +32,52 @@ const CardSlider = ({ cards }) => {
   };
 
   return (
-    <div className="sm:pl-[16rem] top-28 md:top-32 relative p-4">
+    <div className="relative py-8 top-28 pl-[1px] md:pl-[296px] bg-gray-100">
       {/* Left Arrow */}
-      <Button
-        variant="ghost"
-        size="icon"
+      <button
         onClick={() => scrollSlider("left")}
-        className="absolute top-1/2 sm:left-[16rem] transform -translate-y-1/2 z-10 bg-yellow-400 rounded-full shadow-md"
+        className="absolute top-1/2 pl-[2px] md:left-[18.5rem] transform -translate-y-1/2 z-10 p-1 bg-yellow-400 rounded-full shadow hover:bg-yellow-500 focus:outline-none"
       >
-        <IoIosArrowBack size={20} />
-      </Button>
+        <IoIosArrowBack size={22} />
+      </button>
 
-      {/* Card Slider */}
+      {/* Slider Container */}
       <div
         ref={sliderRef}
-        className="flex overflow-hidden gap-4"
+        className="flex overflow-x-scroll scrollbar-hide gap-4"
       >
         {cards.map((card, index) => (
-          <Card
+          <div
             key={index}
-            className="flex-shrink-0 shadow-md border-none overflow-hidden rounded-lg"
+            className="flex-shrink-0 rounded-lg shadow-md overflow-hidden"
             style={{
-              width: `calc(100% / ${getVisibleCards()} - 1rem)`, 
+              width: `calc(100% / ${getVisibleCards()} - 1rem)`,
             }}
           >
             <div className="relative">
               <Image
                 src={card.image}
                 alt={card.title}
-                width={100}
-                height={100}
-                className="h-56 w-full object-cover"
+                width={300}
+                height={200}
+                className="h-64 w-full object-cover"
               />
-              {/* Title on Image */}
-              <div className="absolute bottom-0 md:left-2 sm:left-5 lg:left-7  md:w-28 lg:w-36 w-full sm:w-44 bg-yellow-400 sm:rounded-full text-center py-2">
+              {/* Card Title */}
+              <div className="absolute bottom-0 left-0 right-0 bg-yellow-400 text-center py-2">
                 <p className="text-sm font-medium text-black">{card.title}</p>
               </div>
             </div>
-          </Card>
+          </div>
         ))}
       </div>
 
       {/* Right Arrow */}
-      <Button
-        variant="ghost"
-        size="icon"
+      <button
         onClick={() => scrollSlider("right")}
-        className="absolute top-1/2 right-8 transform -translate-y-1/2 z-10 bg-yellow-400 rounded-full shadow-md"
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10 p-1 bg-yellow-400 rounded-full shadow hover:bg-yellow-500 focus:outline-none"
       >
-        <IoIosArrowForward size={20} />
-      </Button>
+        <IoIosArrowForward size={22} />
+      </button>
     </div>
   );
 };

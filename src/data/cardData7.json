@@ -2,84 +2,138 @@
     {
       "id": 88,
       "image": "/images/black-pepper.png",
-      "title": "Shwapno White Pepper Powder 30gm (Jar)",
+      "title": "Shwapno White Pepper Powder",
       "price": "৳94.40",
       "perprice": "per price",
       "discount": "৳23.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     
     {
       "id": 89,
       "image": "/images/turmeric.png",
-      "title": "Pran Turmeric (Holud) Powder 200gm",
+      "title": "Pran Turmeric (Holud) Powder",
       "price": "৳115",
       "perprice": "per price",
       "discount": "৳13 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 90,
       "image": "/images/baking-soda.png",
-      "title": "Emon Baking Soda Powder 120gm",
+      "title": "Emon Baking Soda Powder ",
       "price": "৳154.40",
       "perprice": "per price",
       "discount": "৳15.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 91,
       "image": "/images/peanut-butter.png",
-      "title": "Sundrop Peanut Butter Creamy 462gm",
+      "title": "Sundrop Peanut Butter Creamy ",
       "price": "৳530",
       "perprice": "per price",
       "discount": "৳50 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 92,
       "image": "/images/holud.png",
-      "title": "Bombay Premium (Holud) Powder 200gm",
+      "title": "Bombay Premium (Holud) Powder ",
       "price": "৳115",
       "perprice": "per price",
       "discount": "৳30 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 93,
       "image": "/images/white-pepper.png",
-      "title": "Shwapno White Pepper Powder 30gm (Jar)",
+      "title": "Shwapno White Pepper Powder ",
       "price": "৳94.40",
       "perprice": "per price",
       "discount": "৳23.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 94,
       "image": "/images/butter-honey.png",
-      "title": "Sundrop Peanut Butter Honey Creamy 462gm",
+      "title": "Sundrop Peanut Butter Honey",
       "price": "৳115",
       "perprice": "per price",
       "discount": "৳13 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 95,
       "image": "/images/butter-crunchy.png",
-      "title": "Sundrop Peanut Butter Crunchy 462gm",
+      "title": "Sundrop Peanut Butter Crunchy ",
       "price": "৳154.40",
       "perprice": "per price",
       "discount": "৳15.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 96,
       "image": "/images/almonds.png",
-      "title": "Vochelle Almonds Chocolate 180gm",
+      "title": "Vochelle Almonds Chocolate ",
       "price": "৳530",
       "perprice": "per price",
       "discount": "৳50 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": ["This is very usefull and healthy."],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     }
     
   ]

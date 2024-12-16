@@ -6,7 +6,13 @@
       "price": "৳94.40",
       "perprice": "per price",
       "discount": "৳23.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 28,
@@ -15,7 +21,13 @@
       "price": "৳115",
       "perprice": "per price",
       "discount": "৳13 OFF", 
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 29,
@@ -24,7 +36,13 @@
       "price": "৳70",
       "perprice": "per price",
       "discount": "৳4 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 30,
@@ -33,7 +51,13 @@
       "price": "৳170",
       "perprice": "per price",
       "discount": "৳30 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 31,
@@ -42,7 +66,13 @@
       "price": "৳550",
       "perprice": "per price",
       "discount": "৳100 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 32,
@@ -51,7 +81,13 @@
       "price": "৳260",
       "perprice": "per price",
       "discount": "৳20 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 33,
@@ -60,7 +96,13 @@
       "price": "৳90",
       "perprice": "per price",
       "discount": "৳10 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 34,
@@ -69,7 +111,13 @@
       "price": "৳35",
       "perprice": "per price",
       "discount": "৳5 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 35,
@@ -78,7 +126,13 @@
       "price": "৳275",
       "perprice": "per price",
       "discount": "৳10 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 36,
@@ -87,7 +141,14 @@
       "price": "৳94.40",
       "perprice": "per price",
       "discount": "৳23.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [""],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
+      
     },
     {
       "id": 37,
@@ -96,7 +157,13 @@
       "price": "৳115",
       "perprice": "per price",
       "discount": "৳13 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 38,
@@ -105,7 +172,13 @@
       "price": "৳250",
       "perprice": "per price",
       "discount": "৳50 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 39,
@@ -114,7 +187,13 @@
       "price": "৳170",
       "perprice": "per price",
       "discount": "৳30 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 40,
@@ -123,7 +202,13 @@
       "price": "৳550",
       "perprice": "per price",
       "discount": "৳100 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies","Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 41,
@@ -132,7 +217,13 @@
       "price": "৳260",
       "perprice": "per price",
       "discount": "৳20 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": ["This is very well"],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
         "id": 42,
@@ -141,7 +232,13 @@
         "price": "৳550",
         "perprice": "per price",
         "discount": "৳100 OFF",
-        "delivery": "Delivery 1-2 hours"
+        "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
         "id": 43,
@@ -150,7 +247,13 @@
         "price": "৳260",
         "perprice": "per price",
         "discount": "৳20 OFF",
-        "delivery": "Delivery 1-2 hours"
+        "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods"],
+      "reviews": [],
+      "sku":"SKU: 2808692",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
       }
   ]
   

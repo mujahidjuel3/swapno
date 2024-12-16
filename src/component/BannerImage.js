@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const BannerImage = () => {
   return (
-    <div className="flex px-12 gap-6">
+    <div className="flex gap-6">
       {/* left side */}
       <div className="rounded lg:w-2/5 flex flex-col gap-3">
         <Image

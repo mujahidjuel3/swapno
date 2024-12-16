@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -22,8 +23,10 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
         setCardsToShow(1); // Mobile
       } else if (window.innerWidth < 1024) {
         setCardsToShow(2); // Tablet
+      } else if (window.innerWidth < 1599) {
+        setCardsToShow(3); // Laptop
       } else {
-        setCardsToShow(4); // Laptop/Desktop
+        setCardsToShow(4); // Desktop
       }
     };
 
@@ -59,7 +62,7 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
   };
 
   return (
-    <div className="flex flex-col pt-10 mb-14 px-12 lg:flex-row bg-gray-50 rounded-lg shadow-lg pl-2 md:pl-16 py-8 gap-4">
+    <div className="flex flex-col pt-32 lg:flex-row bg-gray-50 rounded-lg shadow-lg pl-2 md:pl-16 py-8 gap-4">
       {/* Left Section */}
       <div className="relative lg:w-1/3 flex justify-center items-end">
         <Image
@@ -76,7 +79,7 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
         </div>
       </div>
       {/* Right Section */}
-      <div className="lg:w-2/3 border-r bg-gray-200 pt-5 px-4 py-2 rounded-lg">
+      <div className="lg:w-2/3 border-r bg-gray-200 pt-5 px-4 py-3 rounded-lg">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           {/* Header Title Slider */}
@@ -122,6 +125,8 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
                   className="flex-shrink-0 p-2 bg-white rounded-lg shadow flex flex-col items-center justify-between"
                   style={{ width: `${99 / cardsToShow}%`, minHeight: "250px" }} // Ensures consistent size
                 >
+                  <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
+                  <div>
                   <Image
                     src={card.image}
                     alt={card.title}
@@ -138,43 +143,48 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
                   </p>
                   <p className="text-gray-500 text-xs">{card.discount}</p>
                   <p className="text-xs text-gray-600">{card.delivery}</p>
+                  </div>
+                  </Link>
 
-                  {getItemQuantity(card.id) > 0 ? (
-                    <div className="flex items-center bg-yellow-500 justify-between w-full rounded-full">
+                  <div className="flex items-center justify-center pb-4 pt-4">
+                    {getItemQuantity(card.id) > 0 ? (
+                      <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
+                        <button
+                          onClick={() =>
+                            addToCart({ ...card, quantity: -1 }, true)
+                          }
+                          className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                        >
+                          -
+                        </button>
+                        <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
+                          {getItemQuantity(card.id)}{" "}
+                          <p className="text-xs font-semibold">in Bag</p>
+                        </span>
+                        <button
+                          onClick={() =>
+                            addToCart({ ...card, quantity: 1 }, true)
+                          }
+                          className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                        >
+                          +
+                        </button>
+                      </div>
+                    ) : (
                       <button
+                        className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
                         onClick={() =>
-                          addToCart({ ...card, quantity: -1 }, true)
+                          addToCart({
+                            id: card.id,
+                            name: card.title,
+                            price: parseFloat(card.price.replace("৳", "")),
+                          })
                         }
-                        className="bg-yellow-500 text-white px-2 py-1 text-xl rounded-full"
                       >
-                        -
+                        + Add to Bag
                       </button>
-                      <span className="font-semibold">
-                        {getItemQuantity(card.id)}
-                      </span>
-                      <button
-                        onClick={() =>
-                          addToCart({ ...card, quantity: 1 }, true)
-                        }
-                        className="bg-yellow-500 text-white px-2 py-1 text-xl rounded-full"
-                      >
-                        +
-                      </button>
-                    </div>
-                  ) : (
-                    <button
-                      className="bg-red-600 text-white text-center px-4 py-1 rounded-full"
-                      onClick={() =>
-                        addToCart({
-                          id: card.id,
-                          name: card.title,
-                          price: parseFloat(card.price.replace("৳", "")),
-                        })
-                      }
-                    >
-                      + Add to Bag
-                    </button>
-                  )}
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

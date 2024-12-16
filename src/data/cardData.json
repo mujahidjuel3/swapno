@@ -2,11 +2,17 @@
     {
       "id": 1,
       "image": "/images/black-pepper.png",
-      "title": "Shwapno White Pepper Powder",
+      "title": "White Pepper Powder",
       "price": "৳94.40",
       "perprice": "per price",
       "discount": "৳23.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808532",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 2,
@@ -15,7 +21,13 @@
       "price": "৳115",
       "perprice": "per price",
       "discount": "৳13 OFF", 
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808531",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 3,
@@ -24,7 +36,13 @@
       "price": "৳70",
       "perprice": "per price",
       "discount": "৳4 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808512",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 4,
@@ -33,7 +51,13 @@
       "price": "৳170",
       "perprice": "per price",
       "discount": "৳30 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808032",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 5,
@@ -42,7 +66,13 @@
       "price": "৳550",
       "perprice": "per price",
       "discount": "৳100 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2800532",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 6,
@@ -51,7 +81,13 @@
       "price": "৳260",
       "perprice": "per price",
       "discount": "৳20 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2802532",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 7,
@@ -60,16 +96,28 @@
       "price": "৳90",
       "perprice": "per price",
       "discount": "৳10 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808432",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 8,
       "image": "/images/ginger-powder.png",
-      "title": "Shwapno Ginger Powder 50gm",
+      "title": "Ginger Powder 50gm",
       "price": "৳35",
       "perprice": "per price",
       "discount": "৳5 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808432",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 9,
@@ -78,7 +126,13 @@
       "price": "৳275",
       "perprice": "per price",
       "discount": "৳10 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 10,
@@ -87,25 +141,43 @@
       "price": "৳94.40",
       "perprice": "per price",
       "discount": "৳23.60 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808512",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 11,
       "image": "/images/radhuni.png",
-      "title": "Pran Turmeric (Holud) Powder",
+      "title": "Pran Turmeric Powder",
       "price": "৳115",
       "perprice": "per price",
       "discount": "৳13 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808534",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 12,
       "image": "/images/radhuni-morich.png",
-      "title": "Radhuni Chilli (Morich) Powder",
+      "title": "Radhuni Chilli Powder",
       "price": "৳250",
       "perprice": "per price",
       "discount": "৳50 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2809532",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 13,
@@ -114,16 +186,28 @@
       "price": "৳170",
       "perprice": "per price",
       "discount": "৳30 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808562",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 14,
       "image": "/images/white-pepper.png",
-      "title": "Shwapno White Pepper Powder",
+      "title": "White Pepper Powder",
       "price": "৳550",
       "perprice": "per price",
       "discount": "৳100 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": ["Cookies", "Baked Goods", "Snack Biscuits"],
+      "reviews": [],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
       "id": 15,
@@ -132,7 +216,13 @@
       "price": "৳260",
       "perprice": "per price",
       "discount": "৳20 OFF",
-      "delivery": "Delivery 1-2 hours"
+      "delivery": "Delivery 1-2 hours",
+      "tags": [],
+      "reviews": ["This is Very good"],
+      "sku":"SKU: 2808598",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
     }
   ]
   

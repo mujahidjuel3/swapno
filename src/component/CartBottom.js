@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { RiShoppingBag2Fill, RiCloseFill } from "react-icons/ri";
+import { RiCloseFill } from "react-icons/ri";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { CiShoppingBasket } from "react-icons/ci";
+import { CiShoppingBasket, CiDeliveryTruck, CiLocationOn } from "react-icons/ci";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
-const CartSidebar = ({ cartItems, setCartItems }) => {
+const CartBottom = ({ cartItems, setCartItems }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCart = () => setIsOpen(!isOpen);
@@ -25,49 +25,59 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
     );
   };
 
-  // Calculate Total Price (Ensure Numbers are Used)
-  const totalPrice = (cartItems || []).reduce((acc, item) => {
-    const itemPrice = Number(item.price) || 0; // Convert price to a number
+  const totalPrice = cartItems.reduce((acc, item) => {
+    const itemPrice = Number(item.price) || 0;
     const itemQuantity = Number(item.quantity) || 0;
     return acc + itemPrice * itemQuantity;
   }, 0);
 
   return (
     <>
-      {/* Sidebar Button (Hide on Mobile) */}
-      <div className="hidden lg:flex fixed top-1/2 right-0 z-50 transform -translate-y-1/2">
-        <div
-          onClick={toggleCart}
-          className="relative h-36 w-28 flex items-center justify-center rounded cursor-pointer"
-        >
-          <RiShoppingBag2Fill className="h-24 w-20 text-red-600" />
-          <div className="absolute bottom-2 flex flex-col pb-8 items-center">
-            <p className="bg-red-600 text-white px-2 rounded text-xs font-semibold">
-            {cartItems.length} Items
-            </p>
-            <p className="bg-black text-white px-1 w-full text-xs font-semibold">
-              ৳{totalPrice.toFixed(2)}
-            </p>
+      {/* Fixed Cart Bottom (Mobile Only) */}
+      <div className="fixed bottom-0 left-0 w-full z-50 lg:hidden">
+        <div className="flex justify-between items-center px-4 py-2 bg-white shadow-lg">
+          {/* Location */}
+          <button className="flex items-center text-xs space-x-2">
+            <CiLocationOn className="text-lg" />
+            <span>Select your location</span>
+          </button>
+
+          {/* Cart Icon */}
+          <div
+            onClick={toggleCart}
+            className="relative flex items-center justify-center bottom-7"
+          >
+            
+            <CiShoppingBasket className="h-10 w-10 text-white bg-red-600 rounded-full p-2 cursor-pointer" />
+           
+            <div className="absolute bottom-8 right-0 bg-gray-600 text-white rounded-full text-xs px-1">
+              {cartItems.length}
+            </div>
           </div>
+
+          {/* Delivery Time */}
+          <button className="flex items-center text-xs space-x-2">
+            <CiDeliveryTruck className="text-lg" />
+            <span>Today: 12PM - 1PM</span>
+          </button>
         </div>
       </div>
 
-      {/* Sidebar Content */}
       {isOpen && (
-        <div className="hidden lg:block fixed md:top-[64px] xl:top-[64px] right-0 h-[27rem] w-[22rem] bg-white shadow-lg z-50">
+        <div className="fixed top-[96px] right-0 h-[27rem] w-[21rem] bg-white shadow-lg z-50">
           <div className="flex items-center bg-yellow-400 justify-between p-4 border-b">
             <div className="flex gap-1 items-center justify-center">
-              <CiShoppingBasket className="text-2xl text-red-600" />
+              <CiShoppingBasket  className="text-2xl text-red-600" />
               <p className="bg-red-600 text-white px-2 rounded text-xs font-semibold">
-                {cartItems.length} Items
+              {cartItems.length} Items
               </p>
             </div>
-            <div>
-              <RiCloseFill
-                onClick={toggleCart}
-                className="text-2xl text-gray-600 cursor-pointer"
-              />
-            </div>
+             <div>
+             <RiCloseFill
+              onClick={toggleCart}
+              className="text-2xl text-gray-600 cursor-pointer"
+            />
+             </div>
           </div>
 
           <div className="p-4 flex flex-col gap-4 overflow-y-auto h-[calc(100%-140px)]">
@@ -83,7 +93,7 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button
+                <button
                     onClick={() => handleRemove(item.id)}
                     className="px-2 py-1 text-red-600"
                   >
@@ -92,16 +102,16 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
                   <button
                     onClick={() => updateQuantity(item.id, -1)}
                     disabled={item.quantity === 1}
-                    className="bg-gray-200 px-2 py-2 shadow rounded-full"
+                    className="bg-gray-200 px-2 py-2 shadow  rounded-full"
                   >
-                    <FiMinus className="text-xl text-red-600" />
+                    <FiMinus className="text-xl text-red-600"/>
                   </button>
                   <span>{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, 1)}
-                    className="bg-gray-200 px-2 py-2 shadow rounded-full"
+                    className="bg-gray-200 px-2 py-2 shadow  rounded-full"
                   >
-                    <FiPlus className="text-xl text-red-600" />
+                    <FiPlus className="text-xl text-red-600"/>
                   </button>
                 </div>
               </div>
@@ -111,16 +121,16 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
           <div className="pt-2 border-t">
             <div className="px-4">
               <div className="flex max-w-xs rounded-full border-2">
-                <input
-                  type="text"
-                  placeholder="Type your coupon code"
-                  className="relative w-full py-1 px-2 text-sm text-black rounded focus:outline-none"
-                />
-                <button className="absolute bg-red-600 px-2 py-1 right-4 items-center justify-center pr-9 rounded-full border-2">
-                  <p className="text-xs">Apply coupon</p>
-                </button>
-              </div>
-            </div>
+              <input
+                type="text"
+                placeholder="Type your coupon code"
+                className="relative w-full py-1 px-2 text-sm text-black rounded focus:outline-none"
+               />
+               <button className="absolute bg-red-600 px-2 py-1 right-4 items-center justify-center pr-9 rounded-full border-2">
+                <p className="text-xs">Apply coupon</p>
+               </button>
+             </div>
+             </div>
             <div className="flex justify-between pt-1 px-4 font-semibold text-lg">
               <span>Total:</span>
               <span>৳{totalPrice.toFixed(2)}</span>
@@ -135,4 +145,4 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
   );
 };
 
-export default CartSidebar;
+export default CartBottom;

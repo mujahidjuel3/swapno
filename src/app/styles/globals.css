@@ -20,6 +20,6 @@
   }
 
   body {
-    @apply bg-background text-foreground; /* Apply background and text colors */
+    @apply font-sans overflow-x-hidden;
   }
 }
