@@ -92,7 +92,7 @@ const Featured = ({ cardData2, addToCart, cartItems }) => {
               </Link>
               <div className="flex items-center justify-center pb-4 pt-4">
                 {getItemQuantity(card.id) > 0 ? (
-                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
+                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 md:w-36">
                     <button
                       onClick={() => addToCart({ ...card, quantity: -1 }, true)}
                       className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"

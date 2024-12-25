@@ -1,4 +1,6 @@
 "use client";
+
+
 import { useState, useEffect } from "react";
 import { LiaCommentDollarSolid } from "react-icons/lia";
 import { LuHelpCircle } from "react-icons/lu";
@@ -53,81 +55,199 @@ const NavbarModal = () => {
       subItems: [
         {
           name: "Meat & Fish",
-          subSubItems: ["Beef", "Chicken", "Fish"],
+          subSubItems: [
+            { id: "1-1-1", name: "Beef" },
+            { id: "1-1-2", name: "Chicken" },
+            { id: "1-1-3", name: "Fish" },
+          ],
         },
         {
           name: "Fruits & Vegetables",
-          subSubItems: ["Apples", "Carrots", "Potatoes"],
+          subSubItems: [
+            { id: "1-2-1", name: "Apples" },
+            { id: "1-2-2", name: "Carrots" },
+            { id: "1-2-3", name: "Potatoes" },
+          ],
         },
-        { name: "Eggs", subSubItems: ["Organic Eggs", "Regular Eggs"] },
-        { name: "Baking Needs", subSubItems: ["Flour", "Sugar", "Yeast"] },
+        {
+          name: "Eggs",
+          subSubItems: [
+            { id: "1-3-1", name: "Eggs" },
+            
+          ],
+        },
+        {
+          name: "Baking Needs",
+          subSubItems: [
+            { id: "1-4-1", name: "Flour" },
+            { id: "1-4-2", name: "Sugar" },
+            { id: "1-4-3", name: "Yeast" },
+          ],
+        },
       ],
     },
     {
       name: "Baby Food & Care",
       icon: <FaBaby />,
       subItems: [
-        { name: "Baby Formula", subSubItems: ["Brand A", "Brand B"] },
-        { name: "Baby Snacks", subSubItems: ["Cookies", "Biscuits"] },
+        {
+          name: "Baby Formula",
+          subSubItems: [
+            { id: "2-1-1", name: "Brand A" },
+            { id: "2-1-2", name: "Brand B" },
+          ],
+        },
+        {
+          name: "Baby Snacks",
+          subSubItems: [
+            { id: "2-2-1", name: "Cookies" },
+            { id: "2-2-2", name: "Biscuits" },
+          ],
+        },
       ],
     },
     {
       name: "Home Cleaning",
       icon: <FaBroom />,
       subItems: [
-        { name: "Laundry", subSubItems: ["Detergents", "Softeners"] },
-        { name: "Cleaning Tools", subSubItems: ["Mops", "Brushes"] },
+        {
+          name: "Laundry",
+          subSubItems: [
+            { id: "3-1-1", name: "Detergents" },
+            { id: "3-1-2", name: "Softeners" },
+          ],
+        },
+        {
+          name: "Cleaning Tools",
+          subSubItems: [
+            { id: "3-2-1", name: "Mops" },
+            { id: "3-2-2", name: "Brushes" },
+          ],
+        },
       ],
     },
     {
       name: "Beauty & Health",
       icon: <FaSpa />,
       subItems: [
-        { name: "Makeup", subSubItems: ["Lipstick", "Foundation"] },
-        { name: "Skincare", subSubItems: ["Creams", "Lotions"] },
+        {
+          name: "Makeup",
+          subSubItems: [
+            { id: "4-1-1", name: "Lipstick" },
+            { id: "4-1-2", name: "Foundation" },
+          ],
+        },
+        {
+          name: "Skincare",
+          subSubItems: [
+            { id: "4-2-1", name: "Creams" },
+            { id: "4-2-2", name: "Lotions" },
+          ],
+        },
       ],
     },
     {
       name: "Fashion & Lifestyle",
       icon: <FaTshirt />,
       subItems: [
-        { name: "Men", subSubItems: ["Shirts", "Pants"] },
-        { name: "Women", subSubItems: ["Dresses", "Jewelry"] },
+        {
+          name: "Men",
+          subSubItems: [
+            { id: "5-1-1", name: "Shirts" },
+            { id: "5-1-2", name: "Pants" },
+          ],
+        },
+        {
+          name: "Women",
+          subSubItems: [
+            { id: "5-2-1", name: "Dresses" },
+            { id: "5-2-2", name: "Jewelry" },
+          ],
+        },
       ],
     },
     {
       name: "Home & Kitchen",
       icon: <FaCouch />,
       subItems: [
-        { name: "Furniture", subSubItems: ["Chairs", "Tables"] },
-        { name: "Kitchenware", subSubItems: ["Pots", "Pans"] },
+        {
+          name: "Furniture",
+          subSubItems: [
+            { id: "6-1-1", name: "Chairs" },
+            { id: "6-1-2", name: "Tables" },
+          ],
+        },
+        {
+          name: "Kitchenware",
+          subSubItems: [
+            { id: "6-2-1", name: "Pots" },
+            { id: "6-2-2", name: "Pans" },
+          ],
+        },
       ],
     },
     {
       name: "Stationeries",
       icon: <FaPencilAlt />,
       subItems: [
-        { name: "Office Supplies", subSubItems: ["Pens", "Paper"] },
-        { name: "School Supplies", subSubItems: ["Notebooks", "Erasers"] },
+        {
+          name: "Office Supplies",
+          subSubItems: [
+            { id: "7-1-1", name: "Pens" },
+            { id: "7-1-2", name: "Paper" },
+          ],
+        },
+        {
+          name: "School Supplies",
+          subSubItems: [
+            { id: "7-2-1", name: "Notebooks" },
+            { id: "7-2-2", name: "Erasers" },
+          ],
+        },
       ],
     },
     {
       name: "Toys & Sports",
       icon: <FaGamepad />,
       subItems: [
-        { name: "Outdoor Games", subSubItems: ["Balls", "Rackets"] },
-        { name: "Indoor Games", subSubItems: ["Board Games", "Puzzles"] },
+        {
+          name: "Outdoor Games",
+          subSubItems: [
+            { id: "8-1-1", name: "Balls" },
+            { id: "8-1-2", name: "Rackets" },
+          ],
+        },
+        {
+          name: "Indoor Games",
+          subSubItems: [
+            { id: "8-2-1", name: "Board Games" },
+            { id: "8-2-2", name: "Puzzles" },
+          ],
+        },
       ],
     },
     {
       name: "Gadget",
       icon: <FaMobileAlt />,
       subItems: [
-        { name: "Smartphones", subSubItems: ["Android", "iOS"] },
-        { name: "Accessories", subSubItems: ["Cables", "Chargers"] },
+        {
+          name: "Smartphones",
+          subSubItems: [
+            { id: "9-1-1", name: "Android" },
+            { id: "9-1-2", name: "iOS" },
+          ],
+        },
+        {
+          name: "Accessories",
+          subSubItems: [
+            { id: "9-2-1", name: "Cables" },
+            { id: "9-2-2", name: "Chargers" },
+          ],
+        },
       ],
     },
   ];
+  
 
   return (
     <header
@@ -168,13 +288,13 @@ const NavbarModal = () => {
       </div>
 
       {/* Modal for Desktop/Laptop/Tablets */}
+      
       {isMainModalOpen && !isMobile && (
         <div
           className="absolute top-full hidden md:flex pl-9 xl:pl-[150px] 2xl:pl-[224px] rounded-lg"
           onMouseLeave={hideModal}
         >
           <div className="grid grid-cols-3">
-            {/* Main Menu */}
             <div className="bg-gray-100 w-[14rem] md:w-[18rem]">
               <ul>
                 {mainMenuItems.map((item, index) => (
@@ -193,7 +313,6 @@ const NavbarModal = () => {
               </ul>
             </div>
 
-            {/* Sub Menu */}
             {activeMainItem && (
               <div className="bg-gray-100">
                 <ul>
@@ -211,13 +330,12 @@ const NavbarModal = () => {
               </div>
             )}
 
-            {/* Sub-Sub Menu */}
             {activeSubItem && (
               <div className="bg-gray-100">
                 <ul>
-                  {activeSubItem.subSubItems.map((subSubItem, index) => (
-                    <li key={index} className="p-4 hover:bg-blue-600 rounded">
-                      {subSubItem}
+                  {activeSubItem.subSubItems.map((subSubItem) => (
+                    <li key={subSubItem.name} className="p-4 hover:bg-blue-600 rounded">
+                      <Link href={`/filter/${subSubItem.name}`}>{subSubItem.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -227,11 +345,12 @@ const NavbarModal = () => {
         </div>
       )}
 
-      {/* Modal for Mobile */}
       {isMainModalOpen && isMobile && (
         <div className="fixed inset-0 flex top-24 left-8">
-          <div className="rounded-lg w-[17rem] overflow-hidden bg-gray-100" onMouseLeave={hideModal}>
-            {/* Mobile view content */}
+          <div
+            className="rounded-lg w-[17rem] overflow-hidden bg-gray-100"
+            onMouseLeave={hideModal}
+          >
             {!activeMainItem && !activeSubItem && (
               <div>
                 <h2 className="text-lg font-bold p-4">Main Menu</h2>
@@ -256,7 +375,6 @@ const NavbarModal = () => {
               </div>
             )}
 
-            {/* Sub-menu */}
             {activeMainItem && !activeSubItem && (
               <div>
                 <button
@@ -281,8 +399,8 @@ const NavbarModal = () => {
               </div>
             )}
 
-            {/* Sub-Sub-menu */}
             {activeSubItem && (
+              
               <div>
                 <button
                   className="absolute top-11 left-0 text-xl"
@@ -291,17 +409,22 @@ const NavbarModal = () => {
                   <BsArrowLeft />
                 </button>
                 <h2 className="text-lg font-bold p-4">{activeSubItem.name}</h2>
+                
                 <ul className="divide-y">
-                  {activeSubItem.subSubItems.map((subSubItem, index) => (
+                  {activeSubItem.subSubItems.map((subSubItem) => (
+          
                     <li
-                      key={index}
+                      key={subSubItem.name}
                       className="p-4 hover:bg-indigo-600 rounded cursor-pointer"
                     >
-                      {subSubItem}
-                    </li>
+                      <Link href={`/filter/${subSubItem.name}`}>{subSubItem.name}</Link>
+                      
+                    </li> 
                   ))}
                 </ul>
+             
               </div>
+            
             )}
           </div>
         </div>

@@ -25,6 +25,7 @@ import CartSidebar from "../component/CartSidebar"
 import CartBottom from "../component/CartBottom";
 
 
+
 import cards from "../data/cards.json";
 import cardData from "../data/cardData.json";
 import cardData1 from "../data/cardData1.json";
@@ -34,16 +35,17 @@ import cardData4 from "../data/cardData4.json";
 import cardData5 from "../data/cardData5.json";
 import cardData6 from "../data/cardData6.json";
 import cardData7 from "../data/cardData7.json";
+import products from "../data/products.json";
 
 interface CartItem {
-  id: string | number; // ID হিসাবে string বা number হতে পারে
-  quantity: number;    // quantity সবসময় number হবে
+  id: string | number; 
+  quantity: number;
 }
 
 interface Item {
-  id: string | number; // ID হিসাবে string বা number হতে পারে
-  name: string;        // অন্য যেকোনো আইটেম ডিটেইলস (প্রয়োজনে যোগ করা যাবে)
-  quantity?: number;   // Optional টাইপ: থাকতেও পারে না-ও থাকতে পারে
+  id: string | number; 
+  name: string;        
+  quantity?: number;   
 }
 function MyApp() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);

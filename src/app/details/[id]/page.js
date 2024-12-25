@@ -1,4 +1,3 @@
-// src/app/details/[id]/page.js
 "use client";
 import { useState, useEffect } from "react";
 import { notFound } from "next/navigation"; // Handle 404
@@ -15,6 +14,17 @@ import cardData5 from "@/data/cardData5.json";
 import cardData3 from "@/data/cardData3.json";
 import cardData6 from "@/data/cardData6.json";
 import cardData7 from "@/data/cardData7.json";
+import products from "@/data/products.json";
+import products1 from "@/data/products1.json";
+import products2 from "@/data/products2.json";
+import products3 from "@/data/products3.json";
+import products4 from "@/data/products4.json";
+import products5 from "@/data/products5.json";
+import products6 from "@/data/products6.json";
+import products7 from "@/data/products7.json";
+import products8 from "@/data/products8.json";
+import products9 from "@/data/products9.json";
+import products10 from "@/data/products10.json";
 import Image from "next/image";
 import { Card } from "@/components/ui/card"; // ShadCN Card
 import { Button } from "@/components/ui/button"; // ShadCN Button
@@ -36,6 +46,17 @@ const combinedData = [
   ...cardData5,
   ...cardData6,
   ...cardData7,
+  ...products,
+  ...products1,
+  ...products2,
+  ...products3,
+  ...products4,
+  ...products5,
+  ...products6,
+  ...products7,
+  ...products8,
+  ...products9,
+  ...products10,
 ];
 
 export default function ProductDetailsPage({ params }) {
@@ -60,25 +81,47 @@ export default function ProductDetailsPage({ params }) {
   if (!product) notFound();
 
   // Add to cart functionality
-  const addToCart = (product, increment = 1) => {
-    setCartItems((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + increment }
-            : item
-        );
-      }
-      return [...prevCart, { ...product, quantity: 1 }];
-    });
-  };
+  // Add to cart functionality
+const addToCart = (product, increment = 1) => {
+  setCartItems((prevCart) => {
+    const existingItem = prevCart.find((item) => item.id === product.id);
 
-  // Get item quantity from cart
-  const getItemQuantity = (id) => {
-    const item = cartItems.find((cartItem) => cartItem.id === id);
-    return item ? item.quantity : 0;
-  };
+    if (existingItem) {
+      return prevCart.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + increment }
+          : item
+      );
+    }
+
+    // Correctly parse the price and add a new item
+    const price = parseFloat(
+      typeof product.price === "string" ? product.price.replace(/[^\d.]/g, "") : product.price
+    );
+
+    return [...prevCart, { ...product, quantity: 1, price: price }];
+  });
+};
+
+// Handle minus quantity properly
+const updateCartItemQuantity = (productId, increment) => {
+  setCartItems((prevCart) =>
+    prevCart
+      .map((item) =>
+        item.id === productId
+          ? { ...item, quantity: item.quantity + increment }
+          : item
+      )
+      .filter((item) => item.quantity > 0) // Remove items if quantity goes below 1
+  );
+};
+
+// Get item quantity from cart
+const getItemQuantity = (id) => {
+  const item = cartItems.find((cartItem) => cartItem.id === id);
+  return item ? item.quantity : 0;
+};
+
 
   return (
     <div>
@@ -131,42 +174,38 @@ export default function ProductDetailsPage({ params }) {
               </div>
 
               <div className="flex items-center justify-center pb-4 pt-4">
-                {getItemQuantity(product.id) > 0 ? (
-                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32">
-                    <button
-                      onClick={() =>
-                        addToCart({ ...product, quantity: -1 }, true)
-                      }
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
-                    >
-                      -
-                    </button>
-                    <span className="font-semibold">
-                      {getItemQuantity(product.id)}
-                    </span>
-                    <button
-                      onClick={() =>
-                        addToCart({ ...product, quantity: 1 }, true)
-                      }
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
-                    >
-                      +
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() =>
-                      addToCart({
-                        id: product.id,
-                        name: product.title,
-                        price: parseFloat(product.price.replace("৳", "")),
-                      })
-                    }
-                    className="bg-red-600 text-white px-4 py-2 rounded-full text-sm"
-                  >
-                    + Add to Bag
-                  </button>
-                )}
+              {getItemQuantity(product.id) > 0 ? (
+  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32">
+    <button
+      onClick={() => updateCartItemQuantity(product.id, -1)}
+      className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
+    >
+      -
+    </button>
+    <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
+      {getItemQuantity(product.id)} <p className="text-xs font-semibold">in Bag</p>
+    </span>
+    <button
+      onClick={() => updateCartItemQuantity(product.id, 1)}
+      className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
+    >
+      +
+    </button>
+  </div>
+) : (
+  <button
+    onClick={() =>
+      addToCart({
+        id: product.id,
+        name: product.title,
+        price: product.price, // No need for manual conversion here
+      })
+    }
+    className="bg-red-600 text-white px-4 py-2 rounded-full text-sm"
+  >
+    + Add to Bag
+  </button>
+)}
               </div>
             </div>
 
@@ -316,4 +355,4 @@ export default function ProductDetailsPage({ params }) {
       <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
     </div>
   );
-}
+}  

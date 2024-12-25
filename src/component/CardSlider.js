@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { useState, useEffect, useRef } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
@@ -18,7 +19,7 @@ const CardSlider = ({ cards }) => {
   const getVisibleCards = () => {
     if (windowWidth >= 1920) return 5; // Desktop
     if (windowWidth >= 1599) return 5; // Laptop
-    if (windowWidth >= 992) return 3; // Tablet
+    if (windowWidth >= 992) return 4; // Tablet
     if (windowWidth >= 680) return 2; // Mobile
     return 1; // Extra small devices
   };
@@ -46,14 +47,16 @@ const CardSlider = ({ cards }) => {
         ref={sliderRef}
         className="flex overflow-x-scroll scrollbar-hide gap-4"
       >
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <div
-            key={index}
+            key={card.title}
             className="flex-shrink-0 rounded-lg shadow-md overflow-hidden"
             style={{
               width: `calc(100% / ${getVisibleCards()} - 1rem)`,
             }}
           >
+            <Link
+            href={`/filter/${card.title}`}>
             <div className="relative">
               <Image
                 src={card.image}
@@ -67,6 +70,7 @@ const CardSlider = ({ cards }) => {
                 <p className="text-sm font-medium text-black">{card.title}</p>
               </div>
             </div>
+            </Link>
           </div>
         ))}
       </div>

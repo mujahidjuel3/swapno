@@ -1,4 +1,6 @@
 "use client";
+
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { FaFacebookSquare, FaYoutube, FaPlus, FaMinus } from "react-icons/fa";
@@ -28,22 +30,22 @@ const Footer = () => {
         {/* Second Section */}
         <div className="space-y-2">
           <h1 className="font-semibold">Information</h1>
-          <p>Office Address</p>
-          <p>Shipping & returns</p>
-          <p>About us</p>
-          <p>Terms & Condition</p>
+          <Link href="/address"><p className="hover:text-blue-600">Office Address</p></Link>
+          <p className="hover:text-blue-600">Shipping & returns</p>
+          <p className="hover:text-blue-600">About us</p>
+          <p className="hover:text-blue-600">Terms & Condition</p>
         </div>
 
         {/* Third Section */}
         <div className="space-y-1.5">
           <h1 className="font-semibold">Customer Service</h1>
-          <p>Contact</p>
+         <Link href="/contact"><p className="hover:text-blue-600">Contact</p></Link> 
         </div>
 
         {/* Fourth Section */}
         <div>
           <h1 className="font-semibold">My Account</h1>
-          <p>Account Details</p>
+          <p className="hover:text-blue-600">Account Details</p>
         </div>
 
         {/* Fifth Section */}
@@ -88,10 +90,10 @@ const Footer = () => {
           </div>
           {showInfo && (
             <div className="space-y-2">
-              <p>Office Address</p>
-              <p>Shipping & returns</p>
-              <p>About us</p>
-              <p>Terms & Condition</p>
+              <p className="hover:text-blue-600">Office Address</p>
+              <p className="hover:text-blue-600">Shipping & returns</p>
+              <p className="hover:text-blue-600">About us</p>
+              <p className="hover:text-blue-600">Terms & Condition</p>
             </div>
           )}
         </div>
@@ -105,7 +107,7 @@ const Footer = () => {
           </div>
           {showService && (
             <div className="space-y-2">
-              <p>Contact</p>
+            <Link href="/contact"><p className="hover:text-blue-600">Contact</p></Link>
             </div>
           )}
         </div>
@@ -117,7 +119,7 @@ const Footer = () => {
               {showAccount ? <FaMinus /> : <FaPlus />}
             </button>
           </div>
-          {showAccount && <div className="space-y-2"><p>Account Details</p></div>}
+          {showAccount && <div className="space-y-2"><p className="hover:text-blue-600">Account Details</p></div>}
         </div>
 
         {/* Fifth Section */}
