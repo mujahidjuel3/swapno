@@ -35,7 +35,7 @@ import cardData4 from "../data/cardData4.json";
 import cardData5 from "../data/cardData5.json";
 import cardData6 from "../data/cardData6.json";
 import cardData7 from "../data/cardData7.json";
-import products from "../data/products.json";
+
 
 interface CartItem {
   id: string | number; 
