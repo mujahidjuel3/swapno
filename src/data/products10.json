@@ -18,6 +18,7 @@
       "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
+      "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1593a733cb673c8900cab_Cereals.png",
       "id": 184,
       "image": "/images/Cereals2.png",
       "title": "Special K Original",
@@ -35,6 +36,7 @@
       "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
+      "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1593a733cb673c8900cab_Cereals.png",
       "id": 185,
       "image": "/images/Cereals3.png",
       "title": "Kellogg's Corn Flakes",
@@ -53,6 +55,7 @@
       "description": "Delicious and crisp buttery toast perfect for tea time!"
     },
     {
+      "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1593a733cb673c8900cab_Cereals.png",
       "id": 186,
       "image": "/images/cereals4.png",
       "title": "Chocos Variety Combo ",
@@ -90,6 +93,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603c4928d0c53f5d0a978c0_Chips%20&%20Pretzels%20.png",
         "id": 188,
         "image": "/images/chips2.png",
         "title": "Bombay Sweet Chanachur",
@@ -107,6 +111,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603c4928d0c53f5d0a978c0_Chips%20&%20Pretzels%20.png",
         "id": 189,
         "image": "/images/chips3.png",
         "title": "Bombay Sweets Mr.Twist 20",
@@ -125,6 +130,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603c4928d0c53f5d0a978c0_Chips%20&%20Pretzels%20.png",
         "id": 190,
         "image": "/images/chips4.png",
         "title": "Bombay Sweets Potato",
@@ -162,6 +168,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a9bf5b1669b15f0a2b41_Sauces.png",
         "id": 192,
         "image": "/images/sauces12.png",
         "title": "Pran Hot Tomato Sauce",
@@ -179,6 +186,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a9bf5b1669b15f0a2b41_Sauces.png",
         "id": 193,
         "image": "/images/sauces13.png",
         "title": "Pran BBQ Sauce 280gm",
@@ -197,6 +205,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a9bf5b1669b15f0a2b41_Sauces.png",
         "id": 194,
         "image": "/images/sauces14.png",
         "title": "Pran Tomato Ketchup",
@@ -216,6 +225,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a9bf5b1669b15f0a2b41_Sauces.png",
         "id": 195,
         "image": "/images/sauces15.png",
         "title": "Pran Hot Tomato Sauce",
@@ -234,6 +244,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a9bf5b1669b15f0a2b41_Sauces.png",
         "id": 196,
         "image": "/images/sauces16.png",
         "title": "Ruchi Garlic Sauce 350gm",
@@ -271,6 +282,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f7d5b0115075f231e8bc92_Powder%20Milk.png",
         "id": 198,
         "image": "/images/milk2.png",
         "title": "Full Cream Milk Powder",
@@ -288,6 +300,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f7d5b0115075f231e8bc92_Powder%20Milk.png",
         "id": 199,
         "image": "/images/milk3.png",
         "title": "Gold Low Fat Milk Powder",
@@ -306,6 +319,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f7d5b0115075f231e8bc92_Powder%20Milk.png",
         "id": 200,
         "image": "/images/milk4.png",
         "title": " Chocolate Milk Powder",
@@ -343,6 +357,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1526352799b9600c3708a_Bread.png",
         "id": 202,
         "image": "/images/breads2.png",
         "title": "Pran All Time White Bread",
@@ -360,6 +375,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1526352799b9600c3708a_Bread.png",
         "id": 203,
         "image": "/images/breads3.png",
         "title": "Tasty Treat Butter Bun",
@@ -378,6 +394,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1526352799b9600c3708a_Bread.png",
         "id": 204,
         "image": "/images/breads4.png",
         "title": "Coconut Milk Filling Bun",
@@ -437,6 +454,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f13bcd52799b9600c0ee30_Baking%20Needs.png",
         "id": 207,
         "image": "/images/baking2.png",
         "title": "Foster Clark's Baking Powder",
@@ -474,6 +492,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f7cfb4115075f231e851f8_Butter.png",
         "id": 209,
         "image": "/images/butter2.png",
         "title": "Pran Premium Butter",
@@ -491,6 +510,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f7cfb4115075f231e851f8_Butter.png",
         "id": 210,
         "image": "/images/butter3.png",
         "title": "Aarong Dairy Butter",
@@ -528,6 +548,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f143fa52799b9600c1f94f_Meat.png",
         "id": 212,
         "image": "/images/meat2.png",
         "title": "Khashir Mangsho",
@@ -545,6 +566,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f143fa52799b9600c1f94f_Meat.png",
         "id": 213,
         "image": "/images/meat3.png",
         "title": "Mutton Standard ",
@@ -563,6 +585,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f143fa52799b9600c1f94f_Meat.png",
         "id": 214,
         "image": "/images/meat4.png",
         "title": "Beijing Hansh",
@@ -581,6 +604,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f143fa52799b9600c1f94f_Meat.png",
         "id": 215,
         "image": "/images/meat5.png",
         "title": "Pigeon (Kobutor) fish",
@@ -598,6 +622,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f143fa52799b9600c1f94f_Meat.png",
         "id": 216,
         "image": "/images/meat6.png",
         "title": "Quail fish Dressed",
@@ -616,6 +641,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f143fa52799b9600c1f94f_Meat.png",
         "id": 217,
         "image": "/images/meat7.png",
         "title": "Chicken Keema",
@@ -633,6 +659,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f143fa52799b9600c1f94f_Meat.png",
         "id": 218,
         "image": "/images/meat8.png",
         "title": "Broiler Chicken Drumstick",
@@ -670,6 +697,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1431352799b9600c1f93a_Fish.png",
         "id": 220,
         "image": "/images/fish2.png",
         "title": "Hilsha (700-799 gm)",
@@ -687,6 +715,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1431352799b9600c1f93a_Fish.png",
         "id": 221,
         "image": "/images/fish3.png",
         "title": "Golda Premium ",
@@ -705,6 +734,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1431352799b9600c1f93a_Fish.png",
         "id": 222,
         "image": "/images/fish4.png",
         "title": "Bagda Chingri Medium",
@@ -723,6 +753,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1431352799b9600c1f93a_Fish.png",
         "id": 223,
         "image": "/images/fish5.png",
         "title": "Koral (500-899 kg)",
@@ -740,6 +771,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1431352799b9600c1f93a_Fish.png",
         "id": 224,
         "image": "/images/fish6.png",
         "title": "Tengra Deshi",
@@ -777,6 +809,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a2e35b1669b15f08eb7e_Fresh%20Vegitables.png",
         "id": 226,
         "image": "/images/sobji2.png",
         "title": "Capsicum (Red)",
@@ -794,6 +827,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a2e35b1669b15f08eb7e_Fresh%20Vegitables.png",
         "id": 227,
         "image": "/images/sobji3.png",
         "title": "Salad Pata (Lettuce) Local",
@@ -812,6 +846,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a2e35b1669b15f08eb7e_Fresh%20Vegitables.png",
         "id": 228,
         "image": "/images/sobji4.png",
         "title": "Dhundul (Sponge Gourd)",
@@ -831,6 +866,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a2e35b1669b15f08eb7e_Fresh%20Vegitables.png",
         "id": 229,
         "image": "/images/sobji5.png",
         "title": "Lal Shak",
@@ -868,6 +904,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f13354733cb673c88cf29a_Oil.png",
         "id": 231,
         "image": "/images/oil2.png",
         "title": "Kernel Sunflower Oil 5L",
@@ -924,7 +961,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
-        
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66013abb4744fb420cdb959f_Fresh%20Fruits.png",
         "id": 234,
         "image": "/images/fruits2.png",
         "title": "Apple Gala Premium",
@@ -998,6 +1035,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1545e52799b9600c3a9cd_Honey.png",
         "id": 238,
         "image": "/images/honey2.png",
         "title": "Dabur Honey 500gm",
@@ -1015,6 +1053,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1545e52799b9600c3a9cd_Honey.png",
         "id": 239,
         "image": "/images/honey3.png",
         "title": "Saffola Honey 500ml",
@@ -1033,6 +1072,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f1545e52799b9600c3a9cd_Honey.png",
         "id": 240,
         "image": "/images/honey4.png",
         "title": "Dabur Honey 100gm",
@@ -1071,7 +1111,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
-        
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f7d50dd61902ef2302eba2_Liquid%20&%20UHT.png",       
         "id": 242,
         "image": "/images/liquid2.png",
         "title": "Pran UHT Milk 500ml",
@@ -1089,6 +1129,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65f7d50dd61902ef2302eba2_Liquid%20&%20UHT.png",
         "id": 243,
         "image": "/images/liquid3.png",
         "title": "Farm Fresh UHT Milk 500ml",
@@ -1126,6 +1167,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65ffaf48d2372028beccb0a1_Baby%20Care.png",
         "id": 245,
         "image": "/images/baby2.png",
         "title": "Nido 3+ Growing Up Milk",
@@ -1143,6 +1185,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/65ffaf48d2372028beccb0a1_Baby%20Care.png",
         "id": 246,
         "image": "/images/baby3.png",
         "title": "eck Feeding Bottle",
@@ -1180,6 +1223,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66b826105c414d20bf52e589_Shampoo.png",
         "id": 248,
         "image": "/images/shampo2.png",
         "title": "Sunsilk Shampoo",
@@ -1197,6 +1241,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66b826105c414d20bf52e589_Shampoo.png",
         "id": 249,
         "image": "/images/shampo3.png",
         "title": "Sunsilk Hair Fall Solution",
@@ -1215,6 +1260,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66b826105c414d20bf52e589_Shampoo.png",
         "id": 250,
         "image": "/images/shampo4.png",
         "title": "Sunsilk Nourishing Shampoo",
@@ -1234,6 +1280,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66b826105c414d20bf52e589_Shampoo.png",
         "id": 251,
         "image": "/images/shampo5.png",
         "title": "Dove Hair Fall Rescue ",
@@ -1271,6 +1318,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66b8263b5c414d20bf52e5f2_Conditioner.png",
         "id": 253,
         "image": "/images/conditioner2.png",
         "title": "Sunsilk Hair Fall Solution",
@@ -1344,6 +1392,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66c5b32a6471be5b1b675372_Toys%20&%20Sports.png",
         "id": 257,
         "image": "/images/sports2.png",
         "title": "Zephyr Blix Cars-2",
@@ -1380,6 +1429,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6682c852422b24d32ce5363e_Lifestyle.png",
         "id": 259,
         "image": "/images/fashion2.png",
         "title": "Pink Block Printed 2 Pcs",
@@ -1416,6 +1466,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/660119bcd918e48902393900_Sauces%20&%20Pickles.png",
         "id": 261,
         "image": "/images/pickles2.png",
         "title": "Pran Boroi Sweet Pickle",
@@ -1452,6 +1503,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603db036e5bec88edeb69c1_Flours.png",
         "id": 263,
         "image": "/images/suji2.png",
         "title": "Foster Clark's Corn Flour",
@@ -1469,6 +1521,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603db036e5bec88edeb69c1_Flours.png",
         "id": 264,
         "image": "/images/suji3.png",
         "title": "ACI Brown Atta 2kg",
@@ -1487,6 +1540,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603db036e5bec88edeb69c1_Flours.png",
         "id": 265,
         "image": "/images/suji4.png",
         "title": "ACI Pure Corn Flour",
@@ -1506,6 +1560,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603db036e5bec88edeb69c1_Flours.png",
         "id": 266,
         "image": "/images/suji5.png",
         "title": "Teer Atta 2kg",
@@ -1524,6 +1579,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603db036e5bec88edeb69c1_Flours.png",
         "id": 267,
         "image": "/images/suji6.png",
         "title": "Bashundhara Atta 2kg",
@@ -1562,6 +1618,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+         "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603bf09b63674f9ff1fc990_Soups.png",
         "id": 269,
         "image": "/images/soup2.png",
         "title": "Maggi Healthy Soup",
@@ -1579,6 +1636,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+         "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603bf09b63674f9ff1fc990_Soups.png",
         "id": 270,
         "image": "/images/soup3.png",
         "title": "Knorr Classic Thai Soup",
@@ -1597,6 +1655,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+         "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603bf09b63674f9ff1fc990_Soups.png",
         "id": 271,
         "image": "/images/soup4.png",
         "title": "Chicken Corn Soup",
@@ -1616,6 +1675,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+         "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603bf09b63674f9ff1fc990_Soups.png",
         "id": 272,
         "image": "/images/soup5.png",
         "title": "Hot & Sour Chicken Soup",
@@ -1634,6 +1694,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+         "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603bf09b63674f9ff1fc990_Soups.png",
         "id": 273,
         "image": "/images/soup6.png",
         "title": "Knorr Chicken Stock",
@@ -1651,7 +1712,9 @@
         "brand": "Brand: Swapno",
         "brandname": "Ispahani",
         "description": "Delicious and crisp buttery toast perfect for tea time!"
-      },{
+      },
+      {
+         "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603bf09b63674f9ff1fc990_Soups.png",
         "id": 274,
         "image": "/images/soup7.png",
         "title": "Lady Anna Soup Chicken",
@@ -1670,6 +1733,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+         "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603bf09b63674f9ff1fc990_Soups.png",
         "id": 275,
         "image": "/images/soup8.png",
         "title": "Soup Corn With Chicken",
@@ -1687,6 +1751,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624ac0b7a5eb6f6889bde47_Beef.png",
         "id": 276,
         "image": "/images/beef1.png",
         "title": "Beef Premium Cube",
@@ -1705,6 +1770,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624ac0b7a5eb6f6889bde47_Beef.png",
         "id": 277,
         "image": "/images/beef2.png",
         "title": "Beef Boneless",
@@ -1722,6 +1788,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624ac0b7a5eb6f6889bde47_Beef.png",
         "id": 278,
         "image": "/images/beef3.png",
         "title": "Beef Boneless With Fat",
@@ -1740,6 +1807,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624ac0b7a5eb6f6889bde47_Beef.png",
         "id": 279,
         "image": "/images/beef4.png",
         "title": "Beef Premium Chunk",
@@ -1759,6 +1827,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624ac0b7a5eb6f6889bde47_Beef.png",
         "id": 280,
         "image": "/images/beef5.png",
         "title": "Beef Shank",
@@ -1777,6 +1846,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624ac0b7a5eb6f6889bde47_Beef.png",
         "id": 281,
         "image": "/images/beef6.png",
         "title": "Beef T-Bone Steak",
@@ -1796,6 +1866,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624b40cd335a6bac0986267_Chicken.png",
         "id": 282,
         "image": "/images/chicken1.png",
         "title": "Chicken Keema",
@@ -1814,6 +1885,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624b40cd335a6bac0986267_Chicken.png",
         "id": 283,
         "image": "/images/chicken2.png",
         "title": "Broiler Chicken Breast ",
@@ -1831,6 +1903,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624b40cd335a6bac0986267_Chicken.png",
         "id": 284,
         "image": "/images/chicken3.png",
         "title": "Broiler Chicken Drumstick",
@@ -1849,6 +1922,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624b40cd335a6bac0986267_Chicken.png",
         "id": 285,
         "image": "/images/chicken4.png",
         "title": "Broiler Chicken Leg (Kg)",
@@ -1868,6 +1942,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624b40cd335a6bac0986267_Chicken.png",
         "id": 286,
         "image": "/images/chicken5.png",
         "title": "Broiler Chicken Thigh",
@@ -1886,6 +1961,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6624b40cd335a6bac0986267_Chicken.png",
         "id": 287,
         "image": "/images/chicken6.png",
         "title": "Broiler Chicken With Skin",
@@ -1923,6 +1999,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/66013abb4744fb420cdb959f_Fresh%20Fruits.png",
         "id": 289,
         "image": "/images/apples2.png",
         "title": "Apple Fuji Premium",
@@ -1940,6 +2017,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a2e35b1669b15f08eb7e_Fresh%20Vegitables.png",
         "id": 290,
         "image": "/images/carrots1.png",
         "title": "Gajor (Carrot Local)",
@@ -1957,6 +2035,7 @@
         "description": "Delicious and crisp buttery toast perfect for tea time!"
       },
       {
+        "bannaer":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6603a2e35b1669b15f08eb7e_Fresh%20Vegitables.png",
         "id": 291,
         "image": "/images/alus.png",
         "title": "Potato Regular",
@@ -1972,7 +2051,239 @@
         "brand": "Brand: Swapno",
         "brandname": "Ispahani",
         "description": "Delicious and crisp buttery toast perfect for tea time!"
-      }
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+        "id": 316,
+        "image": "/images/reckitt1.png",
+        "title": "Dettol Anti Bacterial",
+        "price": 62,
+        "perprice": "per price",
+        "delivery": ["Delivery 1-2 hours"],
+        "tags": [""],
+        "category": "Reckitt%20Special",
+        "expresDelivery": true,
+        "freeShipping": false,
+        "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+        "reviews": ["This is very usefull and healthy."],
+        "sku":"SKU: 2808592",
+        "brand": "Brand: Swapno",
+        "brandname": "Ispahani",
+        "description": "Delicious and crisp buttery toast perfect for tea time!"
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+        "id": 317,
+        "image": "/images/reckitt2.png",
+        "title": "Dettol Fresh Body Wash",
+        "price": 148,
+        "perprice": "per price",
+        "delivery": ["Delivery 1-2 hours"],
+        "tags": [""],
+        "category": "Reckitt%20Special",
+        "expresDelivery": false,
+        "freeShipping": true,
+        "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+        "reviews": ["This is very usefull and healthy."],
+        "brand": "Brand: Swapno",
+        "brandname": "Ispahani",
+        "description": "Delicious and crisp buttery toast perfect for tea time!"
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+        "id": 318,
+        "image": "/images/reckitt3.png",
+        "title": "Dettol Soap Skin Care",
+        "price": 70,
+        "perprice": "per price",
+        "delivery": ["Delivery 1-2 hours"],
+        "tags": [""],
+        "category": "Reckitt%20Special",
+        "expresDelivery": true,
+        "freeShipping": true,
+        "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+        "reviews": ["This is very usefull and healthy."],
+        "sku":"SKU: 2808592",
+        "brand": "Brand: Swapno",
+        "brandname": "Ispahani",
+        "description": "Delicious and crisp buttery toast perfect for tea time!"
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+        "id": 319,
+        "image": "/images/reckitt4.png",
+        "title": "Cistern Toilet Cleaner",
+        "price": 298,
+        "perprice": "per price",
+        "discount": "৳50 OFF",
+        "delivery": ["Delivery 1-2 hours"],
+        "tags": [""],
+        "category": "Reckitt%20Special",
+        "expresDelivery": false,
+        "freeShipping": false,
+        "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+        "reviews": ["This is very usefull and healthy."],
+        "sku":"SKU: 2808592",
+        "brand": "Brand: Swapno",
+        "brandname": "Ispahani",
+        "description": "Delicious and crisp buttery toast perfect for tea time!"
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+        "id": 320,
+        "image": "/images/reckitt5.png",
+        "title": "Bathroom Cleaner Liquid",
+        "price": 244,
+        "perprice": "per price",
+        "delivery": ["Delivery 1-2 hours"],
+        "tags": [""],
+        "category": "Reckitt%20Special",
+        "expresDelivery": true,
+        "freeShipping": true,
+        "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+        "reviews": ["This is very usefull and healthy."],
+        "sku":"SKU: 2808592",
+        "brand": "Brand: Swapno",
+        "brandname": "Ispahani",
+        "description": "Delicious and crisp buttery toast perfect for tea time!"
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+        "id": 321,
+        "image": "/images/reckitt6.png",
+        "title": "Surface Cleaner",
+        "price": 127,
+        "perprice": "per price",
+        "discount": "৳50 OFF",
+        "delivery": ["Delivery 1-2 hours"],
+        "tags": [""],
+        "category": "Reckitt%20Specialt",
+        "expresDelivery": false,
+        "freeShipping": false,
+        "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+        "reviews": ["This is very usefull and healthy."],
+        "sku":"SKU: 2808592",
+        "brand": "Brand: Swapno",
+        "brandname": "Ispahani",
+        "description": "Delicious and crisp buttery toast perfect for tea time!"
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+        "id": 322,
+        "image": "/images/reckitt7.png",
+        "title": "Floor & Surface Cleaner",
+        "price": 238,
+        "perprice": "per price",
+        "delivery": ["Delivery 1-2 hours"],
+        "tags": [""],
+        "category": "Reckitt%20Special",
+        "expresDelivery": true,
+        "freeShipping": false,
+        "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+        "reviews": ["This is very usefull and healthy."],
+        "sku":"SKU: 2808592",
+        "brand": "Brand: Swapno",
+        "brandname": "Ispahani",
+        "description": "Delicious and crisp buttery toast perfect for tea time!"
+      },
+      {
+        "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+          "id": 323,
+          "image": "/images/reckitt8.png",
+          "title": "Surface Cleaner Floral",
+          "price": 238,
+          "perprice": "per price",
+          "delivery": ["Delivery 1-2 hours"],
+          "tags": [""],
+          "category": "Reckitt%20Special",
+          "expresDelivery": true,
+          "freeShipping": false,
+          "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+          "reviews": ["This is very usefull and healthy."],
+          "sku":"SKU: 2808592",
+          "brand": "Brand: Swapno",
+          "brandname": "Ispahani",
+          "description": "Delicious and crisp buttery toast perfect for tea time!"
+        },
+        {
+          "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+          "id": 324,
+          "image": "/images/reckitt9.png",
+          "title": "Mr.Brasso Glass Cleaner",
+          "price": 148,
+          "perprice": "per price",
+          "discount": "৳50 OFF",
+          "delivery": ["Delivery 1-2 hours"],
+          "tags": [""],
+          "category": "Reckitt%20Special",
+          "expresDelivery": false,
+          "freeShipping": false,
+          "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+          "reviews": ["This is very usefull and healthy."],
+          "sku":"SKU: 2808592",
+          "brand": "Brand: Swapno",
+          "brandname": "Ispahani",
+          "description": "Delicious and crisp buttery toast perfect for tea time!"
+        },
+        {
+          "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+          "id": 325,
+          "image": "/images/reckitt10.png",
+          "title": "Dettol Antiseptic Liquid",
+          "price": 250,
+          "perprice": "per price",
+          "delivery": ["Delivery 1-2 hours"],
+          "tags": [""],
+          "category": "Reckitt%20Special",
+          "expresDelivery": true,
+          "freeShipping": true,
+          "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+          "reviews": ["This is very usefull and healthy."],
+          "sku":"SKU: 2808592",
+          "brand": "Brand: Swapno",
+          "brandname": "Ispahani",
+          "description": "Delicious and crisp buttery toast perfect for tea time!"
+        },
+        {
+          "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+          "id": 326,
+          "image": "/images/reckitt11.png",
+          "title": "Dettol Fresh Odour",
+          "price": 71,
+          "perprice": "per price",
+          "discount": "৳50 OFF",
+          "delivery": ["Delivery 1-2 hours"],
+          "tags": [""],
+          "category": "Reckitt%20Special",
+          "expresDelivery": false,
+          "freeShipping": false,
+          "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+          "reviews": ["This is very usefull and healthy."],
+          "sku":"SKU: 2808592",
+          "brand": "Brand: Swapno",
+          "brandname": "Ispahani",
+          "description": "Delicious and crisp buttery toast perfect for tea time!"
+        },
+        {
+          "banner":"https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6746f1613a25bae29014a7e8_Brand%20Catagory%20Banner%20Desktop%20Version.webp",
+          "id": 327,
+          "image": "/images/reckitt12.png",
+          "title": "Dettol Energize Handwash",
+          "price": 116,
+          "perprice": "per price",
+          "delivery": ["Delivery 1-2 hours"],
+          "tags": [""],
+          "category": "Reckitt%20Special",
+          "expresDelivery": true,
+          "freeShipping": false,
+          "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+          "reviews": ["This is very usefull and healthy."],
+          "sku":"SKU: 2808592",
+          "brand": "Brand: Swapno",
+          "brandname": "Ispahani",
+          "description": "Delicious and crisp buttery toast perfect for tea time!"
+        }
+        
 
 
 

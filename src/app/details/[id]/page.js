@@ -14,6 +14,8 @@ import cardData5 from "@/data/cardData5.json";
 import cardData3 from "@/data/cardData3.json";
 import cardData6 from "@/data/cardData6.json";
 import cardData7 from "@/data/cardData7.json";
+import cardData8 from "@/data/cardData8.json";
+import cardData9 from "@/data/cardData9.json";
 import products from "@/data/products.json";
 import products1 from "@/data/products1.json";
 import products2 from "@/data/products2.json";
@@ -46,6 +48,8 @@ const combinedData = [
   ...cardData5,
   ...cardData6,
   ...cardData7,
+  ...cardData8,
+  ...cardData9,
   ...products,
   ...products1,
   ...products2,

@@ -20,7 +20,7 @@ import {
 import Link from "next/link";
 
 const NavbarModal = () => {
-  const [isMainModalOpen, setIsMainModalOpen] = useState(true); // শুরুতে মেনু শো থাকবে
+  const [isMainModalOpen, setIsMainModalOpen] = useState(false); // শুরুতে মেনু শো থাকবে
   const [activeMainItem, setActiveMainItem] = useState(null);
   const [activeSubItem, setActiveSubItem] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -247,6 +247,13 @@ const NavbarModal = () => {
       ],
     },
   ];
+
+  const navItem = [
+    {
+      id: 1,
+      name: "Reckitt Special"
+    }
+  ]
   
 
   return (
@@ -259,30 +266,50 @@ const NavbarModal = () => {
           <RiMenu2Fill />
         </button>
         <div className="flex space-x-4 text-[10px] md:text-sm font-semibold uppercase">
-          <Link href="#" className="hover:text-yellow-400">
+          <Link href="/deals" className="hover:text-yellow-400">
             Great Deals
           </Link>
-          <Link href="#" className="hover:text-yellow-400">
-            Reckitt Special
+          <Link href="/unilever" className="hover:text-yellow-400">
+            Unilever&apos;s winter sale
           </Link>
-          <Link href="#" className="hover:text-yellow-400">
-            Our Brands
+          
+          <ul>
+  {navItem.map((navItem) => (
+    <li
+      key={navItem.name}
+      className=""
+    >
+      <span className="flex items-center">
+        <span className="ml-2">
+          <Link
+            href={`/filter/${navItem.name}`}
+            className="hover:text-yellow-400"
+          >
+            {navItem.name} {/* এখানে ডাইনামিক ডাটা দেখাচ্ছে */}
           </Link>
-          <Link href="#" className="hover:text-yellow-400">
+        </span>
+      </span>
+    </li>
+  ))}
+</ul>
+          
+          <Link href="/buy" className="hover:text-yellow-400">
             Buy & Save More
           </Link>
-          <Link href="#" className="hover:text-yellow-400">
-            Deal Hub
+          <Link href="/brands" className="hover:text-yellow-400">
+            Our Brands
           </Link>
+          
+          
         </div>
         <div className="hidden lg:flex items-center space-x-4">
           <button className="flex items-center space-x-2">
             <LiaCommentDollarSolid />
-            <span>Our Outlets</span>
+            <Link href="/outlets"><span>Our Outlets</span></Link>
           </button>
           <button className="flex items-center space-x-2">
             <LuHelpCircle />
-            <span>Help Line</span>
+            <Link href="/helpline"><span>Help Line</span></Link>
           </button>
         </div>
       </div>

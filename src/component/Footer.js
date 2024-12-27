@@ -31,9 +31,9 @@ const Footer = () => {
         <div className="space-y-2">
           <h1 className="font-semibold">Information</h1>
           <Link href="/address"><p className="hover:text-blue-600">Office Address</p></Link>
-          <p className="hover:text-blue-600">Shipping & returns</p>
-          <p className="hover:text-blue-600">About us</p>
-          <p className="hover:text-blue-600">Terms & Condition</p>
+          <Link href="/shipping"><p className="hover:text-blue-600">Shipping & returns</p></Link>
+          <Link href="/about"><p className="hover:text-blue-600">About us</p></Link>
+          <Link href="/condition"><p className="hover:text-blue-600">Terms & Condition</p></Link>
         </div>
 
         {/* Third Section */}
@@ -45,7 +45,7 @@ const Footer = () => {
         {/* Fourth Section */}
         <div>
           <h1 className="font-semibold">My Account</h1>
-          <p className="hover:text-blue-600">Account Details</p>
+          <Link href="/account"><p className="hover:text-blue-600">Account Details</p></Link>
         </div>
 
         {/* Fifth Section */}
@@ -90,10 +90,10 @@ const Footer = () => {
           </div>
           {showInfo && (
             <div className="space-y-2">
-              <p className="hover:text-blue-600">Office Address</p>
-              <p className="hover:text-blue-600">Shipping & returns</p>
-              <p className="hover:text-blue-600">About us</p>
-              <p className="hover:text-blue-600">Terms & Condition</p>
+              <Link href="/address"><p className="hover:text-blue-600">Office Address</p></Link>
+              <Link href="/shipping"><p className="hover:text-blue-600">Shipping & returns</p></Link>
+              <Link href="/about"><p className="hover:text-blue-600">About us</p></Link>
+              <Link href="/condition"><p className="hover:text-blue-600">Terms & Condition</p></Link>
             </div>
           )}
         </div>
@@ -119,7 +119,7 @@ const Footer = () => {
               {showAccount ? <FaMinus /> : <FaPlus />}
             </button>
           </div>
-          {showAccount && <div className="space-y-2"><p className="hover:text-blue-600">Account Details</p></div>}
+          {showAccount && <div className="space-y-2"><Link href="/account"><p className="hover:text-blue-600">Account Details</p></Link></div>}
         </div>
 
         {/* Fifth Section */}

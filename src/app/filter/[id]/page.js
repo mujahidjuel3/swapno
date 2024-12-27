@@ -161,7 +161,7 @@ const ResponsiveFilterCard = ({ params }) => {
     <div className="">
       <Navbar />
       <NavbarModal />
-      <div className="container mx-auto py-8 px-4 lg:px-8 pt-20">
+      <div className="container mx-auto py-8 px-4 lg:px-8 pt-28">
         <div className="flex justify-center items-center py-4">
           {filteredData.length > 0 ? (
             <Image
@@ -172,13 +172,9 @@ const ResponsiveFilterCard = ({ params }) => {
               className="rounded-lg object-cover"
             />
           ) : (
-            <Image
-              src="/images/default-banner.png"
-              alt="Default Banner Image"
-              width={1920}
-              height={1200}
-              className="rounded-lg object-cover"
-            />
+            <p className="text-center text-xl font-bold py-4">
+              Data Not Available
+            </p>
           )}
         </div>
 
@@ -423,7 +419,7 @@ const ResponsiveFilterCard = ({ params }) => {
           {/* Filter Toggle Button */}
 
           <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
               {filteredData.length > 0 ? (
                 filteredData.map((product) => (
                   <Card
@@ -494,17 +490,18 @@ const ResponsiveFilterCard = ({ params }) => {
                   </Card>
                 ))
               ) : (
-                <p>No products found</p>
+                <p className="text-sm text-center justify-center font-bold">
+                  No products found
+                </p>
               )}
             </div>
           </div>
         </div>
-        
       </div>
       <Footer />
-        <FooterBottom />
-        <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
-        <CartBottom cartItems={cartItems} setCartItems={setCartItems} />
+      <FooterBottom />
+      <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
+      <CartBottom cartItems={cartItems} setCartItems={setCartItems} />
     </div>
   );
 };
