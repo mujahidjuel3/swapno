@@ -20,8 +20,8 @@ const Recommended = ({ cardData, addToCart, cartItems }) => {
   }, []);
 
   const getVisibleCards = () => {
-    if (windowWidth >= 1280) return 5; // Desktop
-    if (windowWidth >= 1024) return 4; // Laptop
+    if (windowWidth >= 1280) return 6; // Desktop
+    if (windowWidth >= 1024) return 5; // Laptop
     if (windowWidth >= 640) return 2; // Tablet
     return 1; // Mobile
   };
@@ -56,11 +56,11 @@ const Recommended = ({ cardData, addToCart, cartItems }) => {
         <IoIosArrowBack size={windowWidth <= 680 ? 16 : 20} />
       </Button>
 
-      <div ref={sliderRef} className="flex overflow-hidden gap-4 items-stretch">
+      <div ref={sliderRef} className="flex overflow-hidden gap-[18px] items-stretch">
         {cardData.map((card, index) => (
           <Card
             key={index}
-            className="flex-shrink-0 shadow-md border overflow-hidden h-full rounded-lg cursor-pointer"
+            className="flex-shrink-0 border overflow-hidden h-full rounded-lg"
             style={{
               width: `calc(100% / ${getVisibleCards()} - 1rem)`,
               minHeight: "20rem",
@@ -78,7 +78,7 @@ const Recommended = ({ cardData, addToCart, cartItems }) => {
                     height={100}
                     className="h-44 w-full mb-2"
                   />
-                  <div className="px-4">
+                  <div className="justify-center text-center">
                     <h2 className="text-sm font-semibold">{card.title}</h2>
                     <div className="pt-2">
                       <p className="text-xs text-gray-600">{card.delivery}</p>

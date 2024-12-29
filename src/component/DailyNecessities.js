@@ -19,17 +19,18 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
   // Detect Screen Size and Adjust Cards
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setCardsToShow(1); // Mobile
+      if (window.innerWidth < 680) {
+        setCardsToShow(1); // Mobile (680px-এর নিচে)
+      } else if (window.innerWidth < 724) {
+        setCardsToShow(2); // 680px - 724px
       } else if (window.innerWidth < 1024) {
-        setCardsToShow(2); // Tablet
-      } else if (window.innerWidth < 1599) {
-        setCardsToShow(3); // Laptop
+        setCardsToShow(2); // 724px - 1024px
+      } else if (window.innerWidth < 1280) {
+        setCardsToShow(4); // 1024px - 1280px
       } else {
-        setCardsToShow(4); // Desktop
+        setCardsToShow(5); // 1280px এবং তার উপরে
       }
     };
-
     handleResize(); // Set initial value
     window.addEventListener("resize", handleResize); // Listen for window resize
     return () => window.removeEventListener("resize", handleResize);
@@ -38,7 +39,7 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
   // Slider Navigation Handlers
   const handlePrevSlide = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? Math.max(cards.length - cardsToShow, 0) : prev - 1
+      prev === 0 ? Math.max(cardData6.length - cardsToShow, 0) : prev - 1
     );
   };
 
@@ -62,14 +63,14 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
   };
 
   return (
-    <div className="flex flex-col pt-32 lg:flex-row bg-gray-50 rounded-lg shadow-lg pl-2 md:pl-16 py-8 gap-4">
+    <div className="flex flex-col pt-24 lg:flex-row rounded-lg justify-between  py-8 gap-4">
       {/* Left Section */}
-      <div className="relative lg:w-1/3 flex justify-center items-end">
+      <div className="relative md:w-[33%] xl:w-[21%] flex justify-center items-end">
         <Image
           src="https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/6682cb75422b24d32ce5ac9a_site-banner-2-copy_400.jpeg"
           alt="daily necessity"
-          width={300}
-          height={300}
+          width={500}
+          height={100}
           className="rounded-lg"
         />
         <div className="absolute pb-10">
@@ -79,9 +80,9 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
         </div>
       </div>
       {/* Right Section */}
-      <div className="lg:w-2/3 border-r bg-gray-200 pt-5 px-4 py-3 rounded-lg">
+      <div className="md:w-[67%] xl:w-[79%] border pt-5 bg-slate-100  rounded-lg">
         {/* Header */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-4">
           {/* Header Title Slider */}
           <div className="flex items-center gap-2 pl-1">
             <button
@@ -122,8 +123,8 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
               {cardData6.map((card) => (
                 <div
                   key={card.id}
-                  className="flex-shrink-0 p-2 bg-white rounded-lg shadow flex flex-col items-center justify-between"
-                  style={{ width: `${99 / cardsToShow}%`, minHeight: "250px" }} // Ensures consistent size
+                  className="flex-shrink-0 p-2 bg-white  flex flex-col items-center justify-between"
+                  style={{ width: `${99 / cardsToShow}%`, minHeight: "350px" }} // Ensures consistent size
                 >
                   <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
                   <div>
@@ -134,19 +135,19 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
                     height={150}
                     className="object-contain mb-2"
                   />
-                  <h2 className="text-sm font-semibold">{card.title}</h2>
-                  <p className="text-red-500 font-bold">
+                  <h2 className="text-sm pt-6 justify-center text-center font-semibold">{card.title}</h2>
+                  <p className="text-red-500 pt justify-center text-center font-bold">
                     ৳{card.price}{" "}
                     <span className="text-xs text-gray-500">
                       {card.perprice}
                     </span>
                   </p>
-                  <p className="text-gray-500 text-xs">{card.discount}</p>
-                  <p className="text-xs text-gray-600">{card.delivery}</p>
+                  <p className="text-gray-500 pt justify-center text-center text-xs">{card.discount}</p>
+                  <p className="text-xs pt justify-center text-center text-gray-600">{card.delivery}</p>
                   </div>
                   </Link>
 
-                  <div className="flex items-center justify-center pb-4 pt-4">
+                  <div className="flex items-center justify-center pb-2 pt-4">
                     {getItemQuantity(card.id) > 0 ? (
                       <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
                         <button

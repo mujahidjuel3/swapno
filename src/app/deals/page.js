@@ -6,6 +6,8 @@ import NavbarModal from "../../component/NavbarModal";
 import Footer from "../../component/Footer";
 import FooterBottom from "../../component/FooterBottom";
 import Image from "next/image";
+import NavTop from "../../component/NavTop";
+
 const Deals = () => {
   const deals = [
     { image: "https://d2t8nl1y0ie1km.cloudfront.net/images/thumbs/67486f8e7e56121272ee57c4_BEST%20ONLINE%20DEALS%20card%20D_500.png" },
@@ -18,6 +20,7 @@ const Deals = () => {
 
   return (
     <div >
+      <NavTop />
         <Navbar />
         <NavbarModal />
     <div className=" pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">

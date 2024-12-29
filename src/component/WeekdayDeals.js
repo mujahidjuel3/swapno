@@ -50,16 +50,19 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
   // Detect Screen Size and Adjust Cards
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setCardsToShow(1); // Mobile
+      if (window.innerWidth < 680) {
+        setCardsToShow(1); // Mobile (680px-এর নিচে)
+      } else if (window.innerWidth < 724) {
+        setCardsToShow(2); // 680px - 724px
       } else if (window.innerWidth < 1024) {
-        setCardsToShow(2); // Tablet
-      } else if (window.innerWidth < 1599) {
-        setCardsToShow(3); // Laptop
+        setCardsToShow(2); // 724px - 1024px
+      } else if (window.innerWidth < 1280) {
+        setCardsToShow(4); // 1024px - 1280px
       } else {
-        setCardsToShow(4); // Desktop
+        setCardsToShow(5); // 1280px এবং তার উপরে
       }
     };
+  
 
     handleResize(); // Set initial value
     window.addEventListener("resize", handleResize); // Listen for window resize
@@ -93,41 +96,44 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
   };
 
   return (
-    <div className="flex flex-col pt-32 lg:flex-row bg-gray-50 rounded-lg shadow-lg pl-2 md:pl-16 py-8 gap-4">
+    <div className="flex flex-col pt-16 lg:flex-row rounded-lg justify-between  py-8 gap-4">
       {/* Left Section */}
-      <div className="lg:w-2/3 border-r bg-gray-400 pt-5 px-4 py-3 rounded-lg">
+      <div className="lg:w-[] border-r bg-gray-400 pt-5 px-3 py-3 rounded-lg">
         {/* Header */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center space-x-1">
-            <h1 className="font-bold uppercase text-sm sm:text-xl md:text-2xl text-black pl-1">
-              Weekday Deals!!
-            </h1>
-            <span className="bg-red-600 text-white border-red-600 border px-1 py-0 text-sm rounded">
-              {timeLeft}
-            </span>
-            <span className="text-red-600 font-bold border-red-600 border bg-gray-100 text-sm px-2 py-0 italic">
-              Left
-            </span>
-          </div>
-          {/* Header Title Slider */}
-          <div className="flex items-center gap-2 pr-1">
-            <button
-              onClick={handlePrevHeader}
-              className="p-2 bg-yellow-500 rounded-full items-center"
-            >
-              <IoIosArrowBack />
-            </button>
-            <span className="px-4 bg-red-600 rounded-full text-white text-sm md:text-lg">
-              {headerTitles[headerIndex].title}
-            </span>
-            <button
-              onClick={handleNextHeader}
-              className="p-2 bg-yellow-500 rounded-full items-center"
-            >
-              <IoIosArrowForward />
-            </button>
-          </div>
-        </div>
+        <div className="flex flex-col md:flex-row items-center justify-between mb-4 space-y-2 md:space-y-0">
+  {/* Timer Section */}
+  <div className="flex items-center justify-center space-x-2 md:space-x-1">
+  <h1 className="font-bold uppercase text-sm sm:text-xl md:text-2xl text-black">
+    Weekday Deals!!
+  </h1>
+  <span className="bg-red-600 text-white border-red-600 border px-1 py-0 text-sm rounded">
+    {timeLeft}
+  </span>
+  <span className="text-red-600 font-bold border-red-600 border bg-gray-100 text-sm px-2 py-0 italic">
+    Left
+  </span>
+</div>
+
+  {/* Header Title Slider */}
+  <div className="flex items-center gap-2 md:gap-2">
+    <button
+      onClick={handlePrevHeader}
+      className="p-2 bg-yellow-500 rounded-full"
+    >
+      <IoIosArrowBack />
+    </button>
+    <span className="px-4 bg-red-600 rounded-full text-white text-sm">
+      {headerTitles[headerIndex].title}
+    </span>
+    <button
+      onClick={handleNextHeader}
+      className="p-2 bg-yellow-500 rounded-full"
+    >
+      <IoIosArrowForward />
+    </button>
+  </div>
+</div>
+
 
         {/* Cards Section */}
         <div className="relative">
@@ -150,28 +156,27 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
               {cardData7.map((card) => (
                 <div
                   key={card.id}
-                  className="flex-shrink-0 p-2 bg-white rounded-lg shadow flex flex-col items-center justify-between"
-                  style={{ width: `${99 / cardsToShow}%`, minHeight: "250px" }} // Ensures consistent size
+                  className="flex-shrink-0  bg-white rounded-lg border gap-2 flex flex-col items-center justify-between"
+                  style={{ width: `${99 / cardsToShow}%`, minHeight: "340px" }} // Ensures consistent size
                 >
                   <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
-                  <div>
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    width={150}
-                    height={150}
-                    className="object-contain mb-2"
-                  />
-                  <h2 className="text-sm font-semibold">{card.title}</h2>
-                  <p className="text-red-500 font-bold">
-                    ৳{card.price}{" "}
-                    <span className="text-xs text-gray-500">
-                      {card.perprice}
-                    </span>
-                  </p>
-                  <p className="text-gray-500 text-xs">{card.discount}</p>
-                  <p className="text-xs text-gray-600">{card.delivery}</p>
-                  </div>
+                  <div className="flex flex-col items-center text-center">
+  <Image
+    src={card.image}
+    alt={card.title}
+    width={150}
+    height={150}
+    className="object-contain mb-2"
+  />
+  <h2 className="text-sm font-semibold">{card.title}</h2>
+  <p className="text-red-500 font-bold">
+    ৳{card.price}{" "}
+    <span className="text-xs text-gray-500">{card.perprice}</span>
+  </p>
+  <p className="text-gray-500 text-xs">{card.discount}</p>
+  <p className="text-xs text-gray-600">{card.delivery}</p>
+</div>
+
                   </Link>
                   <div className="flex items-center justify-center pb-4 pt-4">
                     {getItemQuantity(card.id) > 0 ? (
@@ -227,12 +232,12 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
       </div>
 
       {/* Right Section */}
-      <div className="lg:w-1/3 flex items-center justify-center">
+      <div className="flex justify-center">
         <Image
           src="/happy-hour.png"
           alt="Happy Hour"
-          width={300}
-          height={300}
+          width={500}
+          height={100}
           className="rounded-lg"
         />
       </div>

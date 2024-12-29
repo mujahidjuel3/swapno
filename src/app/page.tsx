@@ -23,7 +23,7 @@ import FooterBottom from "../component/FooterBottom";
 import Message from "../component/Message";
 import CartSidebar from "../component/CartSidebar"
 import CartBottom from "../component/CartBottom";
-
+import NavTop from "../component/NavTop";
 
 
 import cards from "../data/cards.json";
@@ -89,11 +89,18 @@ function MyApp() {
   
   
   return (
-    <div className="bg-gray-100">
+    <div className="border bg-white">
       {/* Navbar Section */}
-      <header className="sticky top-0 z-50 bg-white shadow">
-        <Navbar />
-        <NavbarModal />
+      <header>
+      <NavTop/>
+      </header>
+
+      <header className="sticky top-0 z-50 bg-white shadow">       
+        <Navbar />      
+      </header>
+
+      <header>
+      <NavbarModal />
       </header>
 
       {/* Main Content */}
@@ -102,7 +109,7 @@ function MyApp() {
         <section className="container mx-auto px-4 lg:px-8">
           <BannerSlider />
         </section>
-        <section className="container mx-auto px-4 lg:px-8">
+        <section className="container mx-auto px-4 lg:px-7">
           <CardSlider cards={cards} />
         </section>
         <section className="container mx-auto px-4 lg:px-8">
@@ -129,7 +136,7 @@ function MyApp() {
             cartItems={cartItems}
           />
         </section>
-        <section className="container mx-auto px-4 lg:px-8">
+        <section className="">
           <Featured
             cardData2={cardData2}
             addToCart={addToCart}

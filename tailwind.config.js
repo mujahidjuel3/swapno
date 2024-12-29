@@ -12,6 +12,10 @@ module.exports = {
 		  foreground: "hsl(var(--foreground))",
 		  border: "hsl(var(--border))",
 		},
+		spacing: {
+			'96px': '96px',
+			'80px': '80px',
+		},
 	  },
 	},
 	plugins: [],

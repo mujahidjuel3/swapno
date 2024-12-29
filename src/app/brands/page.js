@@ -8,6 +8,7 @@ import Navbar from "../../component/Navbar";
 import NavbarModal from "../../component/NavbarModal";
 import Footer from "../../component/Footer";
 import FooterBottom from "../../component/FooterBottom";
+import NavTop from "../../component/NavTop";
 
 const OurBrands = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -29,6 +30,7 @@ const OurBrands = () => {
 
   return (
     <div>
+      <NavTop />
       <Navbar />
       <NavbarModal />
       <div className="pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">

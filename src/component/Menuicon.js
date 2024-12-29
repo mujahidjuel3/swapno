@@ -1,8 +1,7 @@
 "use client";
 
+
 import { useState, useEffect } from "react";
-import { LiaCommentDollarSolid } from "react-icons/lia";
-import { LuHelpCircle } from "react-icons/lu";
 import { BsChevronRight, BsArrowLeft } from "react-icons/bs";
 import { RiMenu2Fill } from "react-icons/ri";
 import {
@@ -18,7 +17,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 
-const NavbarModal = () => {
+const Menuicon = () => {
   const [isMainModalOpen, setIsMainModalOpen] = useState(false); // শুরুতে মেনু শো থাকবে
   const [activeMainItem, setActiveMainItem] = useState(null);
   const [activeSubItem, setActiveSubItem] = useState(null);
@@ -70,7 +69,10 @@ const NavbarModal = () => {
         },
         {
           name: "Eggs",
-          subSubItems: [{ id: "1-3-1", name: "Eggs" }],
+          subSubItems: [
+            { id: "1-3-1", name: "Eggs" },
+            
+          ],
         },
         {
           name: "Baking Needs",
@@ -244,93 +246,24 @@ const NavbarModal = () => {
     },
   ];
 
-  const navItem = [
-    {
-      id: 1,
-      name: "Reckitt Special",
-    },
-  ];
+ 
 
   return (
     <header
-      className="lg:fixed top-[0px] md:top-16 left-0 w-full bg-white text-black shadow z-50"
+      className="lg:hidden lg:fixed top-[0px] md:top-16 left-0 w-full text-black z-50"
       onMouseLeave={hideModal}
     >
-      <div className="container mx-auto flex items-center justify-center text-center lg:justify-between py-2 px-4 sm:px-6 lg:px-8">
-        <button
-          className="text-xl gap-1 hidden lg:flex lg:text-2xl"
-          onClick={toggleMainModal}
-        >
+      <div className="lg:hidden container mx-auto flex items-center justify-between py-2 lg:px-8">
+        <button className="text-2xl" onClick={toggleMainModal}>
           <RiMenu2Fill />
-          <h1 className="hidden xl:flex uppercase text-sm font-semibold">
-            Shop By Category
-          </h1>
         </button>
-        <div className="flex gap-[3px] md:gap-4 text-[5px] lg:text-sm font-semibold uppercase">
-          <Link
-            href="/deals"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0  rounded-full lg:border-0 lg:rounded-none"
-          >
-            Great Deals
-          </Link>
-          <Link
-            href="/unilever"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-          >
-            Unilever&apos;s winter sale
-          </Link>
-
-          <ul>
-            {navItem.map((navItem) => (
-              <li key={navItem.name} className="">
-                <span className="flex items-center">
-                  <span className="mt-[5px] lg:mt-0">
-                    <Link
-                      href={`/filter/${navItem.name}`}
-                      className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-                    >
-                      {navItem.name}
-                    </Link>
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ul>
-
-          <Link
-            href="/buy"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-          >
-            Buy & Save More
-          </Link>
-          <Link
-            href="/brands"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-          >
-            Our Brands
-          </Link>
-        </div>
-        <div className="hidden lg:flex items-center space-x-4">
-          <button className="flex items-center space-x-2">
-            <LiaCommentDollarSolid />
-            <Link href="/outlets">
-              <span>Our Outlets</span>
-            </Link>
-          </button>
-          <button className="flex items-center space-x-2">
-            <LuHelpCircle />
-            <Link href="/helpline">
-              <span>Help Line</span>
-            </Link>
-          </button>
-        </div>
       </div>
 
       {/* Modal for Desktop/Laptop/Tablets */}
-
+      
       {isMainModalOpen && !isMobile && (
         <div
-          className="absolute top-[41px] hidden lg:flex lg:pl-[22px] xl:pl-[20px] 2xl:pl-[215px]"
+          className="absolute top-full hidden lg:flex pl-9 xl:pl-[150px] 2xl:pl-[224px]"
           onMouseLeave={hideModal}
         >
           <div className="grid grid-cols-3">
@@ -373,13 +306,8 @@ const NavbarModal = () => {
               <div className="bg-white">
                 <ul>
                   {activeSubItem.subSubItems.map((subSubItem) => (
-                    <li
-                      key={subSubItem.name}
-                      className="p-4 hover:bg-blue-600 rounded"
-                    >
-                      <Link href={`/filter/${subSubItem.name}`}>
-                        {subSubItem.name}
-                      </Link>
+                    <li key={subSubItem.name} className="p-4 hover:bg-blue-600 rounded">
+                      <Link href={`/filter/${subSubItem.name}`}>{subSubItem.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -390,9 +318,9 @@ const NavbarModal = () => {
       )}
 
       {isMainModalOpen && isMobile && (
-        <div className="fixed inset-0 flex top-24 left-8">
+        <div className="fixed inset-2  flex top-[97px] left-0 sm:left-[24px] sm:pl- md:left-[1px]">
           <div
-            className="w-[17rem] overflow-hidden bg-white"
+            className=" w-[17rem] overflow-hidden bg-white"
             onMouseLeave={hideModal}
           >
             {!activeMainItem && !activeSubItem && (
@@ -401,7 +329,7 @@ const NavbarModal = () => {
                   {mainMenuItems.map((item, index) => (
                     <li
                       key={index}
-                      className="p-4 flex justify-between items-center hover:bg-red-600 rounded cursor-pointer"
+                      className="p-4 flex justify-between items-center hover:text-red-600 rounded cursor-pointer"
                       onClick={() => {
                         setActiveMainItem(item);
                         setActiveSubItem(null);
@@ -431,7 +359,7 @@ const NavbarModal = () => {
                   {activeMainItem.subItems.map((subItem, index) => (
                     <li
                       key={index}
-                      className="p-4 flex justify-between items-center hover:bg-lime-600 rounded cursor-pointer"
+                      className="p-4 flex justify-between items-center hover:text-lime-600 rounded cursor-pointer"
                       onClick={() => setActiveSubItem(subItem)}
                     >
                       {subItem.name}
@@ -443,6 +371,7 @@ const NavbarModal = () => {
             )}
 
             {activeSubItem && (
+              
               <div>
                 <button
                   className="absolute top-11 left-0 text-xl"
@@ -451,20 +380,22 @@ const NavbarModal = () => {
                   <BsArrowLeft />
                 </button>
                 <h2 className="text-lg font-bold p-4">{activeSubItem.name}</h2>
-
+                
                 <ul className="divide-y">
                   {activeSubItem.subSubItems.map((subSubItem) => (
+          
                     <li
                       key={subSubItem.name}
-                      className="p-4 hover:bg-indigo-600 rounded cursor-pointer"
+                      className="p-4 hover:text-indigo-600 rounded cursor-pointer"
                     >
-                      <Link href={`/filter/${subSubItem.name}`}>
-                        {subSubItem.name}
-                      </Link>
-                    </li>
+                      <Link href={`/filter/${subSubItem.name}`}>{subSubItem.name}</Link>
+                      
+                    </li> 
                   ))}
                 </ul>
+             
               </div>
+            
             )}
           </div>
         </div>
@@ -473,4 +404,4 @@ const NavbarModal = () => {
   );
 };
 
-export default NavbarModal;
+export default Menuicon;

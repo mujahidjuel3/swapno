@@ -33,11 +33,11 @@ const CardSlider = ({ cards }) => {
   };
 
   return (
-    <div className="relative py-8 top-28 pl-[1px] md:pl-[296px] bg-gray-100">
+    <div className="relative py-8 top-12 lg:top-20 pl-[1px] lg:pl-[300px]">
       {/* Left Arrow */}
       <button
         onClick={() => scrollSlider("left")}
-        className="absolute top-1/2 pl-[2px] md:left-[18.5rem] transform -translate-y-1/2 z-10 p-1 bg-yellow-400 rounded-full shadow hover:bg-yellow-500 focus:outline-none"
+        className="absolute top-1/2 pl-[2px] lg:left-[18.5rem] transform -translate-y-1/2 z-10 p-1 bg-yellow-400 rounded-full shadow hover:bg-yellow-500 focus:outline-none"
       >
         <IoIosArrowBack size={22} />
       </button>
@@ -45,12 +45,12 @@ const CardSlider = ({ cards }) => {
       {/* Slider Container */}
       <div
         ref={sliderRef}
-        className="flex overflow-x-scroll scrollbar-hide gap-4"
+        className="flex overflow-x-hidden scrollbar-hide gap-4"
       >
         {cards.map((card) => (
           <div
             key={card.title}
-            className="flex-shrink-0 rounded-lg shadow-md overflow-hidden"
+            className="flex-shrink-0 rounded-lg  overflow-hidden"
             style={{
               width: `calc(100% / ${getVisibleCards()} - 1rem)`,
             }}
@@ -63,7 +63,7 @@ const CardSlider = ({ cards }) => {
                 alt={card.title}
                 width={300}
                 height={200}
-                className="h-64 w-full object-cover"
+                className="h-56 w-full object-cover"
               />
               {/* Card Title */}
               <div className="absolute bottom-0 left-0 right-0 bg-yellow-400 text-center py-2">

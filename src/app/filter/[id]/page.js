@@ -24,6 +24,7 @@ import Footer from "../../../component/Footer";
 import FooterBottom from "../../../component/FooterBottom";
 import CartSidebar from "../../../component/CartSidebar";
 import CartBottom from "../../../component/CartBottom";
+import NavTop from "../../../component/NavTop";
 
 const combinedData = [
   ...products,
@@ -159,6 +160,7 @@ const ResponsiveFilterCard = ({ params }) => {
 
   return (
     <div className="">
+      <NavTop />
       <Navbar />
       <NavbarModal />
       <div className="container mx-auto py-8 px-4 lg:px-8 pt-28">

@@ -6,6 +6,7 @@ import NavbarModal from "../../../component/NavbarModal";
 import Footer from "../../../component/Footer";
 import FooterBottom from "../../../component/FooterBottom";
 import CartSidebar from "../../../component/CartSidebar";
+import NavTop from "../../../component/NavTop";
 //import CartBottom from "../../../component/CartBottom";
 import cardData1 from "@/data/cardData1.json";
 import cardData from "@/data/cardData.json";
@@ -129,6 +130,7 @@ const getItemQuantity = (id) => {
 
   return (
     <div>
+      <NavTop />
       <Navbar />
       <NavbarModal />
       <div className="container mx-auto py-8 px-4 lg:px-8 pt-28">

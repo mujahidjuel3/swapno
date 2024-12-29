@@ -34,9 +34,9 @@ const BannerSlider = () => {
   };
 
   return (
-    <div className="relative top-28 bg-gray-100">
+    <div className="relative top-9 lg:top-28 md:top-20">
   {/* Slider Container */}
-  <div className="relative pl-[1px] md:pl-[296px] mx-auto w-full max-w-8xl h-[180px] md:h-[220px] lg:h-[240px] xl:h-[280px]">
+  <div className="relative pl-[1px] lg:pl-[296px] mx-auto w-full max-w-8xl h-[180px] md:h-[200px] lg:h-[240px] xl:h-[280px]">
     {/* Slides */}
     <div className="relative w-full h-full overflow-hidden">
       {banners.map((banner, index) => (

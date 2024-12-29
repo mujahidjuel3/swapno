@@ -20,8 +20,8 @@ const Featured = ({ cardData2, addToCart, cartItems }) => {
 
   // Screen size card
   const getVisibleCards = () => {
-    if (windowWidth >= 1280) return 5; // Desktop
-    if (windowWidth >= 1024) return 4; // Laptop
+    if (windowWidth >= 1280) return 6; // Desktop
+    if (windowWidth >= 1024) return 5; // Laptop
     if (windowWidth >= 640) return 2; // Tablet
     return 1; // Mobile
   };
@@ -40,105 +40,114 @@ const Featured = ({ cardData2, addToCart, cartItems }) => {
   };
 
   return (
-    <div className="relative bg-[url('https://media.istockphoto.com/id/844226534/photo/leaf-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=gOzf8J9KYQG-4_2cLHnKlemPhX8QtfPwwpJsT0CZLTw=')] bg-cover bg-center h- w-full px-5 py-8">
+    <div className="relative bg-[url('https://media.istockphoto.com/id/844226534/photo/leaf-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=gOzf8J9KYQG-4_2cLHnKlemPhX8QtfPwwpJsT0CZLTw=')] bg-cover bg-center h- w-full  py-8">
       <h1 className="text-center mb-4 uppercase text-3xl font-semibold">
         Featured Products
       </h1>
       {/* Left Arrow */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => scrollSlider("left")}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 bg-yellow-400 rounded-full shadow-md"
-      >
-        <IoIosArrowBack size={20} />
-      </Button>
+      <div className="text-center container px-4 lg:px-8 mx-auto">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => scrollSlider("left")}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 bg-yellow-400 rounded-full shadow-md"
+        >
+          <IoIosArrowBack size={20} />
+        </Button>
 
-      {/* Card slider */}
-      <div ref={sliderRef} className="flex overflow-hidden gap-4 items-stretch">
-        {cardData2.map((card, index) => (
-          <Card
-            key={index}
-            className="flex-shrink-0 shadow-md border overflow-hidden h-full rounded-lg"
-            style={{
-              width: `calc(100% / ${getVisibleCards()} - 1rem)`,
-              minHeight: "20rem",
-            }}
-          >
-            <div className="h-full flex bg-white flex-col justify-between">
-               <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
-              <div>
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  width={100}
-                  height={100}
-                  className="h-44 w-full mb-2"
-                />
-                <div className="px-4">
-                  <h2 className="text-sm font-semibold">{card.title}</h2>
-                  <div className="pt-2">
-                    <p className="text-xs text-gray-600">{card.delivery}</p>
-                    <p className="text-red-500 font-bold">
-                      {card.price}{" "}
-                      <span className="text-xs text-gray-500">
-                        {card.perprice}
-                      </span>
-                    </p>
-                    <p className="text-gray-500 text-xs">{card.discount}</p>
+        {/* Card slider */}
+        <div
+          ref={sliderRef}
+          className="flex overflow-hidden gap-[18px] items-stretch"
+        >
+          {cardData2.map((card, index) => (
+            <Card
+              key={index}
+              className="flex-shrink-0 border overflow-hidden h-full rounded-lg"
+              style={{
+                width: `calc(100% / ${getVisibleCards()} - 1rem)`,
+                minHeight: "20rem",
+              }}
+            >
+              <div className="h-full flex bg-white flex-col justify-between">
+                <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
+                  <div>
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      width={100}
+                      height={100}
+                      className="h-44 w-full mb-2"
+                    />
+                    <div className="justify-center text-center">
+                      <h2 className="text-sm font-semibold">{card.title}</h2>
+                      <div className="pt-2">
+                        <p className="text-xs text-gray-600">{card.delivery}</p>
+                        <p className="text-red-500 font-bold">
+                          {card.price}{" "}
+                          <span className="text-xs text-gray-500">
+                            {card.perprice}
+                          </span>
+                        </p>
+                        <p className="text-gray-500 text-xs">{card.discount}</p>
+                      </div>
+                    </div>
                   </div>
+                </Link>
+                <div className="flex items-center justify-center pb-4 pt-4">
+                  {getItemQuantity(card.id) > 0 ? (
+                    <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 md:w-36">
+                      <button
+                        onClick={() =>
+                          addToCart({ ...card, quantity: -1 }, true)
+                        }
+                        className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                      >
+                        -
+                      </button>
+                      <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
+                        {getItemQuantity(card.id)}{" "}
+                        <p className="text-xs font-semibold">in Bag</p>
+                      </span>
+                      <button
+                        onClick={() =>
+                          addToCart({ ...card, quantity: 1 }, true)
+                        }
+                        className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                      >
+                        +
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
+                      onClick={() =>
+                        addToCart({
+                          id: card.id,
+                          name: card.title,
+                          price: parseFloat(card.price.replace("৳", "")),
+                        })
+                      }
+                    >
+                      + Add to Bag
+                    </button>
+                  )}
                 </div>
               </div>
-              </Link>
-              <div className="flex items-center justify-center pb-4 pt-4">
-                {getItemQuantity(card.id) > 0 ? (
-                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 md:w-36">
-                    <button
-                      onClick={() => addToCart({ ...card, quantity: -1 }, true)}
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
-                    >
-                      -
-                    </button>
-                    <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
-                      {getItemQuantity(card.id)}{" "}
-                      <p className="text-xs font-semibold">in Bag</p>
-                    </span>
-                    <button
-                      onClick={() => addToCart({ ...card, quantity: 1 }, true)}
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
-                    >
-                      +
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
-                    onClick={() =>
-                      addToCart({
-                        id: card.id,
-                        name: card.title,
-                        price: parseFloat(card.price.replace("৳", "")),
-                      })
-                    }
-                  >
-                    + Add to Bag
-                  </button>
-                )}
-              </div>
-            </div>
-          </Card>
-        ))}
-      </div>
+            </Card>
+          ))}
+        </div>
 
-      {/* Right Arrow */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => scrollSlider("right")}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10 bg-yellow-400 rounded-full shadow-md"
-      >
-        <IoIosArrowForward size={20} />
-      </Button>
+        {/* Right Arrow */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => scrollSlider("right")}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10 bg-yellow-400 rounded-full shadow-md"
+        >
+          <IoIosArrowForward size={20} />
+        </Button>
+      </div>
     </div>
   );
 };

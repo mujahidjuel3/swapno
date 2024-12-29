@@ -19,8 +19,8 @@ const Diabetic = ({ cardData5, addToCart, cartItems }) => {
   }, []);
 
   const getVisibleCards = () => {
-    if (windowWidth >= 1280) return 5;
-    if (windowWidth >= 1024) return 4;
+    if (windowWidth >= 1280) return 6;
+    if (windowWidth >= 1024) return 5;
     if (windowWidth >= 640) return 2;
     return 1;
   };
@@ -52,11 +52,11 @@ const Diabetic = ({ cardData5, addToCart, cartItems }) => {
         <IoIosArrowBack size={20} />
       </Button>
 
-      <div ref={sliderRef} className="flex overflow-hidden gap-4 items-stretch">
+      <div ref={sliderRef} className="flex overflow-hidden gap-[18px] items-stretch">
         {cardData5.map((card) => (
           <Card
             key={card.id}
-            className="flex-shrink-0 shadow-md border overflow-hidden h-full rounded-lg"
+            className="flex-shrink-0 border overflow-hidden h-full rounded-lg"
             style={{
               width: `calc(100% / ${getVisibleCards()} - 1rem)`,
               minHeight: "20rem",
@@ -73,7 +73,7 @@ const Diabetic = ({ cardData5, addToCart, cartItems }) => {
                   height={100}
                   className="h-44 w-full mb-2"
                 />
-                <div className="px-4">
+                <div className="justify-center text-center">
                   <h2 className="text-sm font-semibold">{card.title}</h2>
                   <div className="pt-2">
                     <p className="text-xs text-gray-600">{card.delivery}</p>

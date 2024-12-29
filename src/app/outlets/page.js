@@ -5,6 +5,7 @@ import Navbar from "../../component/Navbar";
 import NavbarModal from "../../component/NavbarModal";
 import Footer from "../../component/Footer";
 import FooterBottom from "../../component/FooterBottom";
+import NavTop from "../../component/NavTop";
 // Districts and outlets
 const districts = [
   {
@@ -65,6 +66,7 @@ const Outlets = () => {
 
   return (
     <div>
+      <NavTop />
       <Navbar />
       <NavbarModal />
     <div className="border container mx-auto py-8 px-4 lg:px-8 pt-32 pb-4 min-h-screen bg-gray-50">

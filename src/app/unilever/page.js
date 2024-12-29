@@ -11,6 +11,7 @@ import Footer from "../../component/Footer";
 import FooterBottom from "../../component/FooterBottom";
 import CartSidebar from "../../component/CartSidebar";
 import CartBottom from "../../component/CartBottom";
+import NavTop from "../../component/NavTop";
 
 const Unilever = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -52,6 +53,7 @@ const Unilever = () => {
 
   return (
     <div>
+      <NavTop />
       <Navbar />
       <NavbarModal />
       <div className="pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">

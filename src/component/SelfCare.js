@@ -20,8 +20,8 @@ const SelfCare = ({ cardData1, addToCart, cartItems }) => {
 
   // Screen size card
   const getVisibleCards = () => {
-    if (windowWidth >= 1280) return 5; // Desktop
-    if (windowWidth >= 1024) return 4; // Laptop
+    if (windowWidth >= 1280) return 6; // Desktop
+    if (windowWidth >= 1024) return 5; // Laptop
     if (windowWidth >= 640) return 2; // Tablet
     return 1; // Mobile
   };
@@ -55,11 +55,11 @@ const SelfCare = ({ cardData1, addToCart, cartItems }) => {
       </Button>
 
       {/* Card slider */}
-      <div ref={sliderRef} className="flex overflow-hidden gap-4 items-stretch">
+      <div ref={sliderRef} className="flex overflow-hidden gap-[18px] items-stretch">
         {cardData1.map((card, index) => (
           <Card
             key={index}
-            className="flex-shrink-0 shadow-md border overflow-hidden h-full rounded-lg"
+            className="flex-shrink-0 border overflow-hidden h-full rounded-lg"
             style={{
               width: `calc(100% / ${getVisibleCards()} - 1rem)`,
               minHeight: "20rem",
@@ -75,7 +75,7 @@ const SelfCare = ({ cardData1, addToCart, cartItems }) => {
                   height={100}
                   className="h-44 w-full mb-2"
                 />
-                <div className="px-4">
+                <div className="justify-center text-center">
                   <h2 className="text-sm font-semibold">{card.title}</h2>
                   <div className="pt-2">
                     <p className="text-xs text-gray-600">{card.delivery}</p>
