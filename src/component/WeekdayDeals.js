@@ -62,7 +62,6 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
         setCardsToShow(5); // 1280px এবং তার উপরে
       }
     };
-  
 
     handleResize(); // Set initial value
     window.addEventListener("resize", handleResize); // Listen for window resize
@@ -101,39 +100,38 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
       <div className="lg:w-[] border-r bg-gray-400 pt-5 px-3 py-3 rounded-lg">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-4 space-y-2 md:space-y-0">
-  {/* Timer Section */}
-  <div className="flex items-center justify-center space-x-2 md:space-x-1">
-  <h1 className="font-bold uppercase text-sm sm:text-xl md:text-2xl text-black">
-    Weekday Deals!!
-  </h1>
-  <span className="bg-red-600 text-white border-red-600 border px-1 py-0 text-sm rounded">
-    {timeLeft}
-  </span>
-  <span className="text-red-600 font-bold border-red-600 border bg-gray-100 text-sm px-2 py-0 italic">
-    Left
-  </span>
-</div>
+          {/* Timer Section */}
+          <div className="flex items-center justify-center space-x-2 md:space-x-1">
+            <h1 className="font-bold uppercase text-sm sm:text-xl md:text-2xl text-black">
+              Weekday Deals!!
+            </h1>
+            <span className="bg-red-600 text-white border-red-600 border px-1 py-0 text-sm rounded">
+              {timeLeft}
+            </span>
+            <span className="text-red-600 font-bold border-red-600 border bg-gray-100 text-sm px-2 py-0 italic">
+              Left
+            </span>
+          </div>
 
-  {/* Header Title Slider */}
-  <div className="flex items-center gap-2 md:gap-2">
-    <button
-      onClick={handlePrevHeader}
-      className="p-2 bg-yellow-500 rounded-full"
-    >
-      <IoIosArrowBack />
-    </button>
-    <span className="px-4 bg-red-600 rounded-full text-white text-sm">
-      {headerTitles[headerIndex].title}
-    </span>
-    <button
-      onClick={handleNextHeader}
-      className="p-2 bg-yellow-500 rounded-full"
-    >
-      <IoIosArrowForward />
-    </button>
-  </div>
-</div>
-
+          {/* Header Title Slider */}
+          <div className="flex items-center gap-2 md:gap-2">
+            <button
+              onClick={handlePrevHeader}
+              className="p-2 bg-yellow-500 rounded-full"
+            >
+              <IoIosArrowBack />
+            </button>
+            <span className="px-4 bg-red-600 rounded-full text-white text-sm">
+              {headerTitles[headerIndex].title}
+            </span>
+            <button
+              onClick={handleNextHeader}
+              className="p-2 bg-yellow-500 rounded-full"
+            >
+              <IoIosArrowForward />
+            </button>
+          </div>
+        </div>
 
         {/* Cards Section */}
         <div className="relative">
@@ -159,24 +157,29 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
                   className="flex-shrink-0  bg-white rounded-lg border gap-2 flex flex-col items-center justify-between"
                   style={{ width: `${99 / cardsToShow}%`, minHeight: "340px" }} // Ensures consistent size
                 >
-                  <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
-                  <div className="flex flex-col items-center text-center">
-  <Image
-    src={card.image}
-    alt={card.title}
-    width={150}
-    height={150}
-    className="object-contain mb-2"
-  />
-  <h2 className="text-sm font-semibold">{card.title}</h2>
-  <p className="text-red-500 font-bold">
-    ৳{card.price}{" "}
-    <span className="text-xs text-gray-500">{card.perprice}</span>
-  </p>
-  <p className="text-gray-500 text-xs">{card.discount}</p>
-  <p className="text-xs text-gray-600">{card.delivery}</p>
-</div>
-
+                  <Link
+                    href={`/details/${card.id}`}
+                    key={card.id}
+                    legacyBehavior
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        width={150}
+                        height={150}
+                        className="object-contain mb-2"
+                      />
+                      <h2 className="text-sm font-semibold">{card.title}</h2>
+                      <p className="text-red-500 font-bold">
+                        ৳{card.price}{" "}
+                        <span className="text-xs text-gray-500">
+                          {card.perprice}
+                        </span>
+                      </p>
+                      <p className="text-gray-500 text-xs">{card.discount}</p>
+                      <p className="text-xs text-gray-600">{card.delivery}</p>
+                    </div>
                   </Link>
                   <div className="flex items-center justify-center pb-4 pt-4">
                     {getItemQuantity(card.id) > 0 ? (

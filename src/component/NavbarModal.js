@@ -17,12 +17,14 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 import Link from "next/link";
+import Slider from "./Slider";
 
 const NavbarModal = () => {
-  const [isMainModalOpen, setIsMainModalOpen] = useState(false); // শুরুতে মেনু শো থাকবে
+  const [isMainModalOpen, setIsMainModalOpen] = useState(true); // শুরুতে মেনু শো থাকবে
   const [activeMainItem, setActiveMainItem] = useState(null);
   const [activeSubItem, setActiveSubItem] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+ 
 
   useEffect(() => {
     const handleResize = () => {
@@ -244,12 +246,7 @@ const NavbarModal = () => {
     },
   ];
 
-  const navItem = [
-    {
-      id: 1,
-      name: "Reckitt Special",
-    },
-  ];
+  
 
   return (
     <header
@@ -267,48 +264,7 @@ const NavbarModal = () => {
           </h1>
         </button>
         <div className="flex gap-[3px] md:gap-4 text-[5px] lg:text-sm font-semibold uppercase">
-          <Link
-            href="/deals"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0  rounded-full lg:border-0 lg:rounded-none"
-          >
-            Great Deals
-          </Link>
-          <Link
-            href="/unilever"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-          >
-            Unilever&apos;s winter sale
-          </Link>
-
-          <ul>
-            {navItem.map((navItem) => (
-              <li key={navItem.name} className="">
-                <span className="flex items-center">
-                  <span className="mt-[5px] lg:mt-0">
-                    <Link
-                      href={`/filter/${navItem.name}`}
-                      className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-                    >
-                      {navItem.name}
-                    </Link>
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ul>
-
-          <Link
-            href="/buy"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-          >
-            Buy & Save More
-          </Link>
-          <Link
-            href="/brands"
-            className="hover:text-yellow-400 border-red-300  border-2 px-1 py-[2px] lg:px-0 lg:py-0 rounded-full lg:border-0 lg:rounded-none"
-          >
-            Our Brands
-          </Link>
+          <Slider />
         </div>
         <div className="hidden lg:flex items-center space-x-4">
           <button className="flex items-center space-x-2">

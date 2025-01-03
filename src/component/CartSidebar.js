@@ -5,6 +5,7 @@ import { RiShoppingBag2Fill, RiCloseFill } from "react-icons/ri";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { CiShoppingBasket } from "react-icons/ci";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import Link from "next/link";
 
 const CartSidebar = ({ cartItems, setCartItems }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -125,9 +126,11 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
               <span>Total:</span>
               <span>৳{totalPrice.toFixed(2)}</span>
             </div>
+            <Link href={`/checkout/${cartItems[0]?.id}`} legacyBehavior>
             <button className="mt-2 w-full bg-red-600 text-white py-2 rounded">
               Place Order
             </button>
+            </Link>
           </div>
         </div>
       )}
