@@ -72,7 +72,7 @@ export default function ProductDetailsPage({ params }) {
   // Unwrap the dynamic route param
   const { cartItems, setCartItems, addToCart } = useCart();
   const { id } = params;
-  
+
   useEffect(() => {
     // Load cart items from localStorage when component mounts
     const savedCart = localStorage.getItem("cartItems");
@@ -92,26 +92,24 @@ export default function ProductDetailsPage({ params }) {
   // Add to cart functionality
   // Add to cart functionality
 
+  // Handle minus quantity properly
+  const updateCartItemQuantity = (productId, increment) => {
+    setCartItems(
+      (prevCart) =>
+        prevCart
+          .map((item) =>
+            item.id === productId
+              ? { ...item, quantity: item.quantity + increment }
+              : item
+          )
+          .filter((item) => item.quantity > 0) // Remove items if quantity goes below 1
+    );
+  };
 
-
-// Handle minus quantity properly
-const updateCartItemQuantity = (productId, increment) => {
-  setCartItems((prevCart) =>
-    prevCart
-      .map((item) =>
-        item.id === productId
-          ? { ...item, quantity: item.quantity + increment }
-          : item
-      )
-      .filter((item) => item.quantity > 0) // Remove items if quantity goes below 1
-  );
-};
-
-const getItemQuantity = (id) => {
-  const item = cartItems.find((cartItem) => cartItem.id === id);
-  return item ? item.quantity : 0;
-};
-
+  const getItemQuantity = (id) => {
+    const item = cartItems.find((cartItem) => cartItem.id === id);
+    return item ? item.quantity : 0;
+  };
 
   return (
     <div>
@@ -165,38 +163,41 @@ const getItemQuantity = (id) => {
               </div>
 
               <div className="flex items-center justify-center pb-4 pt-4">
-              {getItemQuantity(product.id) > 0 ? (
-  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32">
-    <button
-      onClick={() => updateCartItemQuantity(product.id, -1)}
-      className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
-    >
-      -
-    </button>
-    <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
-      {getItemQuantity(product.id)} <p className="text-xs font-semibold">in Bag</p>
-    </span>
-    <button
-      onClick={() => updateCartItemQuantity(product.id, 1)}
-      className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
-    >
-      +
-    </button>
-  </div>
-) : (
-  <button
-    onClick={() =>
-      addToCart({
-        id: product.id,
-        name: product.title,
-        price: product.price, // No need for manual conversion here
-      })
-    }
-    className="bg-red-600 text-white px-4 rounded-full text-sm"
-  >
-    <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
-  </button>
-)}
+                {getItemQuantity(product.id) > 0 ? (
+                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32">
+                    <button
+                      onClick={() => updateCartItemQuantity(product.id, -1)}
+                      className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
+                    >
+                      -
+                    </button>
+                    <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
+                      {getItemQuantity(product.id)}{" "}
+                      <p className="text-xs font-semibold">in Bag</p>
+                    </span>
+                    <button
+                      onClick={() => updateCartItemQuantity(product.id, 1)}
+                      className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
+                    >
+                      +
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() =>
+                      addToCart({
+                        id: product.id,
+                        name: product.title,
+                        price: product.price, // No need for manual conversion here
+                      })
+                    }
+                    className="bg-red-600 text-white px-4 rounded-full text-sm"
+                  >
+                    <p className="text-xs items-center py-1 px-2">
+                      + Add to Bag
+                    </p>
+                  </button>
+                )}
               </div>
             </div>
 
@@ -317,25 +318,25 @@ const getItemQuantity = (id) => {
                 </span>
               </h2>
               {product.reviews?.length > 0 ? (
-      <div className="space-y-4 px-4 py-3">
-        {product.reviews.map((review, index) => (
-          <div
-            key={index}
-            className="p-4 bg-white shadow-sm rounded-lg border"
-          >
-            <div className="flex justify-between items-center">
-              <h4 className="text-sm font-semibold text-gray-800">
-                {review}
-              </h4>        
-            </div>
-          </div>
-        ))}
-      </div>
-    ) : (
-      <p className="text-black font-semibold rounded text-center py-5">
-        No reviews yet. Be the first one to review!
-      </p>
-    )}
+                <div className="space-y-4 px-4 py-3">
+                  {product.reviews.map((review, index) => (
+                    <div
+                      key={index}
+                      className="p-4 bg-white shadow-sm rounded-lg border"
+                    >
+                      <div className="flex justify-between items-center">
+                        <h4 className="text-sm font-semibold text-gray-800">
+                          {review}
+                        </h4>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-black font-semibold rounded text-center py-5">
+                  No reviews yet. Be the first one to review!
+                </p>
+              )}
             </div>
           </div>
         </Card>
@@ -343,9 +344,9 @@ const getItemQuantity = (id) => {
 
       <Footer />
       <FooterBottom />
-      <CartSidebar  />
+      <CartSidebar />
       <CartBottom />
       <Message />
     </div>
   );
-}  
+}
