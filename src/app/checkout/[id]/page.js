@@ -63,7 +63,7 @@ const Checkout = () => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="flex flex-col lg:flex-row gap-4 container mx-auto py-8 px-4 pt-32 lg:px-8">
+      <div className="flex flex-col lg:flex-row gap-4 container mx-auto py-8 px-4 pt-12 lg:pt-32 lg:px-8">
         <Card className="flex-1">
           <div>
             <CardHeader className="bg-blue-600 py-1 rounded-t-md">
