@@ -118,7 +118,7 @@ const getItemQuantity = (id) => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="container mx-auto py-8 px-4 lg:px-8 pt-16 lg:pt-28">
+      <div className="container mx-auto py-8 px-4 lg:px-8 pt-12 lg:pt-28">
         <Card className="shadow-lg border rounded-lg p-6">
           {/* Main Grid Section */}
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">

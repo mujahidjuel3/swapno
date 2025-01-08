@@ -47,7 +47,7 @@ const Unilever = () => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="pt-16 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
+      <div className="pt-12 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
         <div className="relative p-4">
           {/* Banner Section */}
           <div className="flex justify-center items-center py-4">

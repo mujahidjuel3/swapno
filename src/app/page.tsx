@@ -37,18 +37,9 @@ import cardData6 from "../data/cardData6.json";
 import cardData7 from "../data/cardData7.json";
 
 
-interface CartItem {
-  id: string | number; 
-  quantity: number;
-}
 
-interface Item {
-  id: string | number; 
-  name: string;        
-  quantity?: number;   
-}
 function MyApp() {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     const savedCart = localStorage.getItem("cartItems");
@@ -61,31 +52,6 @@ function MyApp() {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-
-  const addToCart = (item: Item, isUpdate: boolean = false) => {
-    setCartItems((prev: CartItem[]) => {
-      const newItemQuantity = item.quantity ?? 1;
-  
-      const existingItem = prev.find((cartItem) => cartItem.id === item.id);
-  
-      if (existingItem) {
-       
-        return prev.map((cartItem) =>
-          cartItem.id === item.id
-            ? {
-                ...cartItem,
-                quantity: isUpdate
-                  ? cartItem.quantity + newItemQuantity
-                  : cartItem.quantity + 1,
-              }
-            : cartItem
-        );
-      }
-  
-      
-      return [...prev, { ...item, quantity: newItemQuantity }];
-    });
-  };
   
   
   return (
@@ -118,43 +84,38 @@ function MyApp() {
         <section className="container mx-auto px-4 lg:px-8">
           <WeekdayDeals
             cardData7={cardData7}
-            addToCart={addToCart}
-            cartItems={cartItems}
+           
+            
           />
         </section>
         <section className="container mx-auto px-4 lg:px-8">
           <Recommended
             cardData={cardData}
-            addToCart={addToCart}
-            cartItems={cartItems}
+           
           />
         </section>
         <section className="container mx-auto px-4 lg:px-8">
           <SelfCare
             cardData1={cardData1}
-            addToCart={addToCart}
-            cartItems={cartItems}
+            
           />
         </section>
         <section className="">
           <Featured
             cardData2={cardData2}
-            addToCart={addToCart}
-            cartItems={cartItems}
+           
           />
         </section>
         <section className="container mx-auto px-4 lg:px-8">
           <Popular
             cardData3={cardData3}
-            addToCart={addToCart}
-            cartItems={cartItems}
+            
           />
         </section>
         <section className="container mx-auto px-4 lg:px-8">
           <DailyNecessities
             cardData6={cardData6}
-            addToCart={addToCart}
-            cartItems={cartItems}
+           
           />
         </section>
         <section className="container mx-auto px-4 lg:px-8">
@@ -166,8 +127,7 @@ function MyApp() {
         <section className="container mx-auto px-4 lg:px-8">
           <Diabetic
             cardData5={cardData5}
-            addToCart={addToCart}
-            cartItems={cartItems}
+           
           />
         </section>
         <section className="container mx-auto px-4 lg:px-8">
@@ -180,7 +140,7 @@ function MyApp() {
           <Services1 />
         </section>
         
-        <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
+        <CartSidebar />
         
       </main>
 
@@ -190,7 +150,7 @@ function MyApp() {
         <FooterBottom />
         <Message />
       </footer>
-      <CartBottom cartItems={cartItems} setCartItems={setCartItems}/>
+      <CartBottom />
       <section className="mt-10">
         <Message />
       </section>

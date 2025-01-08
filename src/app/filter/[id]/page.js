@@ -156,7 +156,7 @@ const ResponsiveFilterCard = ({ params }) => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="container mx-auto py-8 px-4 lg:px-8 pt-16 lg:pt-28">
+      <div className="container mx-auto py-8 px-4 lg:px-8 pt-12 lg:pt-28">
         <div className="flex justify-center items-center py-4">
           {filteredData.length > 0 ? (
             <Image

@@ -250,7 +250,7 @@ const NavbarModal = () => {
 
   return (
     <header
-      className="lg:fixed top-[0px] md:top-16 left-0 w-full bg-white text-black shadow z-50"
+      className="lg:fixed  top-[0px] md:top-16 left-0 w-full bg-white text-black shadow z-50"
       onMouseLeave={hideModal}
     >
       <div className="container mx-auto flex items-center justify-center text-center lg:justify-between py-2 px-4 sm:px-6 lg:px-8">

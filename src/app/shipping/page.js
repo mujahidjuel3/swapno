@@ -17,7 +17,7 @@ const Shipping = () => {
       <NavTop />
          <Navbar />
          <NavbarModal />
-        <div className=' justify-center  text-center pt-16 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8'>
+        <div className=' justify-center  text-center pt-12 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8'>
             <p className="shadow-lg bg-slate-50 py-8"></p>
         </div>
         <Footer />

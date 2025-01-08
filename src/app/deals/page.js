@@ -27,7 +27,7 @@ const Deals = () => {
       <NavTop />
         <Navbar />
         <NavbarModal />
-    <div className="pt-16 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
+    <div className="pt-12 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
       <div className="">
         <h1 className="text-2xl md:text-3xl font-bold text-center mb-8">
           Our Deals

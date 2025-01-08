@@ -51,16 +51,16 @@ const Navbar = () => {
     <header className="sticky top-0 lg:fixed md:top-0 left-0 w-full bg-red-600 text-white z-50">
       <div className="container mx-auto flex items-center justify-between py-2 px-4 lg:px-8 gap-[5px] lg:gap-4">
         {/* Logo */}
-        <div className="flex gap-[2px] md:gap-[5px] items-center">
+        <div className="flex gap-[2px] md:gap-[0px] items-center">
           <Menuicon />
           <Link href="/">
-          <Image
-            src="/shwapno.png"
-            alt="Logo"
-            width={100}
-            height={40}
-            className="h-6 w-12 lg:h-12 lg:w-32"
-          />
+            <Image
+              src="/shwapno.png"
+              alt="Logo"
+              width={100}
+              height={40}
+              className="h-6 w-[100px] lg:h-12 lg:w-32"
+            />
           </Link>
         </div>
 
@@ -80,19 +80,19 @@ const Navbar = () => {
             className="w-full py-2 px-4 text-sm text-black rounded-l-lg focus:outline-none"
           />
           <button className="bg-yellow-500 px-4 rounded-r-lg hover:bg-yellow-600 transition">
-          <FaSearch />
+            <FaSearch />
           </button>
         </div>
 
         <div className="flex lg:hidden items-center left-5 justify-center w-full max-w-[400px]  mx-auto">
-          <div className="relative left-8 w-full">  
+          <div className="relative left-8 w-full">
             <input
               type="text"
               placeholder="Search your products"
               className="w-full py-1 pl-2  text-[9px] md:text-sm text-black rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 border border-gray-300"
             />
             <span className="absolute inset-y-0 right-[10px] flex items-center mt-[2px] pointer-events-none text-gray-400">
-            <FaSearch />
+              <FaSearch />
             </span>
           </div>
         </div>
@@ -136,8 +136,8 @@ const Navbar = () => {
 
       {/* Mobile Menu Modal */}
       {isMenuOpen && (
-        <div className="fixed pt-24 pr-10 inset-0 bg-black bg-opacity-20 flex justify-end z-50">
-          <div className="w-64 bg-white h-64 rounded-l-lg shadow-lg p-4">
+        <div className="fixed pt-24 pr-0 inset-0 bg-black bg-opacity-20 flex justify-end z-50">
+          <div className="w-64 bg-white h-64  shadow-lg p-4">
             <button
               onClick={toggleMenu}
               className="text-red-600 font-bold text-2xl self-end"
@@ -169,79 +169,91 @@ const Navbar = () => {
       {/* Sign Modal */}
       {isSignOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="w-[20rem] bg-white h-[25rem] rounded-lg shadow-lg p-4">
-            {/* Close Button */}
-            <button
-              onClick={toggleSign}
-              className="text-red-600 font-bold text-2xl self-end pl-[260px] pb-10"
-            >
-              ✕
-            </button>
-
-            {/* Title */}
-            <h2 className="text-sm text-black justify-center text-center font-bold mb-8">
-              Sign in to get best online experience
-            </h2>
-
-            {/* Phone Number Input */}
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Phone Number
-                </label>
-                <div className="flex items-center">
-                  <span className="bg-gray-200 px-3 py-2 rounded-l border border-gray-300">
-                    +880
-                  </span>
-                  <input
-                    type="text"
-                    {...register("phone", {
-                      required: "Phone number is required",
-                      pattern: {
-                        value: /^[0-9]{9}$/,
-                        message: "Invalid phone number",
-                      },
-                    })}
-                    placeholder="1XXXXXXXXX"
-                    className={`w-full p-2 border rounded-r ${
-                      errors.phone ? "border-red-500" : "border-gray-300"
-                    }`}
-                  />
-                </div>
-                {errors.phone && (
-                  <p className="text-red-500 text-sm">{errors.phone.message}</p>
-                )}
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="bg-red-500 text-white w-full py-2 rounded-full font-bold"
-              >
-                Login
-              </button>
-            </form>
-
-            {/* Google Sign-In */}
-            <div className="mt-4 text-center">
-              <p className="text-black text-sm">or, sign in with</p>
-              <button
-                onClick={handleGoogleSignIn}
-                className="mt-2 bg-white border border-gray-300 flex items-center justify-center py-2 w-full rounded-full shadow hover:bg-gray-100"
-              >
-                <Image
-                  src="/google.png"
-                  alt="Google"
-                  height={5}
-                  width={5}
-                  className="w-5 h-5 mr-2"
-                />
-                <span className="text-black font-bold">
-                  Sign in with Google
-                </span>
-              </button>
+        <div className="relative w-[25rem] bg-white h-[21rem] rounded-lg shadow-lg p-4">
+        {/* Logo */}
+        <div className="absolute top-[-2rem] left-1/2 transform -translate-x-1/2">
+          <Image
+            src="https://www.shwapno.com/logo_circle.svg"
+            alt="Circle Logo"
+            width={100}
+            height={100}
+            className="h-16 w-16"
+          />
+        </div>
+      
+        {/* Close Button */}
+        <button
+          onClick={toggleSign}
+          className="absolute top-4 right-4 text-red-600 font-bold text-2xl"
+        >
+          ✕
+        </button>
+      
+        {/* Title */}
+        <h2 className="text-sm text-black text-center font-bold mt-10 mb-8">
+          Sign in to get best online experience
+        </h2>
+      
+        {/* Phone Number Input */}
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Phone Number
+            </label>
+            <div className="flex items-center">
+              <span className="bg-gray-200 px-3 py-2 rounded-l border border-gray-300">
+                +880
+              </span>
+              <input
+                type="text"
+                {...register("phone", {
+                  required: "Phone number is required",
+                  pattern: {
+                    value: /^[0-9]{9}$/,
+                    message: "Invalid phone number",
+                  },
+                })}
+                placeholder="1XXXXXXXXX"
+                className={`w-full p-2 border rounded-r ${
+                  errors.phone ? "border-red-500" : "border-gray-300"
+                }`}
+              />
             </div>
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone.message}</p>
+            )}
           </div>
+      
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="bg-red-500 text-white w-full py-2 rounded-full font-bold"
+          >
+            Login
+          </button>
+        </form>
+      
+        {/* Google Sign-In */}
+        <div className="mt-4 text-center">
+          <p className="text-black text-sm">or, sign in with</p>
+          <button
+            onClick={handleGoogleSignIn}
+            className="mt-2 bg-white border border-gray-300 flex items-center justify-center py-2 w-full rounded-full shadow hover:bg-gray-100"
+          >
+            <Image
+              src="/google.png"
+              alt="Google"
+              height={5}
+              width={5}
+              className="w-5 h-5 mr-2"
+            />
+            <span className="text-black font-bold">
+              Sign in
+            </span>
+          </button>
+        </div>
+      </div>
+      
         </div>
       )}
     </header>

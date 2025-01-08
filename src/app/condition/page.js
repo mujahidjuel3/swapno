@@ -17,7 +17,7 @@ const Condition = () => {
       <NavTop />
          <Navbar />
          <NavbarModal />
-        <div className='bg-slate-50 shadow-lg rounded-sm border container mx-auto py-8 px-4 lg:px-8 pt-16 lg:pt-32 pb-4'>
+        <div className='bg-slate-50 shadow-lg rounded-sm border container mx-auto py-8 px-4 lg:px-8 pt-12 lg:pt-32 pb-4'>
             <h1  className="text-xl text-center justify-center font-bold pb-4 underline">Terms & Condition</h1>
             <p>Please read the terms and conditions (Terms and Conditions) set out below carefully before ordering any Goods or Services from this Website. By ordering any Goods or Services from this Website, by phone, or by our mobile applications you agree to comply with these Terms and Conditions.</p>
             <h1 className="text-xl font-bold space-y-3 pt-2">Section 1: Introduction</h1>

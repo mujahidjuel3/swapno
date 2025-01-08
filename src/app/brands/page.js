@@ -37,7 +37,7 @@ const OurBrands = () => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="pt-16 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
+      <div className="pt-12 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
         <div className="relative p-4">
           <h2 className="text-xl font-bold mb-4 text-center underline">
             Our Brands

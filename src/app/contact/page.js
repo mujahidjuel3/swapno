@@ -16,7 +16,7 @@ const Contact = () => {
       <NavTop />
        <Navbar />
        <NavbarModal />
-    <div className=' justify-center text-center pt-16 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8'>
+    <div className=' justify-center text-center pt-12 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8'>
       <h1 className='font-bold text-2xl pt-8'>Contact Us</h1>
       <div className='pt-4 space-y-3'>
         <h1 className='text-2xl text-green-500'>Hotline</h1>

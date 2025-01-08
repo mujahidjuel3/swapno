@@ -17,7 +17,7 @@ const HelpLine = () => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="border container mx-auto py-8 px-4 lg:px-8 pt-16 lg:pt-32 pb-4">
+      <div className="border container mx-auto py-8 px-4 lg:px-8 pt-12 lg:pt-32 pb-4">
         <h1 className="text-xl justify-center text-center font-bold pb-4 underline">
           Help Line
         </h1>
