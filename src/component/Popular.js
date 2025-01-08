@@ -2,14 +2,17 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useCart } from "../context/cartContext";
 import { Button } from "@/components/ui/button"; // ShadCN Button
 import { Card } from "@/components/ui/card"; // ShadCN Card
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
 
-const Popular = ({ cardData3, addToCart, cartItems }) => {
+const Popular = ({ cardData3 }) => {
   const [windowWidth, setWindowWidth] = useState(0);
   const sliderRef = useRef(null);
+
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -93,8 +96,8 @@ const Popular = ({ cardData3, addToCart, cartItems }) => {
                 {getItemQuantity(card.id) > 0 ? (
                   <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
                     <button
-                      onClick={() => addToCart({ ...card, quantity: -1 }, true)}
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                      onClick={() => removeFromCart({ ...card, quantity: -1 }, true)}
+                      className="bg-yellow-500 text-white px-3 items-center text-sm sm:text-lg rounded-full"
                     >
                       -
                     </button>
@@ -104,14 +107,14 @@ const Popular = ({ cardData3, addToCart, cartItems }) => {
                     </span>
                     <button
                       onClick={() => addToCart({ ...card, quantity: 1 }, true)}
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                      className="bg-yellow-500 text-white px-3 items-center text-sm sm:text-lg rounded-full"
                     >
                       +
                     </button>
                   </div>
                 ) : (
                   <button
-                    className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
+                    className="bg-red-600 text-white text-center px-3 sm:px-4 rounded-full text-sm sm:text-base"
                     onClick={() =>
                       addToCart({
                         id: card.id,
@@ -120,7 +123,7 @@ const Popular = ({ cardData3, addToCart, cartItems }) => {
                       })
                     }
                   >
-                    + Add to Bag
+                    <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
                   </button>
                 )}
               </div>

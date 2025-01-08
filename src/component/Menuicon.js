@@ -263,7 +263,7 @@ const Menuicon = () => {
       
       {isMainModalOpen && !isMobile && (
         <div
-          className="absolute top-full hidden lg:flex pl-9 xl:pl-[150px] 2xl:pl-[224px]"
+          className="absolute top-full hidden md:flex pl-9 xl:pl-[150px] 2xl:pl-[224px]"
           onMouseLeave={hideModal}
         >
           <div className="grid grid-cols-3">

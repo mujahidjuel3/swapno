@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useCart } from "../../../context/cartContext";
 import { notFound } from "next/navigation"; // Handle 404
 import Navbar from "../../../component/Navbar";
 import NavbarModal from "../../../component/NavbarModal";
@@ -7,7 +8,8 @@ import Footer from "../../../component/Footer";
 import FooterBottom from "../../../component/FooterBottom";
 import CartSidebar from "../../../component/CartSidebar";
 import NavTop from "../../../component/NavTop";
-//import CartBottom from "../../../component/CartBottom";
+import CartBottom from "../../../component/CartBottom";
+import Message from "../../../component/Message";
 import cardData1 from "@/data/cardData1.json";
 import cardData from "@/data/cardData.json";
 import cardData2 from "@/data/cardData2.json";
@@ -17,6 +19,7 @@ import cardData6 from "@/data/cardData6.json";
 import cardData7 from "@/data/cardData7.json";
 import cardData8 from "@/data/cardData8.json";
 import cardData9 from "@/data/cardData9.json";
+import cardData10 from "@/data/cardData10.json";
 import products from "@/data/products.json";
 import products1 from "@/data/products1.json";
 import products2 from "@/data/products2.json";
@@ -51,6 +54,7 @@ const combinedData = [
   ...cardData7,
   ...cardData8,
   ...cardData9,
+  ...cardData10,
   ...products,
   ...products1,
   ...products2,
@@ -66,16 +70,16 @@ const combinedData = [
 
 export default function ProductDetailsPage({ params }) {
   // Unwrap the dynamic route param
-  const [cartItems, setCartItems] = useState([]);
+  const { cartItems, setCartItems, addToCart } = useCart();
   const { id } = params;
-
+  
   useEffect(() => {
-    // Fetch cart items from localStorage on component mount
+    // Load cart items from localStorage when component mounts
     const savedCart = localStorage.getItem("cartItems");
     if (savedCart) {
       setCartItems(JSON.parse(savedCart));
     }
-  }, []);
+  }, [setCartItems]);
 
   useEffect(() => {
     // Save cart items to localStorage when cartItems changes
@@ -87,26 +91,8 @@ export default function ProductDetailsPage({ params }) {
 
   // Add to cart functionality
   // Add to cart functionality
-const addToCart = (product, increment = 1) => {
-  setCartItems((prevCart) => {
-    const existingItem = prevCart.find((item) => item.id === product.id);
 
-    if (existingItem) {
-      return prevCart.map((item) =>
-        item.id === product.id
-          ? { ...item, quantity: item.quantity + increment }
-          : item
-      );
-    }
 
-    // Correctly parse the price and add a new item
-    const price = parseFloat(
-      typeof product.price === "string" ? product.price.replace(/[^\d.]/g, "") : product.price
-    );
-
-    return [...prevCart, { ...product, quantity: 1, price: price }];
-  });
-};
 
 // Handle minus quantity properly
 const updateCartItemQuantity = (productId, increment) => {
@@ -121,7 +107,6 @@ const updateCartItemQuantity = (productId, increment) => {
   );
 };
 
-// Get item quantity from cart
 const getItemQuantity = (id) => {
   const item = cartItems.find((cartItem) => cartItem.id === id);
   return item ? item.quantity : 0;
@@ -133,7 +118,7 @@ const getItemQuantity = (id) => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="container mx-auto py-8 px-4 lg:px-8 pt-28">
+      <div className="container mx-auto py-8 px-4 lg:px-8 pt-16 lg:pt-28">
         <Card className="shadow-lg border rounded-lg p-6">
           {/* Main Grid Section */}
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -184,7 +169,7 @@ const getItemQuantity = (id) => {
   <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32">
     <button
       onClick={() => updateCartItemQuantity(product.id, -1)}
-      className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
+      className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
     >
       -
     </button>
@@ -193,7 +178,7 @@ const getItemQuantity = (id) => {
     </span>
     <button
       onClick={() => updateCartItemQuantity(product.id, 1)}
-      className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
+      className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
     >
       +
     </button>
@@ -207,9 +192,9 @@ const getItemQuantity = (id) => {
         price: product.price, // No need for manual conversion here
       })
     }
-    className="bg-red-600 text-white px-4 py-2 rounded-full text-sm"
+    className="bg-red-600 text-white px-4 rounded-full text-sm"
   >
-    + Add to Bag
+    <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
   </button>
 )}
               </div>
@@ -358,7 +343,9 @@ const getItemQuantity = (id) => {
 
       <Footer />
       <FooterBottom />
-      <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
+      <CartSidebar  />
+      <CartBottom />
+      <Message />
     </div>
   );
 }  

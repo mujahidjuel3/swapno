@@ -1,55 +1,92 @@
-"use client"
-import React, { createContext, useState, useContext } from "react";
+"use client";
 
+import React, { createContext, useContext, useState } from "react";
+
+// Create Cart Context
 const CartContext = createContext();
 
+// Custom Hook to access Cart Context
+export const useCart = () => {
+  return useContext(CartContext);
+};
+
+// Cart Provider Component
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]); // Cart Items
 
   // Add Item to Cart
   const addToCart = (item) => {
     setCartItems((prev) => {
-      const existingItem = prev.find((i) => i.id === item.id);
+      const existingItem = prev.find((cartItem) => cartItem.id === item.id);
+
       if (existingItem) {
-        return prev.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+        // Update quantity if item already exists
+        return prev.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
         );
+      } else {
+        // Validate and parse the price
+        const price = parseFloat(
+          typeof item.price === "string"
+            ? item.price.replace(/[^\d.]/g, "")
+            : item.price
+        );
+
+        // Add new item
+        return [...prev, { ...item, price: price || 0, quantity: 1 }];
       }
-      return [...prev, { ...item, quantity: 1 }];
     });
   };
 
-  // Remove Item from Cart
-  const removeFromCart = (id) => {
+  
+  const removeFromCart = (item) => {
+    setCartItems((prev) => {
+      const existingItem = prev.find((cartItem) => cartItem.id === item.id);
+
+      if (existingItem) {
+        // Update quantity if item already exists
+        return prev.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        );
+      } else {
+        // Add new item
+        return [...prev, { ...item, quantity: 1 }];
+      }
+    });
+  };
+
+  // Update Quantity of an Item
+  const updateQuantity = (id, amount) => {
     setCartItems((prev) =>
-      prev
-        .map((item) =>
-          item.id === id && item.quantity > 1
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        )
-        .filter((item) => item.quantity > 0)
+      prev.map((item) =>
+        item.id === id
+          ? { ...item, quantity: Math.max(1, item.quantity + amount) }
+          : item
+      )
     );
   };
 
-  // Toggle Cart Sidebar
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
+  // Remove Item from Cart
+  const handleRemove = (id) => {
+    setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
-
-  const cartTotal = cartItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, toggleCart, cartTotal, isCartOpen }}
+      value={{
+        cartItems,
+        setCartItems,
+        addToCart,
+        updateQuantity,
+        handleRemove,
+        removeFromCart,
+      }}
     >
       {children}
     </CartContext.Provider>
   );
 };
-
-export const useCart = () => useContext(CartContext);

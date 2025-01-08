@@ -2,13 +2,16 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useCart } from "../context/cartContext";
 import Image from "next/image";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
+const DailyNecessities = ({ cardData6 }) => {
   const [currentIndex, setCurrentIndex] = useState(0); // For card slider
   const [headerIndex, setHeaderIndex] = useState(0); // For header title slider
   const [cardsToShow, setCardsToShow] = useState(4); // Default for desktop screens
+
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   const headerTitles = [
     { id: 1, title: "Pasta" },
@@ -152,9 +155,9 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
                       <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
                         <button
                           onClick={() =>
-                            addToCart({ ...card, quantity: -1 }, true)
+                            removeFromCart({ ...card, quantity: -1 }, true)
                           }
-                          className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                          className="bg-yellow-500 text-white px-3 items-center text-sm sm:text-lg rounded-full"
                         >
                           -
                         </button>
@@ -166,14 +169,14 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
                           onClick={() =>
                             addToCart({ ...card, quantity: 1 }, true)
                           }
-                          className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                          className="bg-yellow-500 text-white px-3 items-center text-sm sm:text-lg rounded-full"
                         >
                           +
                         </button>
                       </div>
                     ) : (
                       <button
-                        className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
+                        className="bg-red-600 text-white text-center px-3 sm:px-4 rounded-full text-sm sm:text-base"
                         onClick={() =>
                           addToCart({
                             id: card.id,
@@ -182,7 +185,7 @@ const DailyNecessities = ({ cardData6, addToCart, cartItems }) => {
                           })
                         }
                       >
-                        + Add to Bag
+                        <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
                       </button>
                     )}
                   </div>

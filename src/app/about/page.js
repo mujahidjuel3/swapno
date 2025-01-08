@@ -5,7 +5,10 @@ import Navbar from "../../component/Navbar";
 import NavbarModal from "../../component/NavbarModal";
 import Footer from "../../component/Footer";
 import FooterBottom from "../../component/FooterBottom";
+import CartSidebar from "../../component/CartSidebar";
+import CartBottom from "../../component/CartBottom";
 import NavTop from "../../component/NavTop";
+import Message from "../../component/Message";
 const About = () => {
   return (
     <div>
@@ -88,6 +91,9 @@ const About = () => {
       </div>
       <Footer />
     <FooterBottom />
+    <CartSidebar />
+    <CartBottom />
+    <Message />
     </div>
   );
 };

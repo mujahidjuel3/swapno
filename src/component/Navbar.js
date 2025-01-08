@@ -6,6 +6,7 @@ import {
   CiMenuKebab,
   //CiLogout,
 } from "react-icons/ci";
+import Link from "next/link";
 import Menuicon from "./Menuicon";
 //import { IoMdHeart, IoMdListBox } from "react-icons/io";
 //import { MdRequestQuote } from "react-icons/md";
@@ -52,6 +53,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex gap-[2px] md:gap-[5px] items-center">
           <Menuicon />
+          <Link href="/">
           <Image
             src="/shwapno.png"
             alt="Logo"
@@ -59,6 +61,7 @@ const Navbar = () => {
             height={40}
             className="h-6 w-12 lg:h-12 lg:w-32"
           />
+          </Link>
         </div>
 
         {/* Location */}

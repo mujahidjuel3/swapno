@@ -23,6 +23,7 @@ const ResponsiveFilterCard = ({ products }) => {
   const [availableTags, setAvailableTags] = useState([]);
   const [availableDeliveryTimes, setAvailableDeliveryTimes] = useState([]);
 
+
   // Extract Dynamic Tags and Delivery Times
   useEffect(() => {
     const tags = new Set();

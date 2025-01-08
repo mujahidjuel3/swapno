@@ -1,0 +1,98 @@
+[
+    {
+      
+      "id": 328,
+      "image": "/images/cross1.png",
+      "title": "Egg Loose (Min 12pcs)",
+      "price": 11.5,
+      "perprice": "per price",
+      "delivery": ["Delivery 1-2 hours"],
+      "tags": ["Meat & Poltry"],
+      "category": "Cross",
+      "expresDelivery": true,
+      "freeShipping": false,
+      "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+      "reviews": ["This is very usefull and healthy."],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
+    },
+    {
+      
+      "id": 329,
+      "image": "/images/cross2.png",
+      "title": "Aarong Dairy Liquid Milk",
+      "price": 105,
+      "perprice": "per price",
+      "delivery": ["Delivery 1-2 hours"],
+      "tags": [""],
+      "category": "cross",
+      "expresDelivery": false,
+      "freeShipping": true,
+      "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+      "reviews": ["This is very usefull and healthy."],
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
+    },
+    {
+      
+      "id": 330,
+      "image": "/images/cross3.png",
+      "title": "Kinder Joy 20gm",
+      "price": 100,
+      "perprice": "per price",
+      "delivery": ["Delivery 1-2 hours"],
+      "tags": [""],
+      "category": "cross",
+      "expresDelivery": true,
+      "freeShipping": true,
+      "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+      "reviews": ["This is very usefull and healthy."],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
+    },
+    {
+      "id": 331,
+      "image": "/images/cross4.png",
+      "title": "Aarong Dairy white Curd ",
+      "price": 120,
+      "perprice": "per price",
+      "discount": "৳50 OFF",
+      "delivery": ["Delivery 1-2 hours"],
+      "tags": [""],
+      "category": "cross",
+      "expresDelivery": false,
+      "freeShipping": false,
+      "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+      "reviews": ["This is very usefull and healthy."],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
+    },
+    {
+      
+      "id": 332,
+      "image": "/images/cross5.png",
+      "title": "Radhuni (Holud) Powder",
+      "price": 145,
+      "perprice": "per price",
+      "delivery": ["Delivery 1-2 hours"],
+      "tags": [""],
+      "category": "cross",
+      "expresDelivery": true,
+      "freeShipping": true,
+      "sort": ["Default","Best sale","Price asc","Price desc","Newest"],
+      "reviews": ["This is very usefull and healthy."],
+      "sku":"SKU: 2808592",
+      "brand": "Brand: Swapno",
+      "brandname": "Ispahani",
+      "description": "Delicious and crisp buttery toast perfect for tea time!"
+    }
+    
+  ]
+  

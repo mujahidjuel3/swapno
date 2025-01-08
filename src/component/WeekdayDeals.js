@@ -2,14 +2,17 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useCart } from "../context/cartContext";
 import Image from "next/image";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
+const WeekdayDeals = ({ cardData7 }) => {
   const [timeLeft, setTimeLeft] = useState("00:00:00");
   const [currentIndex, setCurrentIndex] = useState(0); // For card slider
   const [headerIndex, setHeaderIndex] = useState(0); // For header title slider
   const [cardsToShow, setCardsToShow] = useState(4); // Default for desktop screens
+
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   const headerTitles = [
     { id: 1, title: "Pasta" },
@@ -52,10 +55,10 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
     const handleResize = () => {
       if (window.innerWidth < 680) {
         setCardsToShow(1); // Mobile (680px-এর নিচে)
-      } else if (window.innerWidth < 724) {
-        setCardsToShow(2); // 680px - 724px
+      } else if (window.innerWidth < 768) {
+        setCardsToShow(2); // 680px - 768px
       } else if (window.innerWidth < 1024) {
-        setCardsToShow(2); // 724px - 1024px
+        setCardsToShow(2); // 768px - 1024px
       } else if (window.innerWidth < 1280) {
         setCardsToShow(4); // 1024px - 1280px
       } else {
@@ -186,9 +189,9 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
                       <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
                         <button
                           onClick={() =>
-                            addToCart({ ...card, quantity: -1 }, true)
+                            removeFromCart({ ...card, quantity: -1 }, true)
                           }
-                          className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                          className="bg-yellow-500 text-white px-3  text-sm sm:text-lg items-center rounded-full"
                         >
                           -
                         </button>
@@ -200,14 +203,14 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
                           onClick={() =>
                             addToCart({ ...card, quantity: 1 }, true)
                           }
-                          className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                          className="bg-yellow-500 text-white px-3  text-sm sm:text-lg items-center rounded-full"
                         >
                           +
                         </button>
                       </div>
                     ) : (
                       <button
-                        className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
+                        className="bg-red-600 text-white text-center px-3 sm:px-4  rounded-full text-sm sm:text-base"
                         onClick={() =>
                           addToCart({
                             id: card.id,
@@ -216,7 +219,7 @@ const WeekdayDeals = ({ cardData7, addToCart, cartItems }) => {
                           })
                         }
                       >
-                        + Add to Bag
+                        <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
                       </button>
                     )}
                   </div>

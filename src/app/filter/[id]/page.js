@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { use } from "react";
 import { useState, useEffect } from "react";
+import { useCart } from "../../../context/cartContext";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -25,6 +27,7 @@ import FooterBottom from "../../../component/FooterBottom";
 import CartSidebar from "../../../component/CartSidebar";
 import CartBottom from "../../../component/CartBottom";
 import NavTop from "../../../component/NavTop";
+import Message from "../../../component/Message";
 
 const combinedData = [
   ...products,
@@ -43,7 +46,6 @@ const combinedData = [
 const ResponsiveFilterCard = ({ params }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
   const [priceRange, setPriceRange] = useState([11, 2000]);
 
   const [filters, setFilters] = useState({
@@ -57,7 +59,10 @@ const ResponsiveFilterCard = ({ params }) => {
   const [availableDeliveryTimes, setAvailableDeliveryTimes] = useState([]);
   const [availableSort, setAvailableSort] = useState([]);
 
-  const category = params?.id || "";
+  const { cartItems, addToCart, removeFromCart, } = useCart();
+
+  const resolvedParams = use(params); // Unwrap the promise
+  const category = resolvedParams?.id || "";
 
   useEffect(() => {
     const filteredByCategory = combinedData.filter(
@@ -139,31 +144,19 @@ const ResponsiveFilterCard = ({ params }) => {
     });
   };
 
-  const addToCart = (product, increment = 1) => {
-    setCartItems((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + increment }
-            : item
-        );
-      }
-      return [...prevCart, { ...product, quantity: 1 }];
-    });
-  };
-
+  
   const getItemQuantity = (id) => {
-    const item = cartItems.find((cartItem) => cartItem.id === id);
+    const item = cartItems.find((item) => item.id === id);
     return item ? item.quantity : 0;
   };
+  
 
   return (
     <div className="">
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="container mx-auto py-8 px-4 lg:px-8 pt-28">
+      <div className="container mx-auto py-8 px-4 lg:px-8 pt-16 lg:pt-28">
         <div className="flex justify-center items-center py-4">
           {filteredData.length > 0 ? (
             <Image
@@ -291,19 +284,20 @@ const ResponsiveFilterCard = ({ params }) => {
             </Dialog>
           </div>
 
-          <div className="flex gap-2 items-center">
-            <h1 className="text-sm flex font-semibold">Sort By:</h1>
-            <ul className="gap-2 flex">
-              {availableSort.map((sorts) => (
-                <li
-                  key={sorts}
-                  className="shadow bg-slate-50 text-xs md:text-sm px-2 py-1 rounded hover:bg-yellow-500 cursor-pointer"
-                >
-                  {sorts}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="flex flex-wrap gap-2 items-center">
+  <h1 className="text-sm font-semibold w-full sm:w-auto mb-2 sm:mb-0">Sort By:</h1>
+  <ul className="flex flex-wrap gap-2 w-full sm:w-auto">
+    {availableSort.map((sorts) => (
+      <li
+        key={sorts}
+        className="shadow bg-slate-50 text-xs md:text-sm px-2 py-1 rounded hover:bg-yellow-500 cursor-pointer text-center w-full sm:w-auto"
+      >
+        {sorts}
+      </li>
+    ))}
+  </ul>
+</div>
+
         </div>
 
         <div className="flex flex-col lg:flex-row gap-4">
@@ -455,40 +449,42 @@ const ResponsiveFilterCard = ({ params }) => {
                     </Link>
 
                     <div className="flex items-center justify-center pb-1 pt-10">
-                      {getItemQuantity(product.id) > 0 ? (
-                        <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 sm:w-32">
-                          <button
-                            onClick={() => addToCart(product, -1)}
-                            className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
-                          >
-                            -
-                          </button>
-                          <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
-                            {getItemQuantity(product.id)}{" "}
-                            <p className="text-xs font-semibold">in Bag</p>
-                          </span>
-                          <button
-                            onClick={() => addToCart(product, 1)}
-                            className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
-                          >
-                            +
-                          </button>
-                        </div>
-                      ) : (
-                        <button
-                          onClick={() =>
-                            addToCart({
-                              id: product.id,
-                              name: product.title,
-                              price: product.price,
-                            })
-                          }
-                          className="bg-red-600 text-white px-4 py-2 rounded-full text-sm"
-                        >
-                          + Add to Bag
-                        </button>
-                      )}
-                    </div>
+                    {getItemQuantity(product.id) > 0 ? (
+                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 sm:w-32">
+                  <button
+                    onClick={() => removeFromCart(product, -1)}
+                    className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
+                  >
+                    -
+                  </button>
+                  <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
+                    {getItemQuantity(product.id)}{" "}
+                    <p className="text-xs font-semibold">in Bag</p>
+                  </span>
+                  <button
+                    onClick={() => addToCart(product, 1)}
+                    className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
+                  >
+                    +
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={() =>
+                    addToCart({
+                      id: product.id,
+                      name: product.title,
+                      price: product.price,
+                     
+                    })
+                  }
+                  className="bg-red-600 text-white px-4  rounded-full text-sm"
+                >
+                 <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
+                </button>
+                )}
+</div>
+
                   </Card>
                 ))
               ) : (
@@ -502,8 +498,9 @@ const ResponsiveFilterCard = ({ params }) => {
       </div>
       <Footer />
       <FooterBottom />
-      <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
-      <CartBottom cartItems={cartItems} setCartItems={setCartItems} />
+      <CartSidebar />
+      <CartBottom />
+      <Message />
     </div>
   );
 };

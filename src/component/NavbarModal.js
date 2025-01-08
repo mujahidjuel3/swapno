@@ -346,7 +346,7 @@ const NavbarModal = () => {
       )}
 
       {isMainModalOpen && isMobile && (
-        <div className="fixed inset-0 flex top-24 left-8">
+        <div className="hidden fixed inset-0 top-24 left-8">
           <div
             className="w-[17rem] overflow-hidden bg-white"
             onMouseLeave={hideModal}

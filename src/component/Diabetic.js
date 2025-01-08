@@ -2,14 +2,17 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useCart } from "../context/cartContext"; // Import Cart Context
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
 
-const Diabetic = ({ cardData5, addToCart, cartItems }) => {
+const Diabetic = ({ cardData5 }) => {
   const [windowWidth, setWindowWidth] = useState(0);
   const sliderRef = useRef(null);
+
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -62,38 +65,37 @@ const Diabetic = ({ cardData5, addToCart, cartItems }) => {
               minHeight: "20rem",
             }}
           >
-           
             <div className="h-full flex flex-col justify-between">
-            <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
-              <div>
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  width={100}
-                  height={100}
-                  className="h-44 w-full mb-2"
-                />
-                <div className="justify-center text-center">
-                  <h2 className="text-sm font-semibold">{card.title}</h2>
-                  <div className="pt-2">
-                    <p className="text-xs text-gray-600">{card.delivery}</p>
-                    <p className="text-red-500 font-bold">
-                      ৳{card.price}{" "}
-                      <span className="text-xs text-gray-500">
-                        {card.perprice}
-                      </span>
-                    </p>
-                    <p className="text-gray-500 text-xs">{card.discount}</p>
+              <Link href={`/details/${card.id}`} key={card.id} legacyBehavior>
+                <div>
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    width={100}
+                    height={100}
+                    className="h-44 w-full mb-2"
+                  />
+                  <div className="justify-center text-center">
+                    <h2 className="text-sm font-semibold">{card.title}</h2>
+                    <div className="pt-2">
+                      <p className="text-xs text-gray-600">{card.delivery}</p>
+                      <p className="text-red-500 font-bold">
+                        ৳{card.price}{" "}
+                        <span className="text-xs text-gray-500">{card.perprice}</span>
+                      </p>
+                      <p className="text-gray-500 text-xs">{card.discount}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </Link>
               <div className="flex items-center justify-center pb-4 pt-4">
                 {getItemQuantity(card.id) > 0 ? (
                   <div className="flex items-center bg-yellow-500 justify-between rounded-full w-28 sm:w-32">
                     <button
-                      onClick={() => addToCart({ ...card, quantity: -1 }, true)}
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                      onClick={() =>
+                        removeFromCart({ id: card.id, quantity: -1 })
+                      }
+                      className="bg-yellow-500 text-white px-3 items-center text-sm sm:text-lg rounded-full"
                     >
                       -
                     </button>
@@ -101,15 +103,15 @@ const Diabetic = ({ cardData5, addToCart, cartItems }) => {
                       {getItemQuantity(card.id)} <p className="text-xs font-semibold">in Bag</p>
                     </span>
                     <button
-                      onClick={() => addToCart({ ...card, quantity: 1 }, true)}
-                      className="bg-yellow-500 text-white px-3 py-1 text-lg sm:text-xl rounded-full"
+                      onClick={() => addToCart({ id: card.id, quantity: 1 })}
+                      className="bg-yellow-500 text-white px-3 items-center text-sm sm:text-lg rounded-full"
                     >
                       +
                     </button>
                   </div>
                 ) : (
                   <button
-                    className="bg-red-600 text-white text-center px-3 sm:px-4 py-1 rounded-full text-sm sm:text-base"
+                    className="bg-red-600 text-white text-center px-3 sm:px-4 rounded-full text-sm sm:text-base"
                     onClick={() =>
                       addToCart({
                         id: card.id,
@@ -118,7 +120,7 @@ const Diabetic = ({ cardData5, addToCart, cartItems }) => {
                       })
                     }
                   >
-                    + Add to Bag
+                    <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
                   </button>
                 )}
               </div>

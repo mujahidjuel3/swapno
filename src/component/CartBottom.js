@@ -1,35 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import { useCart } from "../context/cartContext";
 import { RiCloseFill } from "react-icons/ri";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { CiShoppingBasket, CiDeliveryTruck, CiLocationOn } from "react-icons/ci";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import Link from "next/link";
 
-const CartBottom = ({ cartItems, setCartItems }) => {
+const CartBottom = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleCart = () => setIsOpen(!isOpen);
-
-  const handleRemove = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
-
-  const updateQuantity = (id, amount) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(1, item.quantity + amount) }
-          : item
-      )
+    const { cartItems, updateQuantity, handleRemove } = useCart();
+  
+    const toggleCart = () => setIsOpen(!isOpen);
+  
+    // Calculate Total Price
+    const totalPrice = cartItems.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
     );
-  };
-
-  const totalPrice = cartItems.reduce((acc, item) => {
-    const itemPrice = Number(item.price) || 0;
-    const itemQuantity = Number(item.quantity) || 0;
-    return acc + itemPrice * itemQuantity;
-  }, 0);
 
   return (
     <>
@@ -120,13 +109,13 @@ const CartBottom = ({ cartItems, setCartItems }) => {
 
           <div className="pt-2 border-t">
             <div className="px-4">
-              <div className="flex max-w-xs rounded-full border-2">
+              <div className="flex max-w-xs rounded-md border-2">
               <input
                 type="text"
                 placeholder="Type your coupon code"
-                className="relative w-full py-1 px-2 text-sm text-black rounded focus:outline-none"
+                className="relative w-full py-1 px-2 text-sm text-black rounded-md focus:outline-none"
                />
-               <button className="absolute bg-red-600 px-2 py-1 right-4 items-center justify-center pr-9 rounded-full border-2">
+               <button className="absolute bg-red-600 px-2 py-1 right-4 items-center justify-center pr-9 rounded-md border-2">
                 <p className="text-xs">Apply coupon</p>
                </button>
              </div>
@@ -135,9 +124,11 @@ const CartBottom = ({ cartItems, setCartItems }) => {
               <span>Total:</span>
               <span>৳{totalPrice.toFixed(2)}</span>
             </div>
+            <Link href="/checkout/defaultId" legacyBehavior>
             <button className="mt-2 w-full bg-red-600 text-white py-2 rounded">
               Place Order
             </button>
+            </Link>
           </div>
         </div>
       )}

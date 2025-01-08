@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useCart } from "../../context/cartContext";
 import { Card } from "@/components/ui/card"; // ShadCN Card
 import Image from "next/image";
 import Link from "next/link"; // Link for routing
@@ -12,10 +13,12 @@ import FooterBottom from "../../component/FooterBottom";
 import CartSidebar from "../../component/CartSidebar";
 import CartBottom from "../../component/CartBottom";
 import NavTop from "../../component/NavTop";
+import Message from "../../component/Message";
+
 
 const Unilever = () => {
   const [windowWidth, setWindowWidth] = useState(0);
-  const [cartItems, setCartItems] = useState([]);
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -32,19 +35,7 @@ const Unilever = () => {
     return "grid-cols-1"; // 2 columns for mobile
   };
 
-  const addToCart = (product, increment = 1) => {
-    setCartItems((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + increment }
-            : item
-        );
-      }
-      return [...prevCart, { ...product, quantity: 1 }];
-    });
-  };
+  
 
   const getItemQuantity = (id) => {
     const item = cartItems.find((cartItem) => cartItem.id === id);
@@ -56,7 +47,7 @@ const Unilever = () => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
+      <div className="pt-16 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
         <div className="relative p-4">
           {/* Banner Section */}
           <div className="flex justify-center items-center py-4">
@@ -130,8 +121,8 @@ const Unilever = () => {
                       {getItemQuantity(product.id) > 0 ? (
                         <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 sm:w-32">
                           <button
-                            onClick={() => addToCart(product, -1)}
-                            className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
+                            onClick={() => removeFromCart(product, -1)}
+                            className="bg-yellow-500 text-white px-3 items-center text-sm  rounded-full"
                           >
                             -
                           </button>
@@ -141,7 +132,7 @@ const Unilever = () => {
                           </span>
                           <button
                             onClick={() => addToCart(product, 1)}
-                            className="bg-yellow-500 text-white px-3 py-1 text-lg rounded-full"
+                            className="bg-yellow-500 text-white px-3 items-center text-sm  rounded-full"
                           >
                             +
                           </button>
@@ -155,9 +146,9 @@ const Unilever = () => {
                               price: product.price,
                             })
                           }
-                          className="bg-red-600 text-white px-4 py-2 rounded-full text-sm"
+                          className="bg-red-600 text-white px-4 items-center  rounded-full text-sm"
                         >
-                          + Add to Bag
+                         <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
                         </button>
                       )}
                     </div>
@@ -174,8 +165,9 @@ const Unilever = () => {
       </div>
       <Footer />
       <FooterBottom />
-      <CartSidebar cartItems={cartItems} setCartItems={setCartItems} />
-      <CartBottom cartItems={cartItems} setCartItems={setCartItems} />
+      <CartSidebar  />
+      <CartBottom  />
+      <Message />
     </div>
   );
 };

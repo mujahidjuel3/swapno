@@ -5,7 +5,11 @@ import Navbar from "../../component/Navbar";
 import NavbarModal from "../../component/NavbarModal";
 import Footer from "../../component/Footer";
 import FooterBottom from "../../component/FooterBottom";
+import CartSidebar from "../../component/CartSidebar";
+import CartBottom from "../../component/CartBottom";
 import NavTop from "../../component/NavTop";
+import Message from "../../component/Message";
+
 // Districts and outlets
 const districts = [
   {
@@ -69,7 +73,7 @@ const Outlets = () => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-    <div className="border container mx-auto py-8 px-4 lg:px-8 pt-32 pb-4 min-h-screen bg-gray-50">
+    <div className="border container mx-auto py-8 px-4 lg:px-8 pt-16 lg:pt-32 pb-4 min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-blue-500 text-white p-4 text-center">
         <h1 className="text-3xl font-bold">সপ্ন আউটলেট লোকেশন</h1>
@@ -147,6 +151,9 @@ const Outlets = () => {
     </div>
     <Footer />
     <FooterBottom />
+    <CartSidebar />
+    <CartBottom />
+    <Message />
     </div>
   );
 };

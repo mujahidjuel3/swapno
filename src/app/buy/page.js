@@ -9,7 +9,11 @@ import Navbar from "../../component/Navbar";
 import NavbarModal from "../../component/NavbarModal";
 import Footer from "../../component/Footer";
 import FooterBottom from "../../component/FooterBottom";
+import CartSidebar from "../../component/CartSidebar";
+import CartBottom from "../../component/CartBottom";
 import NavTop from "../../component/NavTop";
+import Message from "../../component/Message";
+
 
 const Buy = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -34,7 +38,7 @@ const Buy = () => {
       <NavTop />
       <Navbar />
       <NavbarModal />
-      <div className="pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
+      <div className="pt-16 lg:pt-32 pb-4 container mx-auto py-8 px-4 lg:px-8">
         <div className="relative p-4">
           
           {/* Banner Section */}
@@ -105,6 +109,9 @@ const Buy = () => {
       </div>
       <Footer />
       <FooterBottom />
+      <CartSidebar />
+      <CartBottom />
+      <Message />
     </div>
   );
 };

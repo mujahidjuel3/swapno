@@ -1,41 +1,26 @@
 "use client";
 
-import { useState } from "react";
-import { RiShoppingBag2Fill, RiCloseFill } from "react-icons/ri";
-import { RiDeleteBin6Line } from "react-icons/ri";
+import { useCart } from "../context/cartContext";
+import { RiShoppingBag2Fill, RiCloseFill, RiDeleteBin6Line } from "react-icons/ri";
 import { CiShoppingBasket } from "react-icons/ci";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import Link from "next/link";
+import { useState } from "react";
 
-const CartSidebar = ({ cartItems, setCartItems }) => {
+const CartSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { cartItems, updateQuantity, handleRemove } = useCart();
 
   const toggleCart = () => setIsOpen(!isOpen);
 
-  const handleRemove = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
-
-  const updateQuantity = (id, amount) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(1, item.quantity + amount) }
-          : item
-      )
-    );
-  };
-
-  // Calculate Total Price (Ensure Numbers are Used)
-  const totalPrice = (cartItems || []).reduce((acc, item) => {
-    const itemPrice = Number(item.price) || 0; // Convert price to a number
-    const itemQuantity = Number(item.quantity) || 0;
-    return acc + itemPrice * itemQuantity;
-  }, 0);
+  // Calculate Total Price
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   return (
     <>
-      {/* Sidebar Button (Hide on Mobile) */}
       <div className="hidden lg:flex fixed top-1/2 right-0 z-50 transform -translate-y-1/2">
         <div
           onClick={toggleCart}
@@ -44,7 +29,7 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
           <RiShoppingBag2Fill className="h-24 w-20 text-red-600" />
           <div className="absolute bottom-2 flex flex-col pb-8 items-center">
             <p className="bg-red-600 text-white px-2 rounded text-xs font-semibold">
-            {cartItems.length} Items
+              {cartItems.length} Items
             </p>
             <p className="bg-black text-white px-1 w-full text-xs font-semibold">
               ৳{totalPrice.toFixed(2)}
@@ -53,9 +38,8 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
         </div>
       </div>
 
-      {/* Sidebar Content */}
       {isOpen && (
-        <div className="hidden lg:block fixed md:top-[64px] xl:top-[64px] right-0 h-[27rem] w-[22rem] bg-white shadow-lg z-50">
+        <div className="fixed md:top-[64px] xl:top-[64px] right-0 h-[27rem] w-[22rem] bg-white shadow-lg z-50">
           <div className="flex items-center bg-yellow-400 justify-between p-4 border-b">
             <div className="flex gap-1 items-center justify-center">
               <CiShoppingBasket className="text-2xl text-red-600" />
@@ -111,27 +95,29 @@ const CartSidebar = ({ cartItems, setCartItems }) => {
 
           <div className="pt-2 border-t">
             <div className="px-4">
-              <div className="flex max-w-xs rounded-full border-2">
+              <div className="flex max-w-xs rounded-md border-2">
                 <input
                   type="text"
                   placeholder="Type your coupon code"
-                  className="relative w-full py-1 px-2 text-sm text-black rounded focus:outline-none"
+                  className="relative w-full py-1 px-2 text-sm text-black rounded-md focus:outline-none"
                 />
-                <button className="absolute bg-red-600 px-2 py-1 right-4 items-center justify-center pr-9 rounded-full border-2">
+                <button className="absolute bg-red-600 px-2 py-1 right-4 items-center justify-center pr-9 rounded-md border-2">
                   <p className="text-xs">Apply coupon</p>
                 </button>
               </div>
             </div>
-            <div className="flex justify-between pt-1 px-4 font-semibold text-lg">
+
+          <div className="flex justify-between pt-1 px-4 font-semibold text-lg">
               <span>Total:</span>
               <span>৳{totalPrice.toFixed(2)}</span>
             </div>
-            <Link href={`/checkout/${cartItems[0]?.id}`} legacyBehavior>
+
+          <Link href="/checkout/defaultId" legacyBehavior>
             <button className="mt-2 w-full bg-red-600 text-white py-2 rounded">
               Place Order
             </button>
-            </Link>
-          </div>
+          </Link>
+        </div>
         </div>
       )}
     </>
