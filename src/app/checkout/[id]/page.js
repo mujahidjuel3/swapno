@@ -72,46 +72,49 @@ const Checkout = () => {
               </CardTitle>
             </CardHeader>
             <CardTitle className="px-4 text-sm pt-3">Delivery Slot</CardTitle>
-            <CardContent className="flex justify-between border-2 pt-3 m-2 rounded-md">
-              <div className="mb-4 w-full lg:w-1/2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Date</label>
-                <Input
-                  type="date"
-                  value={deliverySlot.date}
-                  onChange={(e) =>
-                    setDeliverySlot((prev) => ({ ...prev, date: e.target.value }))
-                  }
-                />
-              </div>
-              <div className="mb-4 w-full lg:w-1/2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Time Slot
-                </label>
-                <Select
-                  onValueChange={(value) =>
-                    setDeliverySlot((prev) => ({ ...prev, time: value }))
-                  }
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder={deliverySlot.time} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {[
-                      "2:00 PM - 3:00 PM",
-                      "3:00 PM - 4:00 PM",
-                      "4:00 PM - 5:00 PM",
-                      "5:00 PM - 6:00 PM",
-                      "6:00 PM - 7:00 PM",
-                      "7:00 PM - 8:00 PM",
-                    ].map((slot) => (
-                      <SelectItem key={slot} value={slot}>
-                        {slot}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </CardContent>
+            <CardContent className="flex flex-col md:flex-row justify-between border-2 pt-3 m-2 rounded-md gap-1">
+  {/* Date Input */}
+  <div className="mb-4 w-full">
+    <label className="block text-sm font-medium text-gray-700 mb-1">Date</label>
+    <Input
+      type="date"
+      value={deliverySlot.date}
+      onChange={(e) =>
+        setDeliverySlot((prev) => ({ ...prev, date: e.target.value }))
+      }
+    />
+  </div>
+  {/* Time Slot Select */}
+  <div className="mb-4 w-full">
+    <label className="block text-sm font-medium text-gray-700 mb-1">
+      Time Slot
+    </label>
+    <Select
+      onValueChange={(value) =>
+        setDeliverySlot((prev) => ({ ...prev, time: value }))
+      }
+    >
+      <SelectTrigger>
+        <SelectValue placeholder={deliverySlot.time} />
+      </SelectTrigger>
+      <SelectContent>
+        {[
+          "2:00 PM - 3:00 PM",
+          "3:00 PM - 4:00 PM",
+          "4:00 PM - 5:00 PM",
+          "5:00 PM - 6:00 PM",
+          "6:00 PM - 7:00 PM",
+          "7:00 PM - 8:00 PM",
+        ].map((slot) => (
+          <SelectItem key={slot} value={slot}>
+            {slot}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  </div>
+</CardContent>
+
             <CardTitle className="px-4 text-lg font-bold">{cartItems.length} Items</CardTitle>
             <CardContent>
               <Table>
@@ -186,7 +189,7 @@ const Checkout = () => {
             {showCouponInput && (
               <div className="flex items-center">
                 <Input placeholder="Type your coupon code." className="flex-grow mr-2 relative w-full py-1 px-3 text-sm text-black rounded focus:ring-2 focus:outline-none border" />
-                <Button className="absolute ml-52 bg-red-600 px-6 py-2 text-white text-xs rounded-md">Apply coupon</Button>
+                <Button className="absolute ml-40 sm:ml-[28rem] md:ml-[36rem] lg:ml-36 xl:ml-52 bg-red-600 lg:px-4 xl:px-6 py-2 text-white text-xs rounded-md">Apply coupon</Button>
               </div>
             )}
           </div>
