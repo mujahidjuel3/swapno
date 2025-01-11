@@ -37,7 +37,7 @@ const CardSlider = ({ cards }) => {
       {/* Left Arrow */}
       <button
         onClick={() => scrollSlider("left")}
-        className="absolute top-1/2 pl-[2px] lg:left-[18.5rem] transform -translate-y-1/2 z-10 p-1 bg-yellow-400 rounded-full shadow hover:bg-yellow-500 focus:outline-none"
+        className="absolute top-1/2 pl-[2px] lg:left-[270px] transform -translate-y-1/2 z-10 p-1 bg-yellow-400 rounded-full shadow hover:bg-yellow-500 focus:outline-none"
       >
         <IoIosArrowBack size={22} />
       </button>

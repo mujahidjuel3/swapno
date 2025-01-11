@@ -61,7 +61,7 @@ const BannerSlider = () => {
     {/* Navigation Buttons */}
     <button
       onClick={prevSlide}
-      className="absolute pl-[2px] lg:left-[18rem] top-1/2 transform -translate-y-1/2 p-1 bg-yellow-300 text-black rounded-full shadow hover:bg-yellow-500 focus:outline-none"
+      className="absolute pl-[2px] lg:left-[270px] top-1/2 transform -translate-y-1/2 p-1 bg-yellow-300 text-black rounded-full shadow hover:bg-yellow-500 focus:outline-none"
     >
       <IoIosArrowBack size={22} />
     </button>
