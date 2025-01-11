@@ -286,7 +286,7 @@ const NavbarModal = () => {
 
       {isMainModalOpen && !isMobile && (
         <div
-          className="absolute top-[41px] hidden lg:flex lg:pl-[22px] xl:pl-[20px] 2xl:pl-[215px]"
+          className="absolute top-[41.5px] hidden lg:flex lg:pl-[22px] xl:pl-[54px] 2xl:pl-[215px]"
           onMouseLeave={hideModal}
         >
           <div className="grid grid-cols-3">

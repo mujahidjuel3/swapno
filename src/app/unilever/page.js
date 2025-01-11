@@ -66,9 +66,9 @@ const Unilever = () => {
             )}
           </div>
 
-          <div className="flex gap-2 items-center pb-4">
+          <div className="flex flex-wrap gap-2 items-center pb-4">
             <h1 className="text-sm flex font-semibold">Sort By:</h1>
-            <ul className="gap-2 flex">
+            <ul className="flex flex-wrap gap-2 w-full sm:w-auto">
               {[
                 ...new Set(cardData9.flatMap((product) => product.sort || [])),
               ].map((sortOption, idx) => (
@@ -83,84 +83,79 @@ const Unilever = () => {
           </div>
 
           {/* Grid Layout for Cards */}
-          <div className="flex flex-col lg:flex-row gap-4">
-            <div className={`grid gap-4 ${getGridColumns()}`}>
-              {cardData9.length > 0 ? (
-                cardData9.map((product) => (
-                  <Card
-                    key={product.id}
-                    className="border rounded-lg shadow hover:shadow-lg h-[300px] w-[230px] flex flex-col"
-                  >
-                    <Link href={`/details/${product.id}`} legacyBehavior>
-                      <div>
-                        <Image
-                          src={product.image}
-                          alt={product.title}
-                          width={300}
-                          height={200}
-                          className="w-full object-cover p-1 h-[150px] rounded-md"
-                        />
-                        <div className="text-center justify-center pt-2">
-                          <p className="text-xs text-gray-600 italic pb-1">
-                            {product.delivery}
-                          </p>
-                          <h3 className="text-sm font-semibold">
-                            {product.title}
-                          </h3>
-                          <p className="text-red-500 font-bold">
-                            ৳{product.price}{" "}
-                            <span className="text-xs text-gray-500">
-                              {product.perprice}
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-
-                    <div className="flex items-center justify-center pb-1 pt-7">
-                      {getItemQuantity(product.id) > 0 ? (
-                        <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 sm:w-32">
-                          <button
-                            onClick={() => removeFromCart(product, -1)}
-                            className="bg-yellow-500 text-white px-3 items-center text-sm  rounded-full"
-                          >
-                            -
-                          </button>
-                          <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
-                            {getItemQuantity(product.id)}{" "}
-                            <p className="text-xs font-semibold">in Bag</p>
-                          </span>
-                          <button
-                            onClick={() => addToCart(product, 1)}
-                            className="bg-yellow-500 text-white px-3 items-center text-sm  rounded-full"
-                          >
-                            +
-                          </button>
-                        </div>
-                      ) : (
-                        <button
-                          onClick={() =>
-                            addToCart({
-                              id: product.id,
-                              name: product.title,
-                              price: product.price,
-                            })
-                          }
-                          className="bg-red-600 text-white px-4 items-center  rounded-full text-sm"
-                        >
-                         <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
-                        </button>
-                      )}
-                    </div>
-                  </Card>
-                ))
-              ) : (
-                <p className="text-sm text-center justify-center font-bold">
-                  No products found
+          <div className="flex flex-col items-center justify-center gap-6">
+  <div className={`grid gap-6 xl:gap-x-10 ${getGridColumns()}`}>
+    {cardData9.length > 0 ? (
+      cardData9.map((product) => (
+        <Card
+          key={product.id}
+          className="border rounded-lg shadow hover:shadow-lg h-[300px] w-[200px] flex flex-col"
+        >
+          <Link href={`/details/${product.id}`} legacyBehavior>
+            <div>
+              <Image
+                src={product.image}
+                alt={product.title}
+                width={300}
+                height={200}
+                className="w-full object-cover p-1 h-[150px] rounded-md"
+              />
+              <div className="text-center justify-center pt-2">
+                <p className="text-xs text-gray-600 italic pb-1">
+                  {product.delivery}
                 </p>
-              )}
+                <h3 className="text-sm font-semibold">{product.title}</h3>
+                <p className="text-red-500 font-bold">
+                  ৳{product.price}{" "}
+                  <span className="text-xs text-gray-500">{product.perprice}</span>
+                </p>
+              </div>
             </div>
+          </Link>
+
+          <div className="flex items-center justify-center pb-1 pt-7">
+            {getItemQuantity(product.id) > 0 ? (
+              <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32">
+                <button
+                  onClick={() => removeFromCart(product, -1)}
+                  className="bg-yellow-500 text-white px-3 text-sm rounded-full"
+                >
+                  -
+                </button>
+                <span className="font-semibold text-sm flex items-center gap-1">
+                  {getItemQuantity(product.id)}{" "}
+                  <p className="text-xs font-semibold">in Bag</p>
+                </span>
+                <button
+                  onClick={() => addToCart(product, 1)}
+                  className="bg-yellow-500 text-white px-3 text-sm rounded-full"
+                >
+                  +
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() =>
+                  addToCart({
+                    id: product.id,
+                    name: product.title,
+                    price: product.price,
+                  })
+                }
+                className="bg-red-600 text-white px-4 rounded-full text-sm"
+              >
+                <p className="text-xs py-1 px-2">+ Add to Bag</p>
+              </button>
+            )}
           </div>
+        </Card>
+      ))
+    ) : (
+      <p className="text-sm text-center font-bold">No products found</p>
+    )}
+  </div>
+</div>
+
         </div>
       </div>
       <Footer />

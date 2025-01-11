@@ -250,7 +250,7 @@ const Menuicon = () => {
 
   return (
     <header
-      className="lg:hidden lg:fixed top-[0px] md:top-16 left-0 w-full text-black z-50"
+      className="lg:hidden top-[0px] md:top-16 left-0 w-full text-black z-50"
       onMouseLeave={hideModal}
     >
       <div className="lg:hidden container mx-auto flex items-center justify-between py-2 lg:px-8">

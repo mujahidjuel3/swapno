@@ -59,7 +59,7 @@ const ResponsiveFilterCard = ({ params }) => {
   const [availableDeliveryTimes, setAvailableDeliveryTimes] = useState([]);
   const [availableSort, setAvailableSort] = useState([]);
 
-  const { cartItems, addToCart, removeFromCart, } = useCart();
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   const resolvedParams = use(params); // Unwrap the promise
   const category = resolvedParams?.id || "";
@@ -144,12 +144,10 @@ const ResponsiveFilterCard = ({ params }) => {
     });
   };
 
-  
   const getItemQuantity = (id) => {
     const item = cartItems.find((item) => item.id === id);
     return item ? item.quantity : 0;
   };
-  
 
   return (
     <div className="">
@@ -188,7 +186,7 @@ const ResponsiveFilterCard = ({ params }) => {
                 </Button>
               </DialogTrigger>
 
-              <DialogContent className="top-[335px] left-[180px]  h-[30rem] w-[18rem] flex flex-col overflow-auto p-4 lg:hidden">
+              <DialogContent className="top-[335px] left-[138px] sm:left-[172px] md:left-[150px]  h-[30rem] w-[18rem] flex flex-col overflow-auto p-2 lg:hidden">
                 {/* Filters Content */}
                 <div className="space-y-2">
                   {/* Price Range */}
@@ -285,25 +283,26 @@ const ResponsiveFilterCard = ({ params }) => {
           </div>
 
           <div className="flex flex-wrap gap-2 items-center">
-  <h1 className="text-sm font-semibold w-full sm:w-auto mb-2 sm:mb-0">Sort By:</h1>
-  <ul className="flex flex-wrap gap-2 w-full sm:w-auto">
-    {availableSort.map((sorts) => (
-      <li
-        key={sorts}
-        className="shadow bg-slate-50 text-xs md:text-sm px-2 py-1 rounded hover:bg-yellow-500 cursor-pointer text-center w-full sm:w-auto"
-      >
-        {sorts}
-      </li>
-    ))}
-  </ul>
-</div>
-
+            <h1 className="text-sm font-semibold w-full sm:w-auto mb-2 sm:mb-0">
+              Sort By:
+            </h1>
+            <ul className="flex flex-wrap gap-2 w-full sm:w-auto">
+              {availableSort.map((sorts) => (
+                <li
+                  key={sorts}
+                  className="shadow bg-slate-50 text-xs md:text-sm px-2 py-1 rounded hover:bg-yellow-500 cursor-pointer text-center w-full sm:w-auto"
+                >
+                  {sorts}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-4">
           {/* Sidebar Filter */}
           <div
-            className={`fixed h-full lg:static top-0 left-0 bg-white p-4 shadow-lg transition-transform z-10 ${
+            className={`fixed h-full lg:sticky top-0 left-0 bg-white p-4 shadow-lg transition-transform z-10 ${
               isFilterOpen
                 ? "translate-x-0"
                 : "-translate-x-full lg:translate-x-0"
@@ -420,7 +419,7 @@ const ResponsiveFilterCard = ({ params }) => {
                 filteredData.map((product) => (
                   <Card
                     key={product.id}
-                    className="border rounded-lg shadow hover:shadow-lg h-[300px] flex flex-col"
+                    className="border rounded-lg shadow hover:shadow-lg h-[290px] flex flex-col"
                   >
                     <Link href={`/details/${product.id}`} legacyBehavior>
                       <div>
@@ -435,6 +434,7 @@ const ResponsiveFilterCard = ({ params }) => {
                           <p className="text-xs text-gray-600 italic pb-1">
                             {product.delivery}
                           </p>
+                          <div className="h-20">
                           <h3 className="text-sm font-semibold">
                             {product.title}
                           </h3>
@@ -444,47 +444,49 @@ const ResponsiveFilterCard = ({ params }) => {
                               {product.perprice}
                             </span>
                           </p>
+                          </div>
+                          
                         </div>
                       </div>
                     </Link>
 
-                    <div className="flex items-center justify-center pb-1 pt-10">
-                    {getItemQuantity(product.id) > 0 ? (
-                  <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 sm:w-32">
-                  <button
-                    onClick={() => removeFromCart(product, -1)}
-                    className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
-                  >
-                    -
-                  </button>
-                  <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
-                    {getItemQuantity(product.id)}{" "}
-                    <p className="text-xs font-semibold">in Bag</p>
-                  </span>
-                  <button
-                    onClick={() => addToCart(product, 1)}
-                    className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
-                  >
-                    +
-                  </button>
-                </div>
-              ) : (
-                <button
-                  onClick={() =>
-                    addToCart({
-                      id: product.id,
-                      name: product.title,
-                      price: product.price,
-                     
-                    })
-                  }
-                  className="bg-red-600 text-white px-4  rounded-full text-sm"
-                >
-                 <p className="text-xs items-center py-1 px-2">+ Add to Bag</p>
-                </button>
-                )}
-</div>
-
+                    <div className="flex items-center justify-center pb-2 ">
+                      {getItemQuantity(product.id) > 0 ? (
+                        <div className="flex items-center bg-yellow-500 justify-between rounded-full w-32 sm:w-32">
+                          <button
+                            onClick={() => removeFromCart(product, -1)}
+                            className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
+                          >
+                            -
+                          </button>
+                          <span className="font-semibold flex items-center gap-1 text-sm sm:text-base">
+                            {getItemQuantity(product.id)}{" "}
+                            <p className="text-xs font-semibold">in Bag</p>
+                          </span>
+                          <button
+                            onClick={() => addToCart(product, 1)}
+                            className="bg-yellow-500 text-white px-3 items-center text-sm rounded-full"
+                          >
+                            +
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() =>
+                            addToCart({
+                              id: product.id,
+                              name: product.title,
+                              price: product.price,
+                            })
+                          }
+                          className="bg-red-600 text-white px-4  rounded-full text-sm"
+                        >
+                          <p className="text-xs items-center py-1 px-2">
+                            + Add to Bag
+                          </p>
+                        </button>
+                      )}
+                    </div>
                   </Card>
                 ))
               ) : (

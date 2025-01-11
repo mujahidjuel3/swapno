@@ -169,7 +169,7 @@ const Navbar = () => {
       {/* Sign Modal */}
       {isSignOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-        <div className="relative w-[25rem] bg-white h-[21rem] rounded-lg shadow-lg p-4">
+        <div className="relative w-[23rem] bg-white h-[330px] rounded-lg shadow-lg p-4">
         {/* Logo */}
         <div className="absolute top-[-2rem] left-1/2 transform -translate-x-1/2">
           <Image
