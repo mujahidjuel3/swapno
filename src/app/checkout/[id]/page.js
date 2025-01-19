@@ -189,7 +189,7 @@ const Checkout = () => {
             {showCouponInput && (
               <div className="flex items-center">
                 <Input placeholder="Type your coupon code." className="flex-grow mr-2 relative w-full py-1 px-3 text-sm text-black rounded focus:ring-2 focus:outline-none border" />
-                <Button className="absolute ml-[195px] sm:ml-[28rem] md:ml-[36rem] lg:ml-36 xl:ml-52 bg-red-600 lg:px-4 xl:px-6 py-2 text-white text-xs rounded-md">Apply coupon</Button>
+                <Button className="absolute ml-[195px] sm:ml-[28rem] md:ml-[36rem] lg:ml-36 xl:ml-52 2xl:ml-72 bg-red-600 lg:px-4 xl:px-6 py-2 text-white text-xs rounded-md">Apply coupon</Button>
               </div>
             )}
           </div>

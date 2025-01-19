@@ -290,7 +290,7 @@ const NavbarModal = () => {
           onMouseLeave={hideModal}
         >
           <div className="grid grid-cols-3">
-            <div className="bg-white w-[14rem] md:w-[18rem]">
+            <div className="bg-white w-[14rem] md:w-[17rem]">
               <ul>
                 {mainMenuItems.map((item, index) => (
                   <li
